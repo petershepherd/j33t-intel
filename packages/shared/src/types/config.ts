@@ -17,7 +17,7 @@ export interface J33TConfig {
 export const CONFIG_DEFAULTS: Partial<J33TConfig> = {
   aiProvider: "groq",
   aiModel: "llama-3.3-70b-versatile",
-  centralApiUrl: "https://api.j33t.com",
+  centralApiUrl: "https://j33t-intel-api.juhasz-peter1986.workers.dev",
   contributeToCommunity: false,
   requestTimeoutMs: 30_000,
   cacheDir: ".j33t-cache",

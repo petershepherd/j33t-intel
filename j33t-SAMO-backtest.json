@@ -1,0 +1,1600 @@
+{
+  "schemaVersion": "0.1.0",
+  "tokenCA": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+  "analyzedAt": 1773217672057,
+  "analysisDurationMs": 9249,
+  "metadata": {
+    "ca": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+    "name": "Samoyed Coin",
+    "symbol": "SAMO",
+    "decimals": 9,
+    "deployer": "5q54JbYaqBmCDZp5vC1YjtennKPxVRfgMNxoBKaAoDhq",
+    "createdAt": 1669603374000,
+    "hasFreezeAuthority": false,
+    "hasMintAuthority": false,
+    "socials": {
+      "website": "https://samoyedcoin.com",
+      "twitter": "https://x.com/samoyedcoin",
+      "telegram": "https://t.me/samoyedcoin",
+      "discord": "https://discord.gg/samofamo"
+    }
+  },
+  "patternType": "unknown",
+  "marketSnapshot": {
+    "timestamp": 1773217663117,
+    "mcapUsd": 2237655,
+    "priceUsd": 0.0004714,
+    "liquidityUsd": 110605.5,
+    "volumeUsd": 4100.96
+  },
+  "signals": {
+    "liquidityGrowthRate": 0.06404839992902797,
+    "buySellRatio": 5,
+    "bundlePercentage": 0.19170982764103084,
+    "bundleCount": 16,
+    "top10HolderPercentage": 78.23171340426649,
+    "devSoldPercentage": 0,
+    "liquidityLocked": false,
+    "liquidityLockDurationHours": 0,
+    "volumeMcapRatio": 0.0018327043266276525,
+    "priceMomentumScore": -4.163336342344337e-17,
+    "hasFreezeAuthority": false,
+    "hasMintAuthority": false,
+    "transactionTimingSuspicion": 0.9,
+    "uniqueWalletsFirst10Min": 1
+  },
+  "scores": {
+    "potentialScore": 50,
+    "rugpullRiskScore": 43,
+    "confidence": 64,
+    "signalBreakdown": [
+      {
+        "signal": "liquidityGrowthRate",
+        "rawValue": 0.06404839992902797,
+        "normalizedScore": 15,
+        "weight": 0.1,
+        "weightedScore": 1.5,
+        "reason": "Very low liquidity growth"
+      },
+      {
+        "signal": "buySellRatio",
+        "rawValue": 5,
+        "normalizedScore": 95,
+        "weight": 0.12,
+        "weightedScore": 11.4,
+        "reason": "Strong buy pressure"
+      },
+      {
+        "signal": "bundlePercentage",
+        "rawValue": 0.19170982764103084,
+        "normalizedScore": 90,
+        "weight": 0.08,
+        "weightedScore": 7.2,
+        "reason": "Minimal bundle activity"
+      },
+      {
+        "signal": "top10HolderPercentage",
+        "rawValue": 78.23171340426649,
+        "normalizedScore": 10,
+        "weight": 0.1,
+        "weightedScore": 1,
+        "reason": "Extreme concentration — dump risk"
+      },
+      {
+        "signal": "devSoldPercentage",
+        "rawValue": 0,
+        "normalizedScore": 95,
+        "weight": 0.08,
+        "weightedScore": 7.6000000000000005,
+        "reason": "Dev hasn't sold"
+      },
+      {
+        "signal": "liquidityLocked",
+        "rawValue": false,
+        "normalizedScore": 25,
+        "weight": 0.08,
+        "weightedScore": 2,
+        "reason": "Liquidity is NOT locked"
+      },
+      {
+        "signal": "volumeMcapRatio",
+        "rawValue": 0.0018327043266276525,
+        "normalizedScore": 20,
+        "weight": 0.1,
+        "weightedScore": 2,
+        "reason": "Very low trading activity"
+      },
+      {
+        "signal": "priceMomentumScore",
+        "rawValue": -4.163336342344337e-17,
+        "normalizedScore": 50,
+        "weight": 0.12,
+        "weightedScore": 6,
+        "reason": "Negative or artificial momentum"
+      },
+      {
+        "signal": "hasFreezeAuthority",
+        "rawValue": false,
+        "normalizedScore": 90,
+        "weight": 0.05,
+        "weightedScore": 4.5,
+        "reason": "No freeze authority"
+      },
+      {
+        "signal": "hasMintAuthority",
+        "rawValue": false,
+        "normalizedScore": 90,
+        "weight": 0.05,
+        "weightedScore": 4.5,
+        "reason": "No mint authority"
+      },
+      {
+        "signal": "transactionTimingSuspicion",
+        "rawValue": 0.9,
+        "normalizedScore": 10,
+        "weight": 0.05,
+        "weightedScore": 0.5,
+        "reason": "Highly suspicious — bundle signature"
+      },
+      {
+        "signal": "uniqueWalletsFirst10Min",
+        "rawValue": 1,
+        "normalizedScore": 20,
+        "weight": 0.07,
+        "weightedScore": 1.4000000000000001,
+        "reason": "Very few unique buyers"
+      }
+    ]
+  },
+  "filterSettings": {
+    "minLiquidityUsd": 500,
+    "maxBundlePercentage": 15,
+    "minBuySellRatio": 3.5,
+    "maxDevSoldPercentage": 10,
+    "maxTop10HolderPercentage": 88.23171340426649,
+    "minUniqueWallets10Min": 5,
+    "requireLiquidityLock": false,
+    "rejectFreezeAuthority": true,
+    "rejectMintAuthority": true,
+    "maxEntryMcapUsd": 100000
+  },
+  "bundles": [
+    {
+      "id": "bundle_1",
+      "wallets": [
+        "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+        "91iTFhWfwMJbATjymCBcY8uWN71F9FL8DYbTwjA8iCAp"
+      ],
+      "totalTokensBought": 176287.719289728,
+      "supplyPercentage": 0.0037137999769034005,
+      "transactions": [
+        {
+          "signature": "5y9nDCBkVsY9RDNqwpwDYLLFVmjyMMESjMaUVKGU3r6AkBr4hgSXJUJWUzyAqNdDvx8qjzC46gYzDAFwJ8yHDqUC",
+          "timestamp": 1773074059000,
+          "slot": 405290537,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 8251.17162125,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "5BZ5uMhAbQpRgNsrkyKU76gjP9sFGULd3HgCErpc8dDpc53pQJ1P7SWHfiJ61CFUW4jsBKarWkDwYYGqF5KAEas",
+          "timestamp": 1773074061000,
+          "slot": 405290541,
+          "signer": "91iTFhWfwMJbATjymCBcY8uWN71F9FL8DYbTwjA8iCAp",
+          "type": "buy",
+          "tokenAmount": 38424.104134958994,
+          "solAmount": 0.000028607
+        },
+        {
+          "signature": "9w6JLPUPNzNqrpV6eKcrEACrozEu2UeRJgnBWerp51sRoP6isBd51ih5teNRzxBnMt87A8EzKtFKLfzjM9jyWRj",
+          "timestamp": 1773083995000,
+          "slot": 405315746,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 3348.399442474,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "4yo4rRRwBSmTCUpRjMMaHfD74Mvk8rEMvAKMhLoRd9PZtWSes8LtLucUN5LsMrcjZmxAYWkJjb99nBs9JPbwmmZT",
+          "timestamp": 1773084184000,
+          "slot": 405316228,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 3024.6941078649998,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "2XZnYp9teeLLZ4jnhWuBthGHqGp6Tjr5HzfbUFH83BP2jbj49GuXP8F42V6cPX9KPVmhF8JQ7PseGFeufoDoBVHF",
+          "timestamp": 1773084318000,
+          "slot": 405316565,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 3503.687094442,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "2wh1tLCZPW4ZrmfaRbD9FCPRy8r8EPRETTKcvjmX6tiyvKH7UC6imhyw6iQaY3xYZsTay4gDRpfjLMZwKeVTVuqL",
+          "timestamp": 1773084344000,
+          "slot": 405316634,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 4979.528693749,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "4K8LbqTYEKPNpCUMRLRGDvuCqpsDX1NELLA7mW8d9AukJhSVEQbpA2RbTGYWaCEtht3NZteKuqTBS7PeMhNFVwqk",
+          "timestamp": 1773084615000,
+          "slot": 405317328,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 5409.159607187,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "5AYkcegwKXByTpJY56LaNk7VBvVwpPZ2JZmv3NZaAFneTodMmEPR7FAafj4YRL27UYqYCMdS42kLSP3Kssd2Bds1",
+          "timestamp": 1773107601000,
+          "slot": 405375629,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 2544.267877202,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "3nWnYJXcojWPdq8Gseqd2DuKV7DZvLtmtHSChFsMzv1Nmvr9XNao2dfPTCwCvK1HnztPHBFne54ZDrLBCwuGzZvs",
+          "timestamp": 1773110098000,
+          "slot": 405381969,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 2723.739716778,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "kYSh3BRX6Ni5yPwuAFS5x3euJ3J4EvEFNRueY99PSWkMwQrnpCdit4571pwTMaDMdMgDNYdHwfyws6MSiMBjhcF",
+          "timestamp": 1773146952000,
+          "slot": 405476059,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1662.0148096560001,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "2U6BSQdf5Vva4Ujz6jp8Kv43XNcjo95wN8zUCJS9sYVSZ2rcCeWLD5pC32jxD1hn7mrjupc1Avt8TDNqMJgVAd1w",
+          "timestamp": 1773148102000,
+          "slot": 405479008,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 698.434939087,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "2Hg2GVYsFHq1reXUfcbCkpQQyGzVdUnoAP4XYNonmkLokAdrbYVAGTEGv71iP1EZC1PfMEECpx9ut7c58iVEK917",
+          "timestamp": 1773148103000,
+          "slot": 405479010,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1454.522064004,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "sZeK9SeAYnVsnX625zA8E8iE624UXcy4cygDXPDoLjS81U8ZrJTYPnqp74rtZCWd5F13JL39nU2pry4WX6GkcFn",
+          "timestamp": 1773149898000,
+          "slot": 405483644,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 767.255187376,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "2fjJUfUDjP6XAVhCPs9gknrZ3P4cp5n5kExqdwJAx9TP7BaZi225P1p4gtasLE57SoXJB2cLoA7GY1hrtfymQxT9",
+          "timestamp": 1773150112000,
+          "slot": 405484195,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 737.080809314,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "34fYrjRM14xTrzozv5sm6drqrhVFqNbw7FH9Svg5sxeRPvToLJ9kPhy6fDPDFaqL3n1oqsoH5haG7DuYkUBWDzuC",
+          "timestamp": 1773150893000,
+          "slot": 405486197,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1504.768057512,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "4sSj6FpJ25KEZe1NS15BJXWBvc7SP1p4Jzmfav23mKtWSBTYx3DbkdbjxVbzcdtNFcUQacrwTXfiA1Fu5f7iggfB",
+          "timestamp": 1773152781000,
+          "slot": 405491057,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1769.780228152,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "22YJpnDJjprGkYhdEzJESAfEhw4PuTnZukS7VWXLTSHZuAmWhGhs5d3GVXAEQHpP2TwaGAgV4PPujYvadeox89Fw",
+          "timestamp": 1773153250000,
+          "slot": 405492258,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 2963.541143337,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "aL8KTtt4h6ThtEpMYXBCV19cG97ZKn36ZUgzmAcKn2QZdSV1tKbS17R2HtynN7W1aZrQEBxZD6GE5k3ZJXuJJjw",
+          "timestamp": 1773154425000,
+          "slot": 405495263,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1560.022010032,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "64fpTye5L5Qbd4civB7ito2Q1yDbynEnbzaS48qRE7nwB6cNSjfBxUS3ZecwQ6Vaf5W1PHmmDK8TwXYvRoySRRSh",
+          "timestamp": 1773154439000,
+          "slot": 405495301,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1968.855449008,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "3EMS1NqjDFHce3UNHTDpGKB6tXSrfCyfyJWcntjFY8UnQZ7akJPgg1Sap6pt9tXyKWN9qSZpapjokQz7KmzG1xyC",
+          "timestamp": 1773154503000,
+          "slot": 405495468,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 2087.462282623,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "qv5TM3A8MnGotrTnaZkec9KwkXEsgJWSXbb3zs7SBaGvaY4adY6kbH9ky6Pm3BEBRjPxPHp1Pw3BhDsP5cfPq7y",
+          "timestamp": 1773154810000,
+          "slot": 405496252,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 3092.665672181,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "33ZifNCbzYDRGyLSTtC9AeTZtS8DZnS2y6Yd3q4F15WpmRCQdGHZiiqXjbWcYTyfQmmzcBBAWB864Ke2dqdLnAqe",
+          "timestamp": 1773154814000,
+          "slot": 405496263,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1924.155909746,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "3PaZ591U8uu87mDxTAyWWzmt61oQEJxg8xTaTtqKtxeTuhPEUmEVEpdawWntGXCZZNBkmKU64sNggGNxbLBMXc1f",
+          "timestamp": 1773155092000,
+          "slot": 405496986,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1741.122226568,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "3PFr9NhZYYPGf8q5otfW7SwbShsRxaGeDsd7T4keyDxvA3GXnNHgaFsMnXFKDGXBAac6MoUm8aruivwPpDkHKxPg",
+          "timestamp": 1773170543000,
+          "slot": 405536523,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 23176.12161152,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "zrix2ujuoTdUTeosEhRmaBSc5Qh1rWHi2ohUHn5HDkW6Dtke8yqAsMkJZADWtZL1z34tSZH3myzYc3FNKzK6GsH",
+          "timestamp": 1773170554000,
+          "slot": 405536550,
+          "signer": "91iTFhWfwMJbATjymCBcY8uWN71F9FL8DYbTwjA8iCAp",
+          "type": "buy",
+          "tokenAmount": 8558.058845546999,
+          "solAmount": 0.000004602
+        },
+        {
+          "signature": "39eUCiVvSHjFRTpNhfoKVdqyb6jZdhXFDYg6fBqDxySjXE4F2kTaPuitJB9SWzrR8eqXRu35zmAc1Cjt5UCL6Rgw",
+          "timestamp": 1773170727000,
+          "slot": 405536994,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1903.244036039,
+          "solAmount": 0.001006159
+        },
+        {
+          "signature": "XEXfrBnBxvKF81pTNXjzdYP2QSnMJTmDVd4on6eeebyjhn7W1YGqWzpx9PgYK7MCij9oFZdC8iaowFjvZxTrE1D",
+          "timestamp": 1773207764000,
+          "slot": 405631937,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1847.257292409,
+          "solAmount": 0.001006
+        },
+        {
+          "signature": "4W3esGnAum73tcyxviGU38AdCPUHYHA2L8F1tjB58Mo2rfeYTBvTVoKfJjq1DUBsDzDCm2xaQLQNKeooQHwdQmk8",
+          "timestamp": 1773214650000,
+          "slot": 405649601,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 1461.472330344,
+          "solAmount": 0.001006096
+        },
+        {
+          "signature": "5eFq8YgFDPRQzvwejXayAFc69JYfEQNEiLhrN3RVDQ3uR4VbEwopYS9mRLemhBH2zd3HSdCKULm11iz2ozem6poR",
+          "timestamp": 1773214660000,
+          "slot": 405649626,
+          "signer": "91iTFhWfwMJbATjymCBcY8uWN71F9FL8DYbTwjA8iCAp",
+          "type": "buy",
+          "tokenAmount": 42426.262210966,
+          "solAmount": 0.000012405
+        },
+        {
+          "signature": "49z2gfLshmJJDTLWDSrmUu1tjAgjhnU8dg3VwksCoYJnYWebR9qu6jebncxMVoa6pjFzrh5jRM8qX8QzQa3UBpmy",
+          "timestamp": 1773214666000,
+          "slot": 405649641,
+          "signer": "3nMNd89AxwHUa1AFvQGqohRkxFEQsTsgiEyEyqXFHyyH",
+          "type": "buy",
+          "tokenAmount": 774.869878401,
+          "solAmount": 0.001006
+        }
+      ]
+    },
+    {
+      "id": "bundle_2",
+      "wallets": [
+        "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+        "SHARKRdGLNYRZrhotqvZi3XAtT62CRGCFxmg5LJgSHC"
+      ],
+      "totalTokensBought": 371594.375310009,
+      "supplyPercentage": 0.007828266132229422,
+      "transactions": [
+        {
+          "signature": "26tJ7n8fiYh7gmMA2cSf6bUk5vY8yXruwrtWusMwxk9jjTyLqL3vt1ETWFRiiscKgsDZwCUKGuujZcEoUW8mBoK9",
+          "timestamp": 1773075323000,
+          "slot": 405293751,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 29855.976030401,
+          "solAmount": 0
+        },
+        {
+          "signature": "2BeBPG4j3Wm2sGoSffSSvyy7ZazxGb61zSy9XEWtYjXep4ftYF7ChFhLUWwPxNXx2EP3A3PRbqsbvfSteUC2JZjp",
+          "timestamp": 1773075323000,
+          "slot": 405293751,
+          "signer": "SHARKRdGLNYRZrhotqvZi3XAtT62CRGCFxmg5LJgSHC",
+          "type": "buy",
+          "tokenAmount": 2326.87249081,
+          "solAmount": 0.000020529
+        },
+        {
+          "signature": "43oUesZfU4MGbUHefqJEC2YCZfiNbiYT2VtQokdcUMsoQVPLUpKPRWKisBLmFcFvHG6eDDGW9asApAuoo7QKE8qV",
+          "timestamp": 1773075327000,
+          "slot": 405293762,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 34812.534282728,
+          "solAmount": 0
+        },
+        {
+          "signature": "2DCvxHaZHGWtwzKygdxsJm8V6XhyTvi9yRJgDavMrU85n899e9qkYeTqtYKV1gubRvjtNtY1CHzxc5R9KLJSYAE9",
+          "timestamp": 1773075340000,
+          "slot": 405293794,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 27734.514244178,
+          "solAmount": 0
+        },
+        {
+          "signature": "3Qs7YE5JiHpiuVyUFYRc5HoTnf5AqEqDUFQvEknUK3mYDaKshEGDV1e4tnRSKSzsc8Xtam9t9zghXqUi1zbZQsXV",
+          "timestamp": 1773075342000,
+          "slot": 405293799,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 31861.316089793,
+          "solAmount": 0
+        },
+        {
+          "signature": "2icop9SBAzR9UNEpBqZ7mzt4Mc8p8VYNQdwmSjUepiXo4VyEpGxJjpagr3DNwvY3CWMZC7xVz1kVFLAo6rzrNdYy",
+          "timestamp": 1773075354000,
+          "slot": 405293828,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 31552.415909529,
+          "solAmount": 0
+        },
+        {
+          "signature": "3LKS3x8dfSsM6hifC9Bi3LXyQbM6PyUKTYFEAhBqvBKvgdqHwkKd3N7AieHNdqD8r2ZK3C95Wz11iBzQUeGXyL3a",
+          "timestamp": 1773208238000,
+          "slot": 405633143,
+          "signer": "GCvHhEUYQwTJ8jyf8Lc4bv8jBXyZU4LMMsZCobwEPzvM",
+          "type": "buy",
+          "tokenAmount": 213450.74626257,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_3",
+      "wallets": [
+        "5d8tDay1ZDV4XVUBtTvFvQiLxDe8dz2ZCdsrkmTDcbm5",
+        "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6"
+      ],
+      "totalTokensBought": 422483.599549009,
+      "supplyPercentage": 0.0089003340026681,
+      "transactions": [
+        {
+          "signature": "63qocwVk76hFtsjEwCUhzTeje5yviKD673qy2GRTbwWC7pyfuP8R2eJqjzCwz4P7Yix958DVgdZpfhg78GwQWEYw",
+          "timestamp": 1773075317000,
+          "slot": 405293735,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 21218.774101047,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "2Qpu35QuBG2xvc2UbgckgmpayCRnLvPwPqQ36RdQDmMnfawSjFyiXZmU67DvLadGXDAH8qvxnVoqxE21mJhBxZY7",
+          "timestamp": 1773077393000,
+          "slot": 405298993,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 42553.728034358,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "4q21xYJZF2m2YitMn1GdXVRQgq2x1XfcCG68s8QzHZkRt6q3mLB1GNSWQgLhMyTtyKG8ZMPzv8thewafUnuPbdgz",
+          "timestamp": 1773077461000,
+          "slot": 405299171,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 42434.372012758,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "4ji5n4Ewpb5Rb4K8vzxq4nhWot6RTr62Ad3kQE6YikaEVws8j7Pc8vNt8pQUzV2tte3nKB2NWHoZQC5SGjskQPG7",
+          "timestamp": 1773077512000,
+          "slot": 405299300,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 42388.468538486,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "5oqntuEJMWBsjQfLz6SjLbHJz3MEkXEKPRq19DXziS58QvCpphpymt1BpT281vxC1xm8bmKBLYgujzBUwoK263mq",
+          "timestamp": 1773078441000,
+          "slot": 405301660,
+          "signer": "5d8tDay1ZDV4XVUBtTvFvQiLxDe8dz2ZCdsrkmTDcbm5",
+          "type": "buy",
+          "tokenAmount": 82254.158717246,
+          "solAmount": 0
+        },
+        {
+          "signature": "3Pj2cXxZ1RWhpmrfhjBW4Jdwshogkgzvs8EujoRmBWjAJ24TWyZbegPDo5QffctCQEp3tir2hBwm72MoNWAXu7uE",
+          "timestamp": 1773078443000,
+          "slot": 405301664,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 42676.085679566,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "2mSD67ZJxKR9jqQzFcdcjNdepUYcBbVdJAnUfKtiKLvh4PpKoEb7yVttybwdvZBqwbTRR5DWHp6nqaZ7UG8Ct74x",
+          "timestamp": 1773078511000,
+          "slot": 405301835,
+          "signer": "77ALSax3yH3rrNc4d2AtFKE1GmMQzXve83BghFbGHnS6",
+          "type": "buy",
+          "tokenAmount": 42667.872289786,
+          "solAmount": 0.00005
+        },
+        {
+          "signature": "5xecJg4j89TKitmW5eNpJuVHNFduKHzajq1uC1d97LtxXxhkFuhKHphW5DWJ8c2P1qfwYqzCgeJT24dMJZfFEQtR",
+          "timestamp": 1773214650000,
+          "slot": 405649600,
+          "signer": "5d8tDay1ZDV4XVUBtTvFvQiLxDe8dz2ZCdsrkmTDcbm5",
+          "type": "buy",
+          "tokenAmount": 106290.140175762,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_4",
+      "wallets": [
+        "GHigB15jr7wZ8GitjD4Hf5naqyUJfMbKa1n1PmSiBhUc",
+        "nika6vkuZHbTp2oc1rD6ebzTuYi6pSYtUMHHKAdBMzo"
+      ],
+      "totalTokensBought": 76311.37040782999,
+      "supplyPercentage": 0.0016076285222811858,
+      "transactions": [
+        {
+          "signature": "2keAwSVEyLy3ZA2qtUx5jJJTZauLpv4Lbem8d6xYPdVaprJWEKM9csXBTT1MYrFfvMugU5jduGVvBpLTAiYgGKxh",
+          "timestamp": 1773084341000,
+          "slot": 405316626,
+          "signer": "GHigB15jr7wZ8GitjD4Hf5naqyUJfMbKa1n1PmSiBhUc",
+          "type": "buy",
+          "tokenAmount": 529.699741426,
+          "solAmount": 0.004081176
+        },
+        {
+          "signature": "3L9VfWJM8wZquAvjWmQKvfPdyeMSzvAoDumfgnmMzwzSkLzUPy3myjMAuYCJXg7JViRBk6WEJ1jC88tRocn8oaq8",
+          "timestamp": 1773084341000,
+          "slot": 405316625,
+          "signer": "nika6vkuZHbTp2oc1rD6ebzTuYi6pSYtUMHHKAdBMzo",
+          "type": "buy",
+          "tokenAmount": 51482.461683532,
+          "solAmount": 0.000032335
+        },
+        {
+          "signature": "2qAbbfGPQU6tSzzd6wjMrm7cpPgBJYhoJV4Uc8s9GKbpvjuuTw44o4xr9VvH5gc4x7Gh9qKQ6akBhWsFuH1BhjnM",
+          "timestamp": 1773151758000,
+          "slot": 405488427,
+          "signer": "GHigB15jr7wZ8GitjD4Hf5naqyUJfMbKa1n1PmSiBhUc",
+          "type": "buy",
+          "tokenAmount": 427.24441411,
+          "solAmount": 0.00407956
+        },
+        {
+          "signature": "2c5E4fkBfXj4RRD2fmrZfv6d5CktxVDAPGMAUWSP8ogUasdzJiwYVz3spvegzKDdYiyc4J8fiaZPRNddEbpc3ubc",
+          "timestamp": 1773154809000,
+          "slot": 405496251,
+          "signer": "GHigB15jr7wZ8GitjD4Hf5naqyUJfMbKa1n1PmSiBhUc",
+          "type": "buy",
+          "tokenAmount": 9012.697808944,
+          "solAmount": 0.004080658
+        },
+        {
+          "signature": "4KjJjGKMjpBEHYZGe2Hdf4cWV4Lanbrqrc1BRCVhZxSgmfLT6dbvb43BoJtN32khYbEN7ZPu97wBrKHBBgn7ukf1",
+          "timestamp": 1773178634000,
+          "slot": 405557196,
+          "signer": "GHigB15jr7wZ8GitjD4Hf5naqyUJfMbKa1n1PmSiBhUc",
+          "type": "buy",
+          "tokenAmount": 3884.347485458,
+          "solAmount": 0.00407956
+        },
+        {
+          "signature": "43oMmhJKr92kLroHJQZ41xZzhKrNV1jtVk6XFx2E2oe2SVbKz6nzQwMYQmsrEJa3Q2UzEde82dYzFZo8wdvkA75Q",
+          "timestamp": 1773180620000,
+          "slot": 405562293,
+          "signer": "nika6vkuZHbTp2oc1rD6ebzTuYi6pSYtUMHHKAdBMzo",
+          "type": "buy",
+          "tokenAmount": 10974.91927436,
+          "solAmount": 0.000005317
+        }
+      ]
+    },
+    {
+      "id": "bundle_5",
+      "wallets": [
+        "D4KULoD4xxHJaea3yrx2mf5avkSEJVm25KqFW3XUpUkW",
+        "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1"
+      ],
+      "totalTokensBought": 6297320.77439322,
+      "supplyPercentage": 0.132663749016223,
+      "transactions": [
+        {
+          "signature": "3H8ibN9W1gSEFb2HaLR3pPTbEunjpH6Ef6uKae6NBBWtjTvNTcWd2bc3jzkuA3bVXq1qd9Do6kx8pz1p1BDqrP27",
+          "timestamp": 1773106482000,
+          "slot": 405372804,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 1261561.252486162,
+          "solAmount": 0
+        },
+        {
+          "signature": "42oD1TSf2sQKM4ex8BnwkfV6G5dPBNX3Prfh8xVxeSxJWTAZuAdzLR4BLTCEs5xa1cjfxvPDtxsLz9uLzuoyezGU",
+          "timestamp": 1773107524000,
+          "slot": 405375437,
+          "signer": "D4KULoD4xxHJaea3yrx2mf5avkSEJVm25KqFW3XUpUkW",
+          "type": "buy",
+          "tokenAmount": 418957.000235568,
+          "solAmount": 0
+        },
+        {
+          "signature": "5rQ3ot8vteFyCmMd8WkAuJ4G4nqNycarkMV5fzbfpimYEXnyGf1eMApCj5aupWYkeg2m7aUePcWniHJ45xyHgWAB",
+          "timestamp": 1773107525000,
+          "slot": 405375439,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 1247973.77759401,
+          "solAmount": 0
+        },
+        {
+          "signature": "5CmpSbJLBc65QqUyXrPekwXjRE4SbXQmfCZBZhZNpXAaw9z8jLuRwxzyaiCzeU2WLmjK7uMFVXNUNRjTT8kqGYtX",
+          "timestamp": 1773107600000,
+          "slot": 405375626,
+          "signer": "D4KULoD4xxHJaea3yrx2mf5avkSEJVm25KqFW3XUpUkW",
+          "type": "buy",
+          "tokenAmount": 415477.821179192,
+          "solAmount": 0
+        },
+        {
+          "signature": "tyDFALNPLRrNvBHHRAbCvW2yxdGBuryFKedav1kuLe8UJYod9SMZxULUvzU299G2btijEnQLDszaSqJCf2EXyEF",
+          "timestamp": 1773107602000,
+          "slot": 405375631,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 207850.145593538,
+          "solAmount": 0
+        },
+        {
+          "signature": "AXtbVAoRLPvzH7vtCxmfc9G4NWwQQpdYGSPvuKSA9ir4gFNDMarRqVbGNLk9KTfugjhDTqUg7Kckd9cW9AxPBMK",
+          "timestamp": 1773107672000,
+          "slot": 405375811,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 413591.26222528,
+          "solAmount": 0
+        },
+        {
+          "signature": "5hmjVpGf9HW91mh5rvLNSHPfbuaKxPx5E3xtnuZV9Z74wGYrjAjPsbyQ1t75Q1PKi1ep93v3Wu7D5Qiy3hgqjydB",
+          "timestamp": 1773214643000,
+          "slot": 405649582,
+          "signer": "D4KULoD4xxHJaea3yrx2mf5avkSEJVm25KqFW3XUpUkW",
+          "type": "buy",
+          "tokenAmount": 424352.37925874,
+          "solAmount": 0
+        },
+        {
+          "signature": "3R9xtWFVcHT9fLPem1ZYZt7i5Qy2zRRwjy1K49xd9srH2t7WKQcero69RCeqb3gmCAGbeayGda18X66KBQt19AXM",
+          "timestamp": 1773214650000,
+          "slot": 405649600,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 1268878.791406076,
+          "solAmount": 0
+        },
+        {
+          "signature": "jYm8iwop5yCFaAACTT1MCDXSK2h1BGhHCPgeZzLwqGY7a8ibmABDRhy3JQoenaJ5qgRfqSQmUXDobnDN1tiFXMf",
+          "timestamp": 1773215345000,
+          "slot": 405651389,
+          "signer": "D4KULoD4xxHJaea3yrx2mf5avkSEJVm25KqFW3XUpUkW",
+          "type": "buy",
+          "tokenAmount": 426171.234393384,
+          "solAmount": 0
+        },
+        {
+          "signature": "2z2yF2d2BWPR3Jq92Gq39qH1SBhFm3HtFd5vYFw7d559URq26kadVXqvBdogwp91SahJfRjUL1ZEPWx6v2KVjUyu",
+          "timestamp": 1773215351000,
+          "slot": 405651404,
+          "signer": "HN7WRRpSQxZN8QvvNhD9sV9sZrYGw5EJgGkzZ6koiuk1",
+          "type": "buy",
+          "tokenAmount": 212507.11002127,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_6",
+      "wallets": [
+        "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+        "CL4Q9icz5SiTvjQiVJ9d2YaBg7cHpbkeS7fNyHAvpSAg",
+        "2n8dSHF8W3X7B4Jd8SvSiuZadq1xnPUAP4M4eeWczSPj"
+      ],
+      "totalTokensBought": 101522.62366378203,
+      "supplyPercentage": 0.002138746357016915,
+      "transactions": [
+        {
+          "signature": "2MfKhKLGEb1FJ15PeUGxRTtRYX6BKNnbJLifUw4orfW7XK4QidEtfxSRudZRxkUdSPZJ8ebdccLmnNozrsyof91T",
+          "timestamp": 1773084440000,
+          "slot": 405316877,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 5910.735434288,
+          "solAmount": 0
+        },
+        {
+          "signature": "x5AhEfiF3QnBkDG1nPRYbDdU6bVkgTyXjcbpyTo2Exjba5wGmCHJRHKhRXNT5hkihNmWyyj2UP5DYV4yXkqkK2o",
+          "timestamp": 1773085922000,
+          "slot": 405320640,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 808.500080702,
+          "solAmount": 0
+        },
+        {
+          "signature": "4geSHVEQEegh4d4baSAQHRuabwQcW4BtdkBEELRy1hFySjDTiNcScxxYKznXByaZEomysoE5N9nPmED3XLA6Egbf",
+          "timestamp": 1773099274000,
+          "slot": 405354530,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3629.972789298,
+          "solAmount": 0
+        },
+        {
+          "signature": "UkJJPv8RSicFKCkXsy1sezTQkHNJ3punjT1es3m6SQUVmjD3jcrnhHwNaKKUT2g7Cx9MPmPEkAVXtSjJMYrBF3W",
+          "timestamp": 1773100737000,
+          "slot": 405358241,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 642.054171654,
+          "solAmount": 0.001005958
+        },
+        {
+          "signature": "VuDaAwWaxcaoztRWMDrMjLtg3HYbfM9RboyAU1cSsKdcPUyKqb2MWvUgUNPXpqaqPddUJuud8Uz85BNEL71SD31",
+          "timestamp": 1773103410000,
+          "slot": 405365008,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 4233.49569184,
+          "solAmount": 0
+        },
+        {
+          "signature": "CqbfaRDQn2iX95ZE2XeoVZoxWNeeaTxYUAq934WASFEMgremrpCsX2ZGLA5VyWf6oK55jPnFrJAShTR1Hf5cB6E",
+          "timestamp": 1773107603000,
+          "slot": 405375633,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 1668.208710434,
+          "solAmount": 0
+        },
+        {
+          "signature": "36vvGT22bpiT99oT7sAGLink4HFAwY8wdSWGu7WXV9rpMpjbcQFvxeDBELsNePUMaJvJH964uLV7XE87MbShEZXQ",
+          "timestamp": 1773107615000,
+          "slot": 405375664,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 4170.94072843,
+          "solAmount": 0
+        },
+        {
+          "signature": "5LZgLGD7UeuttgUDFyrvhD7NvvWRQY8DN15kaXwzJV6ze3VptzXJGtdnNxgN3bJeN6pijd9P2YZLcH1UFuTb6etT",
+          "timestamp": 1773107616000,
+          "slot": 405375668,
+          "signer": "CL4Q9icz5SiTvjQiVJ9d2YaBg7cHpbkeS7fNyHAvpSAg",
+          "type": "buy",
+          "tokenAmount": 3640.928440816,
+          "solAmount": 0.014275596
+        },
+        {
+          "signature": "4t5tStJE6KDWJEgRajYYMtxo8cjAu3ZGjwLjJ1r7PwMFwHACswoTfyn4J6GDsqrgJnv67yVroHXMp5xtkKh1H4ci",
+          "timestamp": 1773107616000,
+          "slot": 405375667,
+          "signer": "2n8dSHF8W3X7B4Jd8SvSiuZadq1xnPUAP4M4eeWczSPj",
+          "type": "buy",
+          "tokenAmount": 4034.8949101219996,
+          "solAmount": 0.015379285
+        },
+        {
+          "signature": "67itsqfMba7kQkKX9neUzWkuxBCumeaG1NpEH8DAjCp7d2ozMxEz9tAj9CdX4knucnKPwhXQTK27XAtFoEnfKXKj",
+          "timestamp": 1773116240000,
+          "slot": 405397579,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 371.01676374,
+          "solAmount": 0
+        },
+        {
+          "signature": "3y9yY9dh6miq1oobb6whAJcb3Lup88T2UU3KfP7VYegA3ZX5vjuwhWHsgVsvuKrb663M4nEjqsHRkgJs5SSvHZ99",
+          "timestamp": 1773116263000,
+          "slot": 405397640,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 2189.91299172,
+          "solAmount": 0
+        },
+        {
+          "signature": "5PSyvACHA4xqDDpGu7ud9UqevS3jd4E3xsFWVYLqVJkdm9imfF1ouwmbvy6H4CYMz5nx1CefCKCTrBBJYCv3KWf5",
+          "timestamp": 1773117978000,
+          "slot": 405402003,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 645.647819438,
+          "solAmount": 0
+        },
+        {
+          "signature": "3BVtr2SPi2mRx7btvC2JkmRNWVxwwgakTKU4fw816qTVUXtviPEnE25SUD2LwEqdmZBJxsFY2mVxPbmrg6cD349Q",
+          "timestamp": 1773119208000,
+          "slot": 405405130,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 196.098042912,
+          "solAmount": 0
+        },
+        {
+          "signature": "3oPBSKBDgL5LsafdKEdW2DAHme355cV2hDekApNGUyexkzCgFhHZuPDr917z15zQAY1mC8itAqcvNYNz8dzbFkt1",
+          "timestamp": 1773122210000,
+          "slot": 405412778,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 978.209172286,
+          "solAmount": 0
+        },
+        {
+          "signature": "5NKm4M121esr4HnTctWWtTkMQuyw6ztp9yQHtoUBxXaSQfiyTMZAktoKr45WWhtgbz5iP6pDgcCTPbpexjKFYpic",
+          "timestamp": 1773129849000,
+          "slot": 405432096,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 59.231077732,
+          "solAmount": 0
+        },
+        {
+          "signature": "3qgQdCJ24hZEhwvyR4ns7i5ckNRzqH3Eo6qXRBM4j6VntDUYTHd1wQcFW7aouwmmSrVzK7AqCxP1pne1aVxExizH",
+          "timestamp": 1773130269000,
+          "slot": 405433159,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 439.860713036,
+          "solAmount": 0
+        },
+        {
+          "signature": "41nmCsDkTUqigs4WaD6BXrwZbU6HsWyHo61je17Zaw2PWuGtCEgL8DQAfW1k9HMu7vpk1hvV2217E5jMxGgth5ic",
+          "timestamp": 1773131489000,
+          "slot": 405436262,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 12412.558418622,
+          "solAmount": 0
+        },
+        {
+          "signature": "i7oFuE4ddFZqg6i8NidH5iWMSQq9KwKUwK7QdwJE1xkNDeJEWUuDLFhUfkaU5bp8fAfbQhZpmqSQqPZHPMnGX8L",
+          "timestamp": 1773131779000,
+          "slot": 405436993,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3625.353049168,
+          "solAmount": 0
+        },
+        {
+          "signature": "o7kZs2Tc4ZyXWPNrZCZdJRp6vhD9A5XQiBho16QSH9V3uP66hUwideHnfDgFroMrfAReLECeGwMeutraJzHePSd",
+          "timestamp": 1773131858000,
+          "slot": 405437195,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3622.0847960520005,
+          "solAmount": 0
+        },
+        {
+          "signature": "2GiZzDQFEf36pFeQnpFmignYyGDKNgncW6fAtbxYuxubVrcqQmkUHwwjMn5F89QPCtCmVXRZ5owiqmBeqdARMDEf",
+          "timestamp": 1773132759000,
+          "slot": 405439470,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3620.49217361,
+          "solAmount": 0
+        },
+        {
+          "signature": "RMs38nYt4RQVPbvDFBQNk2ewa4GVPEJpyVJqNmsHBuumQwaWXmyNWHkiGPpfDqzGKXbXLcegaNtuz2atAKBF1FL",
+          "timestamp": 1773142757000,
+          "slot": 405465245,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 953.23481459,
+          "solAmount": 0
+        },
+        {
+          "signature": "5x52A2CndYdLNaK8J5gX9q9qeZLV8DzJFYYtXYkL3V8bjPaBVFAC5wRoC3nt1ipuBmvytTqHoDT7ZaNzmrgbuHyw",
+          "timestamp": 1773144919000,
+          "slot": 405470800,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 1387.386444166,
+          "solAmount": 0
+        },
+        {
+          "signature": "ag9HZVTTtmt35Utm8pBGfRLhrKydf3BRaicY7zhqC7QNpf4Xg2jhGkkpdDXamuHMLsohiuJVmnc7gePDSxvXBY1",
+          "timestamp": 1773150228000,
+          "slot": 405484498,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 1177.826284182,
+          "solAmount": 0
+        },
+        {
+          "signature": "5TwfLnQxywpMyzfuydt3kBMLE8FdvGYG7gNANDxqQVgWbHKDtfotVkBim5e1Z2TWaWzotMTAoNQkv8RLCzPMWjfu",
+          "timestamp": 1773152513000,
+          "slot": 405490358,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 2598.876646812,
+          "solAmount": 0
+        },
+        {
+          "signature": "4eNBhm4vEub35RpYzabHj62AjUJgWVYogD1PzbSTZYUAR27dj4VjviFyF94ZnCzPaBH7Uec15TveUGMuL5VE8jmy",
+          "timestamp": 1773154989000,
+          "slot": 405496719,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 612.028927888,
+          "solAmount": 0
+        },
+        {
+          "signature": "2gNTfdynSV5H9HvYD9RN5328px6oNFDqNWWJFz3m7udvfc4NbLLazsw9j3JuCcRjjvhkDkGSuLJkXMmGa8WY4aCS",
+          "timestamp": 1773160068000,
+          "slot": 405509803,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 1681.452362336,
+          "solAmount": 0
+        },
+        {
+          "signature": "3zvhudrqRJNnz8khyBVHtCWeKjSxWLdUEGbfeFVUzSQ1oDGXYY56dgamXPdcUosYN7r4c7Yj2mVYEaFQ8WQSAXSN",
+          "timestamp": 1773164241000,
+          "slot": 405520414,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3724.623735382,
+          "solAmount": 0
+        },
+        {
+          "signature": "4RUPm8ATzRdVmQAZ8yjc4LJoGfXjMEL24iqweZCnRwra8E9mnjMNnudbDGih2EdeaTvtkd36tf8aEAAfkBhxG2Ej",
+          "timestamp": 1773164293000,
+          "slot": 405520550,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3724.713855494,
+          "solAmount": 0
+        },
+        {
+          "signature": "664j9fcHmeu2oxdfFf5STuRi1qjrMdK3siebb6qLarh53DQz4Pw3iPrZRhGZu3kaHyto3676fnxLMPCsWtRV7DV9",
+          "timestamp": 1773164298000,
+          "slot": 405520563,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3724.4229039059996,
+          "solAmount": 0
+        },
+        {
+          "signature": "2VyRGeq7QAiLUbgP4w8s9EJXg775vjW1PeMnUwSrZQGEK3y9syhHuFRBois8tNEdKMnAPbLdd8ytT9oJrB1UghMN",
+          "timestamp": 1773166225000,
+          "slot": 405525479,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3722.328136864,
+          "solAmount": 0
+        },
+        {
+          "signature": "2xkvzbvgsACH671VUxJVw5YUkjwuk4T4u2mz8iaMSFpVBhM6YycSEXbQfrikBQBuNnEyNjgfinEsvybwyhAGwcme",
+          "timestamp": 1773166529000,
+          "slot": 405526260,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3705.076074992,
+          "solAmount": 0
+        },
+        {
+          "signature": "46X3Ej7Zoym9ogc7kubM8YdRRykkb8ZVkNnr59asT1wPxiwjfSgqpMhzqbzo1eNoYZZxfqmRJxhaNTjJuCBV17sR",
+          "timestamp": 1773168351000,
+          "slot": 405530946,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 248.028768076,
+          "solAmount": 0
+        },
+        {
+          "signature": "2nTr55fx8ZaAjqhq5TB7Y1nL8rmh7PthSY3AcSexHQVyWc8nd4dsMUKPRQWgfyVqpSFbsMBpufGi4rwfGu4q1XR4",
+          "timestamp": 1773168465000,
+          "slot": 405531236,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3682.671087272,
+          "solAmount": 0
+        },
+        {
+          "signature": "59g8J8FCVps6CVMqSu2rjRbxpSkPxYd7hVMNwQUas37T5EM2sPbPFxQVD9KDBf4xN8rfpvH6Q7JLg1Zm97YXsDN8",
+          "timestamp": 1773170547000,
+          "slot": 405536535,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 3678.4376721179997,
+          "solAmount": 0
+        },
+        {
+          "signature": "3q6GQ5KjW8chNHebq2XLVbMqR47mH2EE4cPYkBiXtEmJt3o483BrPZmbDw1jo92Tbm8oi6PiqLNzCxqfh4Z7PvXx",
+          "timestamp": 1773180917000,
+          "slot": 405563052,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 388.908911722,
+          "solAmount": 0
+        },
+        {
+          "signature": "3hZX4okHUPEUXLpRocLMdA3Fyb8zEJe6Phpm6fQAS4wPJKVebYph4ZL9D91dJXf3QQ36zooNDhiD8T1kFDQeqEux",
+          "timestamp": 1773190625000,
+          "slot": 405587914,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 2298.816786466,
+          "solAmount": 0
+        },
+        {
+          "signature": "wJJK4wvbVJGxVgf2GMhdH6mZHNFmFZp8H9z46WTL3mJVQ3PPxZgdWESUytFR3xsNUS92jXLmBeWovKv5r2nhPut",
+          "timestamp": 1773204802000,
+          "slot": 405624336,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 5953.33409069,
+          "solAmount": 0
+        },
+        {
+          "signature": "AtJ5HnKThnSr8xqv4EJFwnnYbkA7yNmxtchMFkgbyppKrzgHqSneaik3zrYaKKuADbqzuXxgMPfhUp3fX1W9WsD",
+          "timestamp": 1773214539000,
+          "slot": 405649313,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 1076.823558892,
+          "solAmount": 0
+        },
+        {
+          "signature": "2a7Ypc648RwjxMLi8h1FmbGqausLXHDiaoFdAxkjvUtrgE44b8XXMd1eTTj29J7ADQSFwvgbPpYQpwrJ2RUPPQex",
+          "timestamp": 1773217437000,
+          "slot": 405656784,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 283.436626034,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_7",
+      "wallets": [
+        "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+        "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP"
+      ],
+      "totalTokensBought": 82614.702931436,
+      "supplyPercentage": 0.0017404189189968485,
+      "transactions": [
+        {
+          "signature": "SWcrgDUdZE7kg2MNtNtvKX1eoFg6mSgTJ9Hqf2NDk3Kw1aH38U1wAz2j1zG1D8gRa4z3xSciMrMipDh3eQherUX",
+          "timestamp": 1773084308000,
+          "slot": 405316540,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 2128.04380495,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "5EQSeUNsBoj5kWfcxqVDFwX1jQpuJFANww8DUmDdPjd4YRbAMqfMjGydNGk8DsQwgnTLRFpUaEUvG6KiiAvfmy1D",
+          "timestamp": 1773084325000,
+          "slot": 405316585,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 2132.8352992259997,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "hA3sp1Zxe4XatHmfGJoiDBTUDhCH5A5uyZGEsZYnyrt4NQuujiqTmh18VhbxSB8kRj5PQxr6UY6C3WL1zrGaJtS",
+          "timestamp": 1773084349000,
+          "slot": 405316646,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 2135.9160352910003,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "49pfp7c3rNoyPXH6zxX1vdM6cpzx6gwoX8SeKrgDxteCcfY5NeArxNSoZd76dk97AixqAT12GzzNMdz3J948aQHx",
+          "timestamp": 1773107569000,
+          "slot": 405375550,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 235.70326809800002,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "qmSnrkhPiik7XDmMkp56wEKDWnsdz5SPQvuT9zDfeGPkCG8hhj48RepszSCDFutp1qJkjcRUE2wX5CvjeSG1yLD",
+          "timestamp": 1773110105000,
+          "slot": 405381988,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 6725.518095691,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "21fmreGu9MCfhMcDPiemkAuhzLZfxVmWMiXJvSjMY1Jw7mtBtvdSCGZWCCBA9DhsCNyE7CnAoYWD38iCSpyUQRrA",
+          "timestamp": 1773110105000,
+          "slot": 405381987,
+          "signer": "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP",
+          "type": "buy",
+          "tokenAmount": 4754.187551595,
+          "solAmount": 0
+        },
+        {
+          "signature": "2S37aeQNh1XPD8i7PwCHW7HHfnt2mQKmtvr34vk5DwmUinFeZFwiuQzRap6AAwZbMWwRVjD4Ya45Dwve8s6vYtRi",
+          "timestamp": 1773110182000,
+          "slot": 405382182,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 6741.120414633,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "4dH8DY1NNnmWPUq36K2o45LoRpaodn92cP3i8e6NZRNWbWVPzuYZDQsgDUDHFkVqP3JHVWWJqcnsNWFhPhuWPwy1",
+          "timestamp": 1773130116000,
+          "slot": 405432777,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 2012.980301024,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "5k2McfCLAY8kBVqftyzDNPn3sjRQyixcMz2wtdiTYNc7sLM9weYfkYiYoAugjfxgYyFyZW4GzpC4MLAZ9eAvXqVB",
+          "timestamp": 1773153721000,
+          "slot": 405493475,
+          "signer": "SUPErMoycPz71hmZXr78P7cXFYQhdpV39Roeoe2DxUC",
+          "type": "buy",
+          "tokenAmount": 2105.0548931060002,
+          "solAmount": 0.000001
+        },
+        {
+          "signature": "jxXUhQtEzWGy4HcWBVbG6Drh58LeKAsQeg2abukqBbmuaGRwGGVR3pGp9QsTQ9nsh8g4gBmK4erimvoC7JeNxgy",
+          "timestamp": 1773178634000,
+          "slot": 405557197,
+          "signer": "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP",
+          "type": "buy",
+          "tokenAmount": 49887.344968674,
+          "solAmount": 0
+        },
+        {
+          "signature": "2KJM11WspVGbn9dFU8ZMeeyEfoj3otXor93eXX6Wc119Co8Qt8gGSoYfgwADmMaLcBnVXQZZpLTZx32fC3vdQtke",
+          "timestamp": 1773188134000,
+          "slot": 405581541,
+          "signer": "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP",
+          "type": "buy",
+          "tokenAmount": 3755.998299148,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_8",
+      "wallets": [
+        "31VwvcGbtULdcrtERESVGHPbamuik6bPbkRQwAFjDo83",
+        "CEPF4vR7vMFFBvQYaEkfkDhJ3BiStFD2ctsYfN9FjjZ5"
+      ],
+      "totalTokensBought": 1664.281400788,
+      "supplyPercentage": 0.00003506091208570862,
+      "transactions": [
+        {
+          "signature": "FF2qu1yaHcvQgRDWkvrQSNk2eUCawtLyAiWhz1ymTbvuytEtxv8sv4JosendM4BxL4Stb45hBcjLSkzVqDzhwvS",
+          "timestamp": 1773147473000,
+          "slot": 405477413,
+          "signer": "31VwvcGbtULdcrtERESVGHPbamuik6bPbkRQwAFjDo83",
+          "type": "buy",
+          "tokenAmount": 830.394680024,
+          "solAmount": 0.01111784
+        },
+        {
+          "signature": "4r3r7Rn6Ge5os79ocFtNdupXkbUdMfQQPRoT96q4LxB2wCpbawubePukaMc3VvQzYzKSikP9iqkbCn2ryC5ciLoM",
+          "timestamp": 1773147473000,
+          "slot": 405477412,
+          "signer": "CEPF4vR7vMFFBvQYaEkfkDhJ3BiStFD2ctsYfN9FjjZ5",
+          "type": "buy",
+          "tokenAmount": 833.886720764,
+          "solAmount": 0.01111784
+        }
+      ]
+    },
+    {
+      "id": "bundle_9",
+      "wallets": [
+        "A9U3M1CKjhr9B7jbhN9tUj4HkwhBt88yp2TihndHUL47",
+        "7zfZS1MjTTN8UwbGdozsmc7Jm9wbSKwL3FxoTH6Du6nt"
+      ],
+      "totalTokensBought": 29.400726984,
+      "supplyPercentage": 6.193762085870074e-7,
+      "transactions": [
+        {
+          "signature": "z94dnrNmknw3o2bBnXRqBkPg4XPV1g4WX5UccRyDcMtiG9FTvhcA8KHQJqXNp3mcUxdfuAoi7PTxQEk9PxTKj4W",
+          "timestamp": 1773210346000,
+          "slot": 405638542,
+          "signer": "A9U3M1CKjhr9B7jbhN9tUj4HkwhBt88yp2TihndHUL47",
+          "type": "buy",
+          "tokenAmount": 0.380006014,
+          "solAmount": 0.00611884
+        },
+        {
+          "signature": "2xKc58E4f8UdrKZ8sHxAnvrhy57VoEzh2dhciw9yo672mWJG3mPVrFYfamsd9Hgrh4JMhXtTPeEkja5kqxxbyG5B",
+          "timestamp": 1773210347000,
+          "slot": 405638543,
+          "signer": "7zfZS1MjTTN8UwbGdozsmc7Jm9wbSKwL3FxoTH6Du6nt",
+          "type": "buy",
+          "tokenAmount": 29.02072097,
+          "solAmount": 0.00621784
+        }
+      ]
+    },
+    {
+      "id": "bundle_10",
+      "wallets": [
+        "4TSkQPdkYCVS5nCgVH4fjwaVeuokp2dCt58FaHLMRC4r",
+        "5jDTSvkJ3qDYpm9wMs9gne84YmDpYuLUjEqqTs87Qb5i"
+      ],
+      "totalTokensBought": 417603.30476781,
+      "supplyPercentage": 0.008797522310970442,
+      "transactions": [
+        {
+          "signature": "24FMrcXEMXMbrPKxKsNQHf4RLvkH5vRToD5zqpQcxAW4iDbf12yjGdPsGfpsa12ge7oZAmyGCgUn7qsb4tb7V4V8",
+          "timestamp": 1773075872000,
+          "slot": 405295145,
+          "signer": "4TSkQPdkYCVS5nCgVH4fjwaVeuokp2dCt58FaHLMRC4r",
+          "type": "buy",
+          "tokenAmount": 35770.913875822,
+          "solAmount": 0.10895712
+        },
+        {
+          "signature": "1R7RaYcKnJ3C4SigNjUnCdJf9wVF5cR1rooLyaS1wWFuEYfHa97PAebkt91PrUfiJeC5Pq9UHBytGPu7oGKEWDs",
+          "timestamp": 1773075883000,
+          "slot": 405295173,
+          "signer": "5jDTSvkJ3qDYpm9wMs9gne84YmDpYuLUjEqqTs87Qb5i",
+          "type": "buy",
+          "tokenAmount": 23500.423507014,
+          "solAmount": 0.00203928
+        },
+        {
+          "signature": "66xXfdatALVPkeik5yPhuJ2cx4xRUctKp7RTM12nTmDZNnnSkuiYTco5gSyvVEwNJvLLe6r1MS85Wz7Hqf1G5cqm",
+          "timestamp": 1773133794000,
+          "slot": 405442111,
+          "signer": "4TSkQPdkYCVS5nCgVH4fjwaVeuokp2dCt58FaHLMRC4r",
+          "type": "buy",
+          "tokenAmount": 358331.967384974,
+          "solAmount": 1.01615712
+        }
+      ]
+    },
+    {
+      "id": "bundle_11",
+      "wallets": [
+        "BpZpRbuyiqNrdnxnWQrzN5cX8g3ymaoJ4qB5TJmUsMGk",
+        "H6sWJFy6iaZF4Jb9Ue8Bxb5htw57DnMKb3s2rZG6GXpX"
+      ],
+      "totalTokensBought": 877146.527173926,
+      "supplyPercentage": 0.018478580161364857,
+      "transactions": [
+        {
+          "signature": "3Qcb5861ywnT5ffR4BhCVrcKaTCzdPPrbN3Pe9uejVK2EBPq7Kfzs84srfgfsr1dbwvnNSEEusozB7KdhLfApvKN",
+          "timestamp": 1773076541000,
+          "slot": 405296836,
+          "signer": "BpZpRbuyiqNrdnxnWQrzN5cX8g3ymaoJ4qB5TJmUsMGk",
+          "type": "buy",
+          "tokenAmount": 209248.428218818,
+          "solAmount": 0.0000025
+        },
+        {
+          "signature": "4EHCvhwFMYXRU3ZGADzhmmSCX8a4VDWAPsx1AhKiEcn7oKPAHvRnMgogPzwAyVs2vt7HtsQebM2jSvGReamtUdry",
+          "timestamp": 1773076841000,
+          "slot": 405297600,
+          "signer": "BpZpRbuyiqNrdnxnWQrzN5cX8g3ymaoJ4qB5TJmUsMGk",
+          "type": "buy",
+          "tokenAmount": 211069.484337848,
+          "solAmount": 0.00012644
+        },
+        {
+          "signature": "3YRoJLvRXZM8DS3opFHHfzAfiJA2Bz85rDtXTwcXt8PnV4dbMz9E86EZN4fWq7cCHCeLpVM9yr6Y33CXtAo9mBb9",
+          "timestamp": 1773076867000,
+          "slot": 405297665,
+          "signer": "H6sWJFy6iaZF4Jb9Ue8Bxb5htw57DnMKb3s2rZG6GXpX",
+          "type": "buy",
+          "tokenAmount": 35718.407734032,
+          "solAmount": 0.10697384
+        },
+        {
+          "signature": "3UsFrg8Z4zPZWcNH9GxtpcS9CHXWSVBdPYaiDAjrjwG4SUrA5yVxeHbinz622Za4zj1ZLtsPGnpKiNDgzjPyufBJ",
+          "timestamp": 1773077263000,
+          "slot": 405298672,
+          "signer": "BpZpRbuyiqNrdnxnWQrzN5cX8g3ymaoJ4qB5TJmUsMGk",
+          "type": "buy",
+          "tokenAmount": 209595.542533696,
+          "solAmount": 0.000119677
+        },
+        {
+          "signature": "2o5PtfXdgwgPxMpqF51fwhMJaWuxMmpU2vWoA1Z8gaKWhRfV1Mqd3ZXGgjBvtCvpnYTWJVQa7m85XcouKshEHRDe",
+          "timestamp": 1773077998000,
+          "slot": 405300528,
+          "signer": "BpZpRbuyiqNrdnxnWQrzN5cX8g3ymaoJ4qB5TJmUsMGk",
+          "type": "buy",
+          "tokenAmount": 211514.664349532,
+          "solAmount": 0.000006845
+        }
+      ]
+    },
+    {
+      "id": "bundle_12",
+      "wallets": [
+        "mega1e34bGjY7Wft9eDVPJXSNxgtNgggbDH1UsSJAf4",
+        "2ifeF4bVR6z844uMqpRWSBXzhUQRVz7sLzqrNiN5CSR3"
+      ],
+      "totalTokensBought": 994.3414586480001,
+      "supplyPercentage": 0.000020947490279183667,
+      "transactions": [
+        {
+          "signature": "3RmVfooKegVUkD3fHfvFwQhfcaVFfxeCd3Arot5Mr48HAN4hRqSGN2DDFC3xP2fGAXmkyeCSVRURyYgdep7swmwA",
+          "timestamp": 1773113230000,
+          "slot": 405389934,
+          "signer": "mega1e34bGjY7Wft9eDVPJXSNxgtNgggbDH1UsSJAf4",
+          "type": "buy",
+          "tokenAmount": 591.4223355,
+          "solAmount": 0
+        },
+        {
+          "signature": "5xjjyKuyGYawPS1QTp7yRM9PDuGNUg7mSLE38KzXxtJEKW1j7XE6NKTA391ejb8boJceDsuFN6v2mEcHnYKmJN1e",
+          "timestamp": 1773113251000,
+          "slot": 405389984,
+          "signer": "2ifeF4bVR6z844uMqpRWSBXzhUQRVz7sLzqrNiN5CSR3",
+          "type": "buy",
+          "tokenAmount": 105.482891538,
+          "solAmount": 0.000007516
+        },
+        {
+          "signature": "59EUrezrnV8PtsvnmWvRcmVf6goXWSXk7CwWiTtZ1eB2obspq9rLReUCRsauqeH3AFVC5BBYeR9sy8tojZhZwwzQ",
+          "timestamp": 1773139481000,
+          "slot": 405456761,
+          "signer": "mega1e34bGjY7Wft9eDVPJXSNxgtNgggbDH1UsSJAf4",
+          "type": "buy",
+          "tokenAmount": 297.43623161,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_13",
+      "wallets": [
+        "oQDBHhqxpiXRXxX2CpwEEVsqLxWZ3BkVWUHPLKY8rXM",
+        "HpcULgPfrWeXy9GEJyXE5xjg5oBjD2DTbgVyKXeKJfvd"
+      ],
+      "totalTokensBought": 12.476702416,
+      "supplyPercentage": 2.628429100510311e-7,
+      "transactions": [
+        {
+          "signature": "51uxpp9z75XU7DrTXLs2mL4LihGodn95Mf4z9rL3UjmBfXnb1RSti7aHtdoheXCtHLfSgvHZA1W2JpKT3U6akoXM",
+          "timestamp": 1773148355000,
+          "slot": 405479664,
+          "signer": "oQDBHhqxpiXRXxX2CpwEEVsqLxWZ3BkVWUHPLKY8rXM",
+          "type": "buy",
+          "tokenAmount": 4.158910148,
+          "solAmount": 0.004094058
+        },
+        {
+          "signature": "5GhQawddjSndE3m6hpdE53WLsPBtr8p5sPSgrM2u2rDxdc6hSZjZECrkMRcH1PJSKfsiYUe1JTG2yyTFdNgpjxrE",
+          "timestamp": 1773148368000,
+          "slot": 405479697,
+          "signer": "HpcULgPfrWeXy9GEJyXE5xjg5oBjD2DTbgVyKXeKJfvd",
+          "type": "buy",
+          "tokenAmount": 4.158900806,
+          "solAmount": 0.004094035
+        },
+        {
+          "signature": "59fBfiLqtVmuNuaWHqJAAyQKvs4ZFtdvhSrtZaE1n8TuwFoEyvYvsaG2du86kxbivYVBbVYC6JjNTHaoV3HL5oZ7",
+          "timestamp": 1773148463000,
+          "slot": 405479946,
+          "signer": "oQDBHhqxpiXRXxX2CpwEEVsqLxWZ3BkVWUHPLKY8rXM",
+          "type": "buy",
+          "tokenAmount": 4.158891462,
+          "solAmount": 0.004091941
+        }
+      ]
+    },
+    {
+      "id": "bundle_14",
+      "wallets": [
+        "DTd6NAANuTyyWisitMyktbKRDLFMVTaLKLK3eH4ruDWu",
+        "3wfNaBuUpCZLuk9PPE5VTv6xVhvjDt1GNEwws8kt52GP"
+      ],
+      "totalTokensBought": 95404.317210139,
+      "supplyPercentage": 0.0020098538484645545,
+      "transactions": [
+        {
+          "signature": "3t3ja5z87TbpANe2mcRGsmu5PWetEAXfsTGc94z9yKqf9RVTTx5GFgHLESCKYgxVvn1PXD9AVJagvojz9kcFeqcD",
+          "timestamp": 1773163036000,
+          "slot": 405517345,
+          "signer": "DTd6NAANuTyyWisitMyktbKRDLFMVTaLKLK3eH4ruDWu",
+          "type": "buy",
+          "tokenAmount": 91680.429089093,
+          "solAmount": 0.51121784
+        },
+        {
+          "signature": "WBAWvR9kcxmEaHSRyS5XKqh2f2nbPDsTDdvLC6YM565BXod9ggcxL8LagPMz1U1cgybRGV1Jfh8aSBM1LHRsYxn",
+          "timestamp": 1773163066000,
+          "slot": 405517419,
+          "signer": "3wfNaBuUpCZLuk9PPE5VTv6xVhvjDt1GNEwws8kt52GP",
+          "type": "buy",
+          "tokenAmount": 3723.888121046,
+          "solAmount": 0.01611784
+        }
+      ]
+    },
+    {
+      "id": "bundle_15",
+      "wallets": [
+        "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+        "riDi6z4Lzch9FvcEzmkkx9gqCoPniMrTMFchbGaikGq"
+      ],
+      "totalTokensBought": 179146.343022111,
+      "supplyPercentage": 0.003774021737069527,
+      "transactions": [
+        {
+          "signature": "tFjeY7Hc1v5Q2e7WgQwWVwx3cVTHnENFhzZ5WcbvDYDJ5pryQbCJAWZkhDve7cbND1qe3M6edRy35sZTqh8hvgE",
+          "timestamp": 1773074067000,
+          "slot": 405290557,
+          "signer": "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+          "type": "buy",
+          "tokenAmount": 29883.288843045,
+          "solAmount": 0.000008406
+        },
+        {
+          "signature": "ShSnGAvnvUvcXSwqz7owx9pf1UMiZzytyHT4XzdyKjMkSpQ7919tQiwAEof48VX78NKZ4LGxwi8mqvuDHL1SpWM",
+          "timestamp": 1773170501000,
+          "slot": 405536414,
+          "signer": "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+          "type": "buy",
+          "tokenAmount": 46948.226229631,
+          "solAmount": 0.000001803
+        },
+        {
+          "signature": "59Nhwyx1zWFuHb8QqsoqpSpJKbHuqochYLQbRj9dk1WRpVZdAb3RH1enVpo4fT7eTv6vpBpeRgF8rkcEuvyCfTC1",
+          "timestamp": 1773207656000,
+          "slot": 405631659,
+          "signer": "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+          "type": "buy",
+          "tokenAmount": 34179.309610280994,
+          "solAmount": 0.000003901
+        },
+        {
+          "signature": "2gctvUt537ypZdZ2TAGWjfU5YWA3P5LD4wi5w4ntE8Sttm4RmTn9NZU4Yo5bTkiDZvuJvxFb4ro6z6KBXsWnhCkD",
+          "timestamp": 1773207666000,
+          "slot": 405631686,
+          "signer": "riDi6z4Lzch9FvcEzmkkx9gqCoPniMrTMFchbGaikGq",
+          "type": "buy",
+          "tokenAmount": 34179.256154869,
+          "solAmount": 0
+        },
+        {
+          "signature": "3AT5G4nUQ1h7VaonVPL6jBD1nsi6BY5Pxay4thF1fp2u5mCmpVSXu1sHjkkoUkq19qd4atFbmHjHHLyRmqZGnvCe",
+          "timestamp": 1773214663000,
+          "slot": 405649634,
+          "signer": "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+          "type": "buy",
+          "tokenAmount": 25462.648255412998,
+          "solAmount": 0.000004103
+        },
+        {
+          "signature": "2gLQRqGis9DMjK2mDx58NyRiCCDHr1Z8ppjMze6GPdQG8bKCnp2BogZoP2aiPgRxPvewBYu6QX5A5bmPcJ2aJ3xj",
+          "timestamp": 1773214693000,
+          "slot": 405649708,
+          "signer": "9kqgBFnSpUVFXoRTUBWiHGu2LhEJcdXhdFYdSRdwSaYL",
+          "type": "buy",
+          "tokenAmount": 8493.613928872,
+          "solAmount": 0.000009601
+        }
+      ]
+    },
+    {
+      "id": "bundle_16",
+      "wallets": [
+        "DzFuaUHCMagRu2qahb9bmwB3M4fxzgN6ANrjQ3ZWDLT7",
+        "3yhdftcCRBd9R221hZyiNndvSHDkGeKQFPVxhEq3urne"
+      ],
+      "totalTokensBought": 0.761171008,
+      "supplyPercentage": 1.6035359033059166e-8,
+      "transactions": [
+        {
+          "signature": "635ZgqCbYgUCu5MVuhTrkSorCDiTHcMLNJYkftjDnzCKammcavGeCdQA9FxEJbuFjvQz4fmQmh3WMuLCiMDiJspe",
+          "timestamp": 1773210130000,
+          "slot": 405637981,
+          "signer": "DzFuaUHCMagRu2qahb9bmwB3M4fxzgN6ANrjQ3ZWDLT7",
+          "type": "buy",
+          "tokenAmount": 0.380649554,
+          "solAmount": 0.00611884
+        },
+        {
+          "signature": "5cKsZiJJAtLBn3SnmQ3fCqQR61JJgBuw4f1twX7uhJugoh6Mg7Uu55Mnt18XoipibjeyRB2WHNCQUbqWv6sSZZzF",
+          "timestamp": 1773210134000,
+          "slot": 405637991,
+          "signer": "3yhdftcCRBd9R221hZyiNndvSHDkGeKQFPVxhEq3urne",
+          "type": "buy",
+          "tokenAmount": 0.380521454,
+          "solAmount": 0.00611884
+        }
+      ]
+    }
+  ],
+  "devActivity": {
+    "wallet": "5q54JbYaqBmCDZp5vC1YjtennKPxVRfgMNxoBKaAoDhq",
+    "peakHoldingPercentage": 100,
+    "currentHoldingPercentage": 100,
+    "hasSold": false,
+    "soldPercentage": 0,
+    "sellTransactions": []
+  },
+  "mode": "backtester"
+}

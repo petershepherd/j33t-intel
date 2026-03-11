@@ -261,36 +261,41 @@ export function calculateTimingSuspicion(transactions: ParsedTransaction[]): num
 
   const sorted = [...buyTxs].sort((a, b) => a.timestamp - b.timestamp);
 
-  // Calculate inter-transaction times
-  const intervals: number[] = [];
-  for (let i = 1; i < sorted.length; i++) {
-    intervals.push(sorted[i].timestamp - sorted[i - 1].timestamp);
-  }
+  // Only analyze the first 5 minutes of trading
+  // Looking at all 500 txs gives false positives on mature tokens
+  const firstTxTime = sorted[0].timestamp;
+  const earlyBuys = sorted.filter((tx) => tx.timestamp - firstTxTime < 5 * 60_000);
+  if (earlyBuys.length < 3) return 0;
 
-  // Suspicion signals:
-  // 1. Very low variance in intervals (bot-like regularity)
-  const mean = intervals.reduce((a, b) => a + b, 0) / intervals.length;
-  const variance = intervals.reduce((sum, v) => sum + (v - mean) ** 2, 0) / intervals.length;
-  const cv = mean > 0 ? Math.sqrt(variance) / mean : 0; // coefficient of variation
+  // 1. Many transactions in first 10 seconds (pre-programmed bots)
+  const first10Seconds = earlyBuys.filter((tx) => tx.timestamp - firstTxTime < 10_000);
+  const earlyBurstSuspicion = first10Seconds.length > 10 ? 0.8 :
+    first10Seconds.length > 5 ? 0.5 : first10Seconds.length > 2 ? 0.2 : 0;
 
-  // Low CV = suspiciously regular timing
-  const regularitySuspicion = cv < 0.3 ? 0.8 : cv < 0.5 ? 0.4 : 0;
-
-  // 2. Many transactions in very first seconds (pre-programmed bots)
-  const first10Seconds = sorted.filter(
-    (tx) => tx.timestamp - sorted[0].timestamp < 10_000,
-  );
-  const earlyBurstSuspicion = first10Seconds.length > 5 ? 0.7 : first10Seconds.length > 3 ? 0.3 : 0;
-
-  // 3. Same-slot transactions from different wallets
+  // 2. Same-slot txs from different wallets (ratio-based, not absolute)
   const slotCounts = new Map<number, Set<string>>();
-  for (const tx of sorted) {
+  for (const tx of earlyBuys) {
     if (!slotCounts.has(tx.slot)) slotCounts.set(tx.slot, new Set());
     slotCounts.get(tx.slot)!.add(tx.signer);
   }
   const multiWalletSlots = [...slotCounts.values()].filter((s) => s.size > 1).length;
-  const slotSuspicion = multiWalletSlots > 3 ? 0.9 : multiWalletSlots > 1 ? 0.5 : 0;
+  const totalSlots = slotCounts.size;
+  const slotRatio = totalSlots > 0 ? multiWalletSlots / totalSlots : 0;
+  const slotSuspicion = slotRatio > 0.5 ? 0.8 : slotRatio > 0.25 ? 0.5 : slotRatio > 0.1 ? 0.25 : 0;
 
-  // Combine suspicion scores (max of all signals)
-  return Math.min(1, Math.max(regularitySuspicion, earlyBurstSuspicion, slotSuspicion));
+  // 3. Interval regularity (only with enough early data)
+  let regularitySuspicion = 0;
+  if (earlyBuys.length >= 8) {
+    const intervals: number[] = [];
+    for (let i = 1; i < earlyBuys.length; i++) {
+      intervals.push(earlyBuys[i].timestamp - earlyBuys[i - 1].timestamp);
+    }
+    const mean = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+    const variance = intervals.reduce((sum, v) => sum + (v - mean) ** 2, 0) / intervals.length;
+    const cv = mean > 0 ? Math.sqrt(variance) / mean : 0;
+    regularitySuspicion = cv < 0.2 ? 0.7 : cv < 0.4 ? 0.3 : 0;
+  }
+
+  // Weighted combination
+  return Math.min(1, earlyBurstSuspicion * 0.4 + slotSuspicion * 0.4 + regularitySuspicion * 0.2);
 }

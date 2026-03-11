@@ -1,14 +1,14 @@
 {
   "schemaVersion": "0.1.0",
   "tokenCA": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
-  "analyzedAt": 1773218003679,
-  "analysisDurationMs": 9168,
+  "analyzedAt": 1773219141422,
+  "analysisDurationMs": 11816,
   "metadata": {
     "ca": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
     "name": "Popcat",
     "symbol": "POPCAT",
     "decimals": 9,
-    "deployer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
+    "deployer": "4xrfGiXK7aEoik1LRb3pdRtyzq1Gp63eatQsRm1VoC1j",
     "createdAt": 1702415044000,
     "hasFreezeAuthority": false,
     "hasMintAuthority": false,
@@ -18,136 +18,136 @@
       "telegram": "https://t.me/popcatsolana"
     }
   },
-  "patternType": "unknown",
+  "patternType": "positive",
   "marketSnapshot": {
-    "timestamp": 1773217994663,
-    "mcapUsd": 49499446,
-    "priceUsd": 0.05051,
-    "liquidityUsd": 3239896.95,
-    "volumeUsd": 179298.56
+    "timestamp": 1773219131174,
+    "mcapUsd": 49854259,
+    "priceUsd": 0.05087,
+    "liquidityUsd": 3255497.02,
+    "volumeUsd": 178085.77
   },
   "entrySnapshot": {
-    "timestamp": 1773209169000,
-    "mcapUsd": 442.19472299999995,
+    "timestamp": 1773209420000,
+    "mcapUsd": 317.39979599999987,
     "priceUsd": 0,
-    "liquidityUsd": 66.32920845,
-    "volumeUsd": 66.32920845
+    "liquidityUsd": 47.609969399999976,
+    "volumeUsd": 47.609969399999976
   },
   "signals": {
-    "liquidityGrowthRate": 2.745560607848214,
-    "buySellRatio": 1.9350649350649352,
-    "bundlePercentage": 0.0020384249902947772,
-    "bundleCount": 49,
-    "top10HolderPercentage": 77.023866441407,
+    "liquidityGrowthRate": 2.7587361229513077,
+    "buySellRatio": 2.0428571428571427,
+    "bundlePercentage": 0.0034402549677576056,
+    "bundleCount": 51,
+    "top10HolderPercentage": 77.02458261369928,
     "devSoldPercentage": 0,
     "liquidityLocked": false,
     "liquidityLockDurationHours": 0,
-    "volumeMcapRatio": 0.003622233671059672,
-    "priceMomentumScore": 0.23333333333333328,
+    "volumeMcapRatio": 0.0035721275087049233,
+    "priceMomentumScore": 0.08333333333333331,
     "hasFreezeAuthority": false,
     "hasMintAuthority": false,
     "transactionTimingSuspicion": 0.9,
-    "uniqueWalletsFirst10Min": 12
+    "uniqueWalletsFirst10Min": 10
   },
   "scores": {
-    "potentialScore": 50,
-    "rugpullRiskScore": 43,
+    "potentialScore": 63,
+    "rugpullRiskScore": 30,
     "confidence": 64,
     "signalBreakdown": [
       {
         "signal": "liquidityGrowthRate",
-        "rawValue": 2.745560607848214,
+        "rawValue": 2.7587361229513077,
         "normalizedScore": 15,
-        "weight": 0.1,
-        "weightedScore": 1.5,
+        "weight": 0.08,
+        "weightedScore": 1.2,
         "reason": "Very low liquidity growth"
       },
       {
         "signal": "buySellRatio",
-        "rawValue": 1.9350649350649352,
-        "normalizedScore": 61.28571428571429,
-        "weight": 0.12,
-        "weightedScore": 7.354285714285715,
+        "rawValue": 2.0428571428571427,
+        "normalizedScore": 82.23809523809524,
+        "weight": 0.14,
+        "weightedScore": 11.513333333333335,
         "reason": "Strong buy pressure"
       },
       {
         "signal": "bundlePercentage",
-        "rawValue": 0.0020384249902947772,
-        "normalizedScore": 90,
-        "weight": 0.08,
-        "weightedScore": 7.2,
+        "rawValue": 0.0034402549677576056,
+        "normalizedScore": 95,
+        "weight": 0.1,
+        "weightedScore": 9.5,
         "reason": "Minimal bundle activity"
       },
       {
         "signal": "top10HolderPercentage",
-        "rawValue": 77.023866441407,
-        "normalizedScore": 10,
-        "weight": 0.1,
-        "weightedScore": 1,
-        "reason": "Extreme concentration — dump risk"
+        "rawValue": 77.02458261369928,
+        "normalizedScore": 40,
+        "weight": 0.06,
+        "weightedScore": 2.4,
+        "reason": "High concentration — includes LP/exchanges"
       },
       {
         "signal": "devSoldPercentage",
         "rawValue": 0,
         "normalizedScore": 95,
-        "weight": 0.08,
-        "weightedScore": 7.6000000000000005,
+        "weight": 0.12,
+        "weightedScore": 11.4,
         "reason": "Dev hasn't sold"
       },
       {
         "signal": "liquidityLocked",
         "rawValue": false,
-        "normalizedScore": 25,
-        "weight": 0.08,
-        "weightedScore": 2,
+        "normalizedScore": 35,
+        "weight": 0.06,
+        "weightedScore": 2.1,
         "reason": "Liquidity is NOT locked"
       },
       {
         "signal": "volumeMcapRatio",
-        "rawValue": 0.003622233671059672,
-        "normalizedScore": 20,
+        "rawValue": 0.0035721275087049233,
+        "normalizedScore": 30,
         "weight": 0.1,
-        "weightedScore": 2,
+        "weightedScore": 3,
         "reason": "Very low trading activity"
       },
       {
         "signal": "priceMomentumScore",
-        "rawValue": 0.23333333333333328,
-        "normalizedScore": 61.66666666666667,
-        "weight": 0.12,
-        "weightedScore": 7.4,
+        "rawValue": 0.08333333333333331,
+        "normalizedScore": 55,
+        "weight": 0.1,
+        "weightedScore": 5.5,
         "reason": "Slight upward momentum"
       },
       {
         "signal": "hasFreezeAuthority",
         "rawValue": false,
         "normalizedScore": 90,
-        "weight": 0.05,
-        "weightedScore": 4.5,
+        "weight": 0.06,
+        "weightedScore": 5.3999999999999995,
         "reason": "No freeze authority"
       },
       {
         "signal": "hasMintAuthority",
         "rawValue": false,
         "normalizedScore": 90,
-        "weight": 0.05,
-        "weightedScore": 4.5,
+        "weight": 0.06,
+        "weightedScore": 5.3999999999999995,
         "reason": "No mint authority"
       },
       {
         "signal": "transactionTimingSuspicion",
         "rawValue": 0.9,
         "normalizedScore": 10,
-        "weight": 0.05,
-        "weightedScore": 0.5,
-        "reason": "Highly suspicious — bundle signature"
+        "weight": 0.04,
+        "weightedScore": 0.4,
+        "reason": "Bot-like transaction timing"
       },
       {
         "signal": "uniqueWalletsFirst10Min",
-        "rawValue": 12,
-        "normalizedScore": 57.2,
-        "weight": 0.07,
-        "weightedScore": 4.0040000000000004,
+        "rawValue": 10,
+        "normalizedScore": 60,
+        "weight": 0.08,
+        "weightedScore": 4.8,
         "reason": "Moderate organic interest"
       }
     ]
@@ -155,10 +155,10 @@
   "filterSettings": {
     "minLiquidityUsd": 500,
     "maxBundlePercentage": 15,
-    "minBuySellRatio": 1.3545454545454545,
+    "minBuySellRatio": 1.4299999999999997,
     "maxDevSoldPercentage": 10,
-    "maxTop10HolderPercentage": 87.023866441407,
-    "minUniqueWallets10Min": 7,
+    "maxTop10HolderPercentage": 87.02458261369928,
+    "minUniqueWallets10Min": 6,
     "requireLiquidityLock": false,
     "rejectFreezeAuthority": true,
     "rejectMintAuthority": true,
@@ -168,187 +168,11 @@
     {
       "id": "bundle_1",
       "wallets": [
-        "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
-        "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC"
-      ],
-      "totalTokensBought": 131.52839383600002,
-      "supplyPercentage": 0.00001342136066059479,
-      "transactions": [
-        {
-          "signature": "izT4ud4Bxd3F3mTz8jzoiRtVC8cs3i2dnhp57cPQBe876hFCHWwGTHrY4b8SrZbs6evABUaKh8o9CXJi6UcPE9W",
-          "timestamp": 1773208569000,
-          "slot": 405633975,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.006258472,
-          "solAmount": 0.006119683
-        },
-        {
-          "signature": "yvfavGN7uFqa6nZQFfHvPXUuSwRVErapZtAGK9HETzGso4La7KmE8LyBbim3cKaPGbBCsT5yyyZp8hzaQZ8E735",
-          "timestamp": 1773208584000,
-          "slot": 405634013,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.006654578,
-          "solAmount": 0.0061198
-        },
-        {
-          "signature": "3oR13eACSk6ZsXHnR3exY5AKWvTgMUBZXKFV5UoigmkRA7p1o1yZ3cHZ6N5KTyyptXAV4peBcQ2UpNXZRUnm1Eey",
-          "timestamp": 1773208601000,
-          "slot": 405634056,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.006258472,
-          "solAmount": 0.006119683
-        },
-        {
-          "signature": "GXG5gkqjdcm8NZNYR8xwSn3GHPDUc1w2iNKkAbZYQhf89jLpNMfQr5aVPPPbcANJavQ6DMgRDhaVp175egsGFTH",
-          "timestamp": 1773208620000,
-          "slot": 405634105,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.00471366,
-          "solAmount": 0.006119228
-        },
-        {
-          "signature": "5nrbcxvw8qamZTdnKSgDMqh9TpWxAdTJEPPeaWaJVxHjr2GFQV73ye6AH6g27tGvaE5DZwevccaiL3QJnArg26QX",
-          "timestamp": 1773208636000,
-          "slot": 405634147,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.006258472,
-          "solAmount": 0.006119683
-        },
-        {
-          "signature": "PAcPReGRCuzHMkC7dSXXNVqs4qfGzvEjFZoyUVhRHqegk2mCjAgEfswzBrPqGxhik9wPZ5JBQ5fttF2MrmFcqvf",
-          "timestamp": 1773208653000,
-          "slot": 405634185,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.005862366,
-          "solAmount": 0.006119566
-        },
-        {
-          "signature": "59vwTz3DB2BYvpcw6B1wqheExfiLyKCrMDjVkhAaqm88FUjmUSvoPYKEC6ULZE2wexzahJDGwcah1Nuwiw6srfpf",
-          "timestamp": 1773208669000,
-          "slot": 405634227,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.00744679,
-          "solAmount": 0.008159314
-        },
-        {
-          "signature": "5rV1DXH4B7MvAxcofKca9DCgSvAp9kVkYCub2efnnCBnrMRqF7UKBqhspurq8q9QYa2YMsfWeEzQZQQMoA4N9ijJ",
-          "timestamp": 1773208686000,
-          "slot": 405634270,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.005070154,
-          "solAmount": 0.006119333
-        },
-        {
-          "signature": "3CLB9WenMF5dDTMbchFtQfmdndTFmpDGMWbnrJ2ZX6hGgwXtLpV2RFbsndceDwpccrJoqiQbTJRw62Y6cK6Dmd1w",
-          "timestamp": 1773208704000,
-          "slot": 405634317,
-          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
-          "type": "buy",
-          "tokenAmount": 22.728567762,
-          "solAmount": 0
-        },
-        {
-          "signature": "2qyEEiNNUraiK7y7GUATBWQoziVucPwRZ7wc43jzguv8CpejybWRKJaYLHUMsC4PERjSxx4pQKZaiGRQuczhXrRW",
-          "timestamp": 1773208704000,
-          "slot": 405634317,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.004317554,
-          "solAmount": 0.006119112
-        },
-        {
-          "signature": "28LtYV9GH8UYhJTJ64GfLMfZeLrFUE1YpsJCvK3f6UNdioE5nt8EPjkoh1Qe6k8K2wV2o4vwrjVmFGxrNpjZEpbt",
-          "timestamp": 1773208718000,
-          "slot": 405634355,
-          "signer": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
-          "type": "buy",
-          "tokenAmount": 0.00744679,
-          "solAmount": 0.008159313
-        },
-        {
-          "signature": "PtpQFhxooVA3seJw4jJvK4P6Qt44HhKsG2jV3azkcaWUoJvojVuRXkaSRad39SRdcNGturAm6JKxWZNDjHKeesK",
-          "timestamp": 1773211496000,
-          "slot": 405641495,
-          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
-          "type": "buy",
-          "tokenAmount": 13.866308926,
-          "solAmount": 0
-        },
-        {
-          "signature": "2AAaLdzUiDZuNJSoAZDixihogGJJGDu5VLzjHMTCVkbVpB7DVs3FEgoMVJsoHQ19GykFDxUCrCB5QRUTdXMsPNxM",
-          "timestamp": 1773216228000,
-          "slot": 405653669,
-          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
-          "type": "buy",
-          "tokenAmount": 39.571153656,
-          "solAmount": 0
-        },
-        {
-          "signature": "2iVUj3kmcmJeHC9Hycauvz5Edt2bAp6BupgBtTjdo3dvcCRsEhza7h8KEHDsgkdUQj399ejGhyg2vNwE8TZ1CP24",
-          "timestamp": 1773216493000,
-          "slot": 405654352,
-          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
-          "type": "buy",
-          "tokenAmount": 55.302076184,
-          "solAmount": 0
-        }
-      ]
-    },
-    {
-      "id": "bundle_2",
-      "wallets": [
-        "DnEi5hMJJZKRy1QSkVxpvqvymv4M6PUshR1r9K2j6cvw",
-        "7fYZqN1E5EVFPKETti1SRa5vJrVCveL4JPzDvnMBVQ63",
-        "5ePvEZx19BZxVvF3nu6gQacoBA9mEFV82eGnRNrnhK23"
-      ],
-      "totalTokensBought": 668.2516361520001,
-      "supplyPercentage": 0.00006818943012420285,
-      "transactions": [
-        {
-          "signature": "5xBgB8Letv2GWDctFhqrvxfkgSWVAqrkT97ekhvvYqND4yJHRRX6NcY35khLUrLESsppyRmUjbnb4puQdKf6t41F",
-          "timestamp": 1773208723000,
-          "slot": 405634369,
-          "signer": "DnEi5hMJJZKRy1QSkVxpvqvymv4M6PUshR1r9K2j6cvw",
-          "type": "buy",
-          "tokenAmount": 603.667901132,
-          "solAmount": 0.000017153
-        },
-        {
-          "signature": "48naHt8QuoFm2xZZbx6SNoJD4hwAFWrFNQxbD6jVgoPbaTgzBHLo8uTVL9Utu5Mv96nWKVMqMXqSbupd2kygUnbW",
-          "timestamp": 1773208723000,
-          "slot": 405634368,
-          "signer": "7fYZqN1E5EVFPKETti1SRa5vJrVCveL4JPzDvnMBVQ63",
-          "type": "buy",
-          "tokenAmount": 33.903855642,
-          "solAmount": 0.01815712
-        },
-        {
-          "signature": "5yfAFBxFeCtLkUCCdLu5gtgByXD3UVwviVM2ZL4WL6VQzrTaicjgFA912PFxd7atvGLPP63WxeZfs8ByWuWMpuoE",
-          "timestamp": 1773208724000,
-          "slot": 405634370,
-          "signer": "5ePvEZx19BZxVvF3nu6gQacoBA9mEFV82eGnRNrnhK23",
-          "type": "buy",
-          "tokenAmount": 30.679879378000003,
-          "solAmount": 0.00000266
-        }
-      ]
-    },
-    {
-      "id": "bundle_3",
-      "wallets": [
         "AJJe9naKAUe6m5s8MSqmQGekSbRQnd3Sgbq6fgtXR8J5",
         "CSUAJvvY4soJbzqAMnzrVBLwrqQDJW11kc2HAR9w4DAh"
       ],
       "totalTokensBought": 1.961553156,
-      "supplyPercentage": 2.001599167585835e-7,
+      "supplyPercentage": 2.001518246329165e-7,
       "transactions": [
         {
           "signature": "4phDUVSXMKeg3Y26XXZGKu5sbMUaMX9P3143M3fUnCRnTkdnpLCfCprsDBe4gviTZiQDRMyrq6B3n7t89tXDAKpj",
@@ -398,23 +222,14 @@
       ]
     },
     {
-      "id": "bundle_4",
+      "id": "bundle_2",
       "wallets": [
-        "411YHHstiBgWwG9vxFobYT3R9eQ5Uczua2YjADEoeyQC",
-        "2XawBAUVLHdU3djkL6NfCxf73Cj965DEEQZ9XB5NeyZZ"
+        "2XawBAUVLHdU3djkL6NfCxf73Cj965DEEQZ9XB5NeyZZ",
+        "411YHHstiBgWwG9vxFobYT3R9eQ5Uczua2YjADEoeyQC"
       ],
       "totalTokensBought": 8.97290205,
-      "supplyPercentage": 9.156087980166484e-7,
+      "supplyPercentage": 9.155717815071727e-7,
       "transactions": [
-        {
-          "signature": "3S3jG3Gdza22gKYdxYQ2zqt3vYfKec3cVhMFcJtsJtFMWNHvyUzaQdRMX2rdrseV6u8FMKaZaaHhKK6r4mrpsdr2",
-          "timestamp": 1773209230000,
-          "slot": 405635673,
-          "signer": "411YHHstiBgWwG9vxFobYT3R9eQ5Uczua2YjADEoeyQC",
-          "type": "buy",
-          "tokenAmount": 3.926382004,
-          "solAmount": 0.009313111
-        },
         {
           "signature": "44HSJREaTZQSUgnXxmA5MaFasQnGcouuVLAJDfdJWhxJBPaZKtJdfbnrJUcioeLxu1niGeFnxMTdCYt14M4JPDeH",
           "timestamp": 1773209230000,
@@ -423,6 +238,15 @@
           "type": "buy",
           "tokenAmount": 0.785518106,
           "solAmount": 0.008388391
+        },
+        {
+          "signature": "3S3jG3Gdza22gKYdxYQ2zqt3vYfKec3cVhMFcJtsJtFMWNHvyUzaQdRMX2rdrseV6u8FMKaZaaHhKK6r4mrpsdr2",
+          "timestamp": 1773209230000,
+          "slot": 405635673,
+          "signer": "411YHHstiBgWwG9vxFobYT3R9eQ5Uczua2YjADEoeyQC",
+          "type": "buy",
+          "tokenAmount": 3.926382004,
+          "solAmount": 0.009313111
         },
         {
           "signature": "28mqNR2mLED3tsyUDTHg1cwSuSPb54cZQrVf2Y4FWjx5W6ERTeYt4VZ5PSTE8AuE6xrRsDqnbHUgfN8GM2V2HXsp",
@@ -445,13 +269,13 @@
       ]
     },
     {
-      "id": "bundle_5",
+      "id": "bundle_3",
       "wallets": [
         "3XorWkBjA8TKAz34QJuaBkBQ41euz1CHCwxCg9P8uucu",
         "FDwQdu4VxCFdjzi82h4mWJbRHcQDa5omv8UKbuu5rriR"
       ],
       "totalTokensBought": 68.860111468,
-      "supplyPercentage": 0.000007026592237514496,
+      "supplyPercentage": 0.000007026308164317836,
       "transactions": [
         {
           "signature": "3zgW3uGRY7N377ypy9G9pKt3Vn8Q4SRkLfeHBpMPYsHsduNhGmdg4TJ9YxJ3HzZUqRLmSAMCko7cqnnhVFZgH55T",
@@ -501,16 +325,16 @@
       ]
     },
     {
-      "id": "bundle_6",
+      "id": "bundle_4",
       "wallets": [
         "2bLXQjWtquMkvRv8vM4vejUXcEAXRuLw4VPnoKGMiRiB",
         "Eu5UG9qbDdT99XYL5zCA5T4wapA5zvqNzdQovDzRjZNV",
         "GtiVQU8fhkZxDHKdyeSJzWpLMCLKaXaMBC1Wm91aGvMo",
-        "ADkzYphfuiBe6d6KYc1VA9tVqu5A2QAjH7259FYHRV1C",
-        "B7q7wFd1XnQb2EMQ25jnfGfycqVPGgKDACp8biTyAXgN"
+        "B7q7wFd1XnQb2EMQ25jnfGfycqVPGgKDACp8biTyAXgN",
+        "ADkzYphfuiBe6d6KYc1VA9tVqu5A2QAjH7259FYHRV1C"
       ],
       "totalTokensBought": 70.394247352,
-      "supplyPercentage": 0.000007183137835016416,
+      "supplyPercentage": 0.0000071828474329469805,
       "transactions": [
         {
           "signature": "4rdDML6howwwq5ypTii8QSEszNPfubyq8BWZLbL9X3ccarE3af9Ky3vLZnbmdRqs9ytGpCdQbUKcZwMtuLwYcZtP",
@@ -540,15 +364,6 @@
           "solAmount": 0.00945712
         },
         {
-          "signature": "41e8uPvP7HrPhWvLXAzSLqHLbWUhmZTDvHYHPTYcAVvbXnp7pVL8FW9wqYtJN5dLXYSMkArVsLKP5sPLfkRSvDWj",
-          "timestamp": 1773210245000,
-          "slot": 405638275,
-          "signer": "ADkzYphfuiBe6d6KYc1VA9tVqu5A2QAjH7259FYHRV1C",
-          "type": "buy",
-          "tokenAmount": 3.390905716,
-          "solAmount": 0.00915712
-        },
-        {
           "signature": "3u2WQXf87XpQ2d8V6XCuSx89xaXPWCjnHwegDT7tY1TxQmQttbDwF6T2mchwDiz9pRCadmqCm2NiBd68jteit651",
           "timestamp": 1773210245000,
           "slot": 405638275,
@@ -556,6 +371,15 @@
           "type": "buy",
           "tokenAmount": 33.91768164,
           "solAmount": 0.01815712
+        },
+        {
+          "signature": "41e8uPvP7HrPhWvLXAzSLqHLbWUhmZTDvHYHPTYcAVvbXnp7pVL8FW9wqYtJN5dLXYSMkArVsLKP5sPLfkRSvDWj",
+          "timestamp": 1773210245000,
+          "slot": 405638275,
+          "signer": "ADkzYphfuiBe6d6KYc1VA9tVqu5A2QAjH7259FYHRV1C",
+          "type": "buy",
+          "tokenAmount": 3.390905716,
+          "solAmount": 0.00915712
         },
         {
           "signature": "5zpYhnmUfvfCeejY89kNfnmQfajH9uz4hoJe3FSrgt1o6guFneCovFPkdj4fhPMpVG7Vdg7XA6f9PjYhpZvcjUNQ",
@@ -587,23 +411,14 @@
       ]
     },
     {
-      "id": "bundle_7",
+      "id": "bundle_5",
       "wallets": [
         "2uR5Nv9PKqefsWW8PZ48wGc36DVd2VvU6Umt2dzAmWMd",
         "4K2vj6HDvFZ99Hgedq7ECpgHQRDsqrEPj9TVJw5rexEW"
       ],
-      "totalTokensBought": 16.228767118,
-      "supplyPercentage": 0.0000016560084877115192,
+      "totalTokensBought": 11.90201627,
+      "supplyPercentage": 0.0000012144510414945693,
       "transactions": [
-        {
-          "signature": "23nXvM5qjJxPzB2UhGicLFj9L2rzjD56qxQ9Cwuxjysj7oYippqmKbonrt6tABwSndgHz43tzfa2odnefpXDobpd",
-          "timestamp": 1773208574000,
-          "slot": 405633990,
-          "signer": "4K2vj6HDvFZ99Hgedq7ECpgHQRDsqrEPj9TVJw5rexEW",
-          "type": "buy",
-          "tokenAmount": 4.326750848,
-          "solAmount": 0.00943312
-        },
         {
           "signature": "kxnYPhfiSLUJWHfkLUjcs99AYiAHwBy4KF1DFUzeV4GZ1nhGawxhz2QEtQuUHeiX6B15PPgVRPpCVdYNKCxutsX",
           "timestamp": 1773208826000,
@@ -634,14 +449,14 @@
       ]
     },
     {
-      "id": "bundle_8",
+      "id": "bundle_6",
       "wallets": [
         "G1ixA46DDz2Co75nPD7d5xRQJ4jAxEtCo6TEf4pLj8CW",
         "DrTUjncy7puok6rX3mj7ChXyr2KFPTaJjWdJMnxhxjkT",
         "FVLiSh3Qx8sYJ7mDhRYMiKytF9znQ5z23SP6gqvAKHpK"
       ],
       "totalTokensBought": 10.42864832,
-      "supplyPercentage": 0.0000010641553981093042,
+      "supplyPercentage": 0.0000010641123761129416,
       "transactions": [
         {
           "signature": "3oyzzMcjMGuGqB2Boy5XBxXwt7tpxhbYSwuNbJHC5joqiZBCK3E1XmvuFinky7Pvm4EVhx3FuC3B2ufVmeDTUuqy",
@@ -691,13 +506,13 @@
       ]
     },
     {
-      "id": "bundle_9",
+      "id": "bundle_7",
       "wallets": [
         "EkPbuZK5tnjRE62pWweL4LjkXa8KqsPZ47YcdMmG3xWu",
         "DTzUDYbh3Dt7XVux2MWZke7BZLS9UbTBKg4auxsJPt7W"
       ],
       "totalTokensBought": 22.284712237999994,
-      "supplyPercentage": 0.000002273966490738865,
+      "supplyPercentage": 0.000002273874558133658,
       "transactions": [
         {
           "signature": "xz2FofHFAC22VDwBQmBduNnTAtgE1WiHJ7kcQQyt1wVKUBZs8xzSTceipgseWousEdL8Z2Z4ofyrHjCY7FKK8dp",
@@ -1089,13 +904,13 @@
       ]
     },
     {
-      "id": "bundle_10",
+      "id": "bundle_8",
       "wallets": [
         "4XVJj56hKdEG9chD1Vgpyr4tEbtK9zgC3kA446q7jUjz",
         "GQWjTQ2fdSwCsmSnLYK44nWZupZhZcynj9tHc3pDMryV"
       ],
       "totalTokensBought": 13.565280562,
-      "supplyPercentage": 0.0000013842222015709427,
+      "supplyPercentage": 0.0000013841662398170235,
       "transactions": [
         {
           "signature": "2YSbj4ZEtXtgq6TPSUpiL5Jb8bF5M9Wv84dprhdeqtsJV7fNUykqnYAdZ5aLHTqgiNGYAH2TsTDYvTmXJ6nq9BoD",
@@ -1136,13 +951,13 @@
       ]
     },
     {
-      "id": "bundle_11",
+      "id": "bundle_9",
       "wallets": [
         "Ae7T27Hm4rqkD5rHfm3rAgRH5f2dtwqLtfWEHePrccBS",
         "5ueY3fD8uDJgsJRq12XaER13JzsaV5NDwFmjEs3FJ39Z"
       ],
       "totalTokensBought": 7.717187345999999,
-      "supplyPercentage": 7.874737281836649e-7,
+      "supplyPercentage": 7.874418919575556e-7,
       "transactions": [
         {
           "signature": "4g8umxsXDjfVyKmAsPNVL9uYnS1JKtkhuGf1sc7ni5pHZMfqZP3hbutU6ZWJkBg6tFjXRLReurUSYHupEaWXadEZ",
@@ -1174,14 +989,14 @@
       ]
     },
     {
-      "id": "bundle_12",
+      "id": "bundle_10",
       "wallets": [
         "4AQTLuHbMg2MwzLvAQMZwgRdjCAzyohKEHGwVBBThFcB",
         "9K4hcgEJSKerfXrHw4aJP1avs2ZVFwm2y1naeFm2fHwS",
         "3qfosAbM48Y1H9VHNyBcYzi7bD8MjeaNEnJpVAuWPgK5"
       ],
       "totalTokensBought": 19.008754246,
-      "supplyPercentage": 0.0000019396826723383127,
+      "supplyPercentage": 0.000001939604254260443,
       "transactions": [
         {
           "signature": "3UiQR6nCV61Dc15P7E5SGW73PsAbvPMHjYNUaGsvZqLNBsiWPCg6MkVNdjTAv2HX8EFjVXuo7zqA9ZBB9qp8Jcp1",
@@ -1249,14 +1064,14 @@
       ]
     },
     {
-      "id": "bundle_13",
+      "id": "bundle_11",
       "wallets": [
         "5d8sujaQuJXDWJukHNRpLoMCyepCVRhBqB4mfppo4CqW",
         "BpJ1bSAg4eT9k8V1unWpXAmXrJnuea1QvHsUugpTnLE5",
         "BYQJKwPd8kAyZHHRuHNWho1G9wJnADnLW15P8JWs31Mn"
       ],
       "totalTokensBought": 26.677880169,
-      "supplyPercentage": 0.0000027222521386121977,
+      "supplyPercentage": 0.0000027221420825792034,
       "transactions": [
         {
           "signature": "4c9ipQroZjgab3pFdfdE9gwZWz2Gz67BysRsLYnws5f6y6n1UM1q9sAFbUfy7rfHF7MwQjJnJJe9xCgRcyNUX2kh",
@@ -1450,14 +1265,14 @@
       ]
     },
     {
-      "id": "bundle_14",
+      "id": "bundle_12",
       "wallets": [
         "F7ffzwzEmAJJv3F5br9DjoLToxaojgycJcTCLvQtVCQ8",
         "Hi71pVSrakGq8KfzqaH3Xu4tt937BZ9nyq3WNFdfaNvo",
         "6EgSCL8KK7UWKD2TeMs7MQnPm1HUp2YVZQ9ZU6SVWX9v"
       ],
       "totalTokensBought": 19.328792738,
-      "supplyPercentage": 0.00000197233989486747,
+      "supplyPercentage": 0.0000019722601565135286,
       "transactions": [
         {
           "signature": "5yechwuQEWtKWNbDz5Cv71XzHYEJLN4WpBxpwxAGinSvVzAEfdp52fXkVjoTvpKEJGMQNTYQHD4d6KqSRLmcjMrT",
@@ -1552,13 +1367,13 @@
       ]
     },
     {
-      "id": "bundle_15",
+      "id": "bundle_13",
       "wallets": [
         "5ULvxfqN4S6AfyT69GwPnJYq7Yd6MNGJvtULR7j3oqUK",
         "DX9oax77pv9Qv6YozkoAg4tqamzzXsguk7a4EkW3ShRu"
       ],
       "totalTokensBought": 16.998414261999997,
-      "supplyPercentage": 0.000001734544472222214,
+      "supplyPercentage": 0.0000017344743475335576,
       "transactions": [
         {
           "signature": "NfUb9WVkk3dULCnG1DHa7w3Xq65RZxcQSbGS6UhYUthXkkgd9ZAyxR8C6tHNoCCZGmzTPMNCdHTYRZChcAbjox7",
@@ -1599,13 +1414,13 @@
       ]
     },
     {
-      "id": "bundle_16",
+      "id": "bundle_14",
       "wallets": [
-        "GgGap6tiUKhD8XeUZaHpVB3rerb3zKWNouWQJHozDujt",
-        "ESuvjvsQtjuxC4XGsDeMhx8Wp5yjQcCFGncGhupcJbg8"
+        "ESuvjvsQtjuxC4XGsDeMhx8Wp5yjQcCFGncGhupcJbg8",
+        "GgGap6tiUKhD8XeUZaHpVB3rerb3zKWNouWQJHozDujt"
       ],
       "totalTokensBought": 101.566079473,
-      "supplyPercentage": 0.00001036395977882506,
+      "supplyPercentage": 0.000010363540781523822,
       "transactions": [
         {
           "signature": "5EYTf1c2fXkyuYNvBW2kM5YTNvsdeqroUnXHVYbep5dA1zEZE69fJ3QywW1XSVmAKvQ8HjUP1ZU8pNRuvyzEALJp",
@@ -1617,15 +1432,6 @@
           "solAmount": 0.000003361
         },
         {
-          "signature": "2ervzoK23NsFfjcTC9epFqSgsPxf6Fpj52cYQ2MpwQm1C7bhM1smqUZCLy2zgAV75uo574omTfdCRpPTna7fSGAQ",
-          "timestamp": 1773212213000,
-          "slot": 405643340,
-          "signer": "GgGap6tiUKhD8XeUZaHpVB3rerb3zKWNouWQJHozDujt",
-          "type": "buy",
-          "tokenAmount": 23.0517877,
-          "solAmount": 0.000002746
-        },
-        {
           "signature": "2UjLNYQM7MEfMqzx2Q1BCf3PmXc7H4LDURodbxGnLJ29M6PVapJtNP15UtSjakmmgMpZSpi7GJkGJkZeDjQCJVbn",
           "timestamp": 1773212213000,
           "slot": 405643340,
@@ -1633,6 +1439,15 @@
           "type": "buy",
           "tokenAmount": 20.941492564999997,
           "solAmount": 0.000001
+        },
+        {
+          "signature": "2ervzoK23NsFfjcTC9epFqSgsPxf6Fpj52cYQ2MpwQm1C7bhM1smqUZCLy2zgAV75uo574omTfdCRpPTna7fSGAQ",
+          "timestamp": 1773212213000,
+          "slot": 405643340,
+          "signer": "GgGap6tiUKhD8XeUZaHpVB3rerb3zKWNouWQJHozDujt",
+          "type": "buy",
+          "tokenAmount": 23.0517877,
+          "solAmount": 0.000002746
         },
         {
           "signature": "62n5DKqkjdJtwLnXxD6bCaWHoBq4JV4ixkyRkc6GnvGSXbYxYP5NYM5BkzXJPtM3uNmgcSK8fyHC6KsUwBdFEx79",
@@ -1646,13 +1461,13 @@
       ]
     },
     {
-      "id": "bundle_17",
+      "id": "bundle_15",
       "wallets": [
         "RustUSBDaDcRRbT8JRmJ8GpomiXiMdgt3iYwbA59xvB",
         "En3NPq8o9Cynf1Q3eP69AqZmPKmBaDugYnE832o2YuzP"
       ],
       "totalTokensBought": 776.078162112,
-      "supplyPercentage": 0.00007919221554171963,
+      "supplyPercentage": 0.00007918901393487252,
       "transactions": [
         {
           "signature": "5ZofEG41oJinNEVEpHvJKcRqhqFLu2qgg2GLH7XrBFmqgAmQQHGZFbYatNotxkUQawk3BP44XT9jaAnQzz416zf1",
@@ -1693,14 +1508,14 @@
       ]
     },
     {
-      "id": "bundle_18",
+      "id": "bundle_16",
       "wallets": [
         "GQuWR6Hq6W2rdmtimm2xbP4ce65a3e15tYbaziELzris",
         "4jjEXcFPXw7WVGXSTb227HW6wfLprjh2RtiHty4GbetE",
         "9TxtvVVDBAgFDkSq1JZLyhXdXsNBMhG4sKhAn6gnJEDf"
       ],
       "totalTokensBought": 57.59341113,
-      "supplyPercentage": 0.0000058769207157920515,
+      "supplyPercentage": 0.00000587668312186347,
       "transactions": [
         {
           "signature": "3rGW1Z23zRGQbHsJQ68aAtUi4dVTt65VGKEQzZnL7n21ZaKGAiwTcKtqpfotzVbrRHib9zpnxHw9xAs7nC8nc1AG",
@@ -1786,13 +1601,13 @@
       ]
     },
     {
-      "id": "bundle_19",
+      "id": "bundle_17",
       "wallets": [
         "5dxkSa4b4regQWacq5Feg41WVW39nYa57UyMdHixatgk",
         "ButXNnQhdBbxKqLV7SEsFGkiLekAsnjBFrqFzT5yise3"
       ],
       "totalTokensBought": 44.37057769,
-      "supplyPercentage": 0.000004527642348001025,
+      "supplyPercentage": 0.00000452745930310648,
       "transactions": [
         {
           "signature": "57gftzMEkZF8dkKiRrUy38QXNt8L2aWt9QtWjwnFmDgJ6azvzcA7LFSQWn2xQ1hUkHZ18mUs6gG74ph1ecwFcwvS",
@@ -1869,13 +1684,13 @@
       ]
     },
     {
-      "id": "bundle_20",
+      "id": "bundle_18",
       "wallets": [
         "CTPTyCRFqEHpD3KwRXHWUeyQufS3zXuH4L545suhRdkf",
         "6fFCmWvTWoz4LvjKYqg2cSBQuJcZJPTgusei4bNUgRom"
       ],
       "totalTokensBought": 21.588882316,
-      "supplyPercentage": 0.0000022029629296884654,
+      "supplyPercentage": 0.0000022028738676367044,
       "transactions": [
         {
           "signature": "4deLEafPKC5b1EcsdMdjePNYUJHnzvgGfmDQoSrWjg3vgg7AvRkdLdbzpVyRgseWTCMCg1x3rePrUSF6cP4Gcv6k",
@@ -1925,13 +1740,13 @@
       ]
     },
     {
-      "id": "bundle_21",
+      "id": "bundle_19",
       "wallets": [
         "8te2iaQehyjpBtFTQWwJSNpq2PnCJegk8vwWBkq8HrFA",
         "Htq6paQrjNBgiL5xqumzF8sPDCsYrqNrjscpFVD3pLVm"
       ],
       "totalTokensBought": 27.503992356,
-      "supplyPercentage": 0.0000028065499034101516,
+      "supplyPercentage": 0.00000280643643936162,
       "transactions": [
         {
           "signature": "4v5ebjZCyqZVycXR2tH4LDrbjseEaYj7ZQGdMT14Sr2qaE5DkTn5tF9kD5nQzjjVGFk44wdEZfcXbHGNm1fWmhTG",
@@ -1972,13 +1787,13 @@
       ]
     },
     {
-      "id": "bundle_22",
+      "id": "bundle_20",
       "wallets": [
         "A8HSkfnmWDgAxQKcEBF1ioZyqDai135r1UgthR7beYgA",
         "HFMDxN5Sb3yRFpzav39jeJsXSMT7r7pcgo49xuYQK6mn"
       ],
       "totalTokensBought": 2.35030628,
-      "supplyPercentage": 2.398288865754174e-7,
+      "supplyPercentage": 2.39819190700638e-7,
       "transactions": [
         {
           "signature": "k1iohmpD1FkFPTQ7dXbUfLWJ6qXSBCi7baBWPyHPJMuKEWf6pZW7s2qti5VieDFJCYmqFMDcbH61SveH4R7S2NW",
@@ -2017,15 +1832,6 @@
           "solAmount": 0.00827344
         },
         {
-          "signature": "2VmFRmZVW4jGxkBSXUzzmqbeZSKvQjHHJcX9r5aZQpjrj1PM8qRumJ8RHyjV2G2eHv26ELunMZwRaahYBNC25gjs",
-          "timestamp": 1773214865000,
-          "slot": 405650152,
-          "signer": "A8HSkfnmWDgAxQKcEBF1ioZyqDai135r1UgthR7beYgA",
-          "type": "buy",
-          "tokenAmount": 0.39172255,
-          "solAmount": 0.008273368
-        },
-        {
           "signature": "5RhugJDg44TTaoCW8x2MaoWkhgM26RtvmaGUzk1e9DrkoVsa8LAX65cgQPL5dsmqW8EBZjuG5CZVuAx35y2yiagD",
           "timestamp": 1773214865000,
           "slot": 405650152,
@@ -2033,17 +1839,26 @@
           "type": "buy",
           "tokenAmount": 0.39172255,
           "solAmount": 0.008273368
+        },
+        {
+          "signature": "2VmFRmZVW4jGxkBSXUzzmqbeZSKvQjHHJcX9r5aZQpjrj1PM8qRumJ8RHyjV2G2eHv26ELunMZwRaahYBNC25gjs",
+          "timestamp": 1773214865000,
+          "slot": 405650152,
+          "signer": "A8HSkfnmWDgAxQKcEBF1ioZyqDai135r1UgthR7beYgA",
+          "type": "buy",
+          "tokenAmount": 0.39172255,
+          "solAmount": 0.008273368
         }
       ]
     },
     {
-      "id": "bundle_23",
+      "id": "bundle_21",
       "wallets": [
         "4ncwzWdBT9nYuHgnSGCubh6KGZmu2MVCi13WszdLehAQ",
         "2bHUEG5SrnY9jueuDHiJ5L7WViwqEseNB8138arLa75P"
       ],
       "totalTokensBought": 7.541820076,
-      "supplyPercentage": 7.695789808208359e-7,
+      "supplyPercentage": 7.695478680489865e-7,
       "transactions": [
         {
           "signature": "4SCi35gNBXwSznbYmUUsNmE9LdcLSs8zF7xVgFvLAgQYazTzXnLxNBrKNgh1cXfmEMrJ1eNZPeZTRiY5twDwyceR",
@@ -2066,13 +1881,13 @@
       ]
     },
     {
-      "id": "bundle_24",
+      "id": "bundle_22",
       "wallets": [
         "JD2i8ScTWYwqhQtyNGr4ES7qN1AVFZwGqmJwefVK3jmZ",
         "H5mgcsQSYJu1CHtYq49Hu27SjRwtyzxCfNKnyhNVeZJx"
       ],
       "totalTokensBought": 5.479609172,
-      "supplyPercentage": 5.591477918312863e-7,
+      "supplyPercentage": 5.591251864352051e-7,
       "transactions": [
         {
           "signature": "2kkixfax3AkRRwndrFAeC1f74gDwXVaeLzfWbHx4NNgCfLtRFRD1cVPzs6U3EJ1chvy8o2DD7sAhqBgJYmTeUoro",
@@ -2122,13 +1937,13 @@
       ]
     },
     {
-      "id": "bundle_25",
+      "id": "bundle_23",
       "wallets": [
         "42DsgX7yNijvCCBu9AbwA2uZKqCYTQ4ouVB79zDi35U5",
         "AQGYAdGvmBrJTyzsnWSnr3MwX64wAX1MiKQ6qwsFsZMP"
       ],
       "totalTokensBought": 15.641762065999998,
-      "supplyPercentage": 0.0000015961095846479977,
+      "supplyPercentage": 0.000001596045056646855,
       "transactions": [
         {
           "signature": "5A2oG3QzXst4nJvCMBcZXvZaiwj8DpK9HDPQStj1qmDYXbEfsYFP9vqMtY4i61xnyxvq953eySvS9DzEpK7MS5MF",
@@ -2169,13 +1984,13 @@
       ]
     },
     {
-      "id": "bundle_26",
+      "id": "bundle_24",
       "wallets": [
         "C2b7XPBxKqbye2M2Q2uFfMEAhUKVe8JWSpCiYa3bS7P9",
         "8cHpmijdUJHcRSzoSXK5Z5CEyyHbobH1pES6Uu4hTwRJ"
       ],
       "totalTokensBought": 14.65744418,
-      "supplyPercentage": 0.0000014956682657252367,
+      "supplyPercentage": 0.000001495607798396121,
       "transactions": [
         {
           "signature": "h1u9KzZ2gkCTAzdzR3E41sxkSnHZb2kwBo1NgRAj3Bk58FMLeYkCWPcFPCciMDhCQRSwDpf7ScDCPxPH2Syh5yk",
@@ -2234,13 +2049,13 @@
       ]
     },
     {
-      "id": "bundle_27",
+      "id": "bundle_25",
       "wallets": [
         "SHARKRdGLNYRZrhotqvZi3XAtT62CRGCFxmg5LJgSHC",
         "BGHKaN8qT6f6aRnNvy1SEWBzupuoTCidFVfp3NxZyH9X"
       ],
       "totalTokensBought": 2252.5743773599997,
-      "supplyPercentage": 0.00022985617212858015,
+      "supplyPercentage": 0.00022984687943371736,
       "transactions": [
         {
           "signature": "2HLC8zsYjPUhtp8bykVBwVEZnzRvQ2k1KpTmHp7weLEwcK2d9wnrSEdumy2TWpD115gJGCwMXRi8F1HdGHfEtUQ6",
@@ -2272,13 +2087,69 @@
       ]
     },
     {
-      "id": "bundle_28",
+      "id": "bundle_26",
+      "wallets": [
+        "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+        "CEu8ee4nFz96w5ibLw21KVgiFbnJ9NpbmxYmsTpqv5eb"
+      ],
+      "totalTokensBought": 114.195405742,
+      "supplyPercentage": 0.000011652204659376324,
+      "transactions": [
+        {
+          "signature": "PtpQFhxooVA3seJw4jJvK4P6Qt44HhKsG2jV3azkcaWUoJvojVuRXkaSRad39SRdcNGturAm6JKxWZNDjHKeesK",
+          "timestamp": 1773211496000,
+          "slot": 405641495,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 13.866308926,
+          "solAmount": 0
+        },
+        {
+          "signature": "2AAaLdzUiDZuNJSoAZDixihogGJJGDu5VLzjHMTCVkbVpB7DVs3FEgoMVJsoHQ19GykFDxUCrCB5QRUTdXMsPNxM",
+          "timestamp": 1773216228000,
+          "slot": 405653669,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 39.571153656,
+          "solAmount": 0
+        },
+        {
+          "signature": "2iVUj3kmcmJeHC9Hycauvz5Edt2bAp6BupgBtTjdo3dvcCRsEhza7h8KEHDsgkdUQj399ejGhyg2vNwE8TZ1CP24",
+          "timestamp": 1773216493000,
+          "slot": 405654352,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 55.302076184,
+          "solAmount": 0
+        },
+        {
+          "signature": "3iY2RBqmUhNAPifavUyFGvpvPRo5AKW7rLqbZvZDL2SJBSMZwc3rvQvmwQfeNbzVzWSXmEj8zdoyCxwNLiVY7ZBZ",
+          "timestamp": 1773216494000,
+          "slot": 405654353,
+          "signer": "CEu8ee4nFz96w5ibLw21KVgiFbnJ9NpbmxYmsTpqv5eb",
+          "type": "buy",
+          "tokenAmount": 3.314627234,
+          "solAmount": 0.009140747
+        },
+        {
+          "signature": "VWB8mJCRYVF2NVRcf1tUeJKdFY9gdJ7uDHjU96BB59cyTAUQqAaV1BUdgvodHqVk51UNYhT1Qt9sGcUGiJ5vTZq",
+          "timestamp": 1773219015000,
+          "slot": 405660815,
+          "signer": "AVedewo4W5E5C9vtjFeAe13DGq6L5WNN2Kk3yuWZGNUN",
+          "type": "buy",
+          "tokenAmount": 2.141239742,
+          "solAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "bundle_27",
       "wallets": [
         "EV3ujSwMGdVGWewQZhfVti6pew9Nmv5TJGdtzaGQgzr2",
         "HyrTWi2rBMHQCPU5RupKja1wms7Xv4osUq1RvUH8cwBh"
       ],
       "totalTokensBought": 8.045168713999999,
-      "supplyPercentage": 8.209414540601928e-7,
+      "supplyPercentage": 8.209082647907372e-7,
       "transactions": [
         {
           "signature": "29i1naBbY2DEY5LFT8Bz1eE2LH3wURpcN42Q7BEys7fj76wwPNxG1K7YWogcTPmqBegp6mWJV3GspZPzaZM2Tqmt",
@@ -2301,23 +2172,14 @@
       ]
     },
     {
-      "id": "bundle_29",
+      "id": "bundle_28",
       "wallets": [
-        "9d5SWkZuWoW8h4GwXzpN6pBaAQAd3KkCsSb26AXBXo3J",
-        "9kfdQnuFApRKs3XeC76BBkEoReSVt2mbV2wD5Qg1MNpa"
+        "9kfdQnuFApRKs3XeC76BBkEoReSVt2mbV2wD5Qg1MNpa",
+        "9d5SWkZuWoW8h4GwXzpN6pBaAQAd3KkCsSb26AXBXo3J"
       ],
       "totalTokensBought": 826.906330673,
-      "supplyPercentage": 0.00008437880044615697,
+      "supplyPercentage": 0.0000843753891544863,
       "transactions": [
-        {
-          "signature": "3EGjjbGpD9dndAwaCfEzNBvXRqL7DYMpPkR1XsKPp7TbGLWWLog9a434pwSm9ZEqtVtxLsucHLRU43iGn1M4rpMJ",
-          "timestamp": 1773216720000,
-          "slot": 405654945,
-          "signer": "9d5SWkZuWoW8h4GwXzpN6pBaAQAd3KkCsSb26AXBXo3J",
-          "type": "buy",
-          "tokenAmount": 446.529418563,
-          "solAmount": 0
-        },
         {
           "signature": "2x75C2Wwq85CeD6pAhrW4MB86Cz8vLMeCXFSeuW7wfgr7qMZMMTYr49DSpjfiye6EbYq3TLa2MrquwoBQx6LX5dD",
           "timestamp": 1773216720000,
@@ -2326,17 +2188,26 @@
           "type": "buy",
           "tokenAmount": 380.37691211,
           "solAmount": 0
+        },
+        {
+          "signature": "3EGjjbGpD9dndAwaCfEzNBvXRqL7DYMpPkR1XsKPp7TbGLWWLog9a434pwSm9ZEqtVtxLsucHLRU43iGn1M4rpMJ",
+          "timestamp": 1773216720000,
+          "slot": 405654945,
+          "signer": "9d5SWkZuWoW8h4GwXzpN6pBaAQAd3KkCsSb26AXBXo3J",
+          "type": "buy",
+          "tokenAmount": 446.529418563,
+          "solAmount": 0
         }
       ]
     },
     {
-      "id": "bundle_30",
+      "id": "bundle_29",
       "wallets": [
         "AG8dtUGJm1aCuJAeyidoMdCdgrJejyGkLCyJwJerdDXc",
         "8ty4AfpMTTdm1BJeKMQ6DC7hifj3uitzsyXkhJogVvZN"
       ],
-      "totalTokensBought": 0.6731632160000001,
-      "supplyPercentage": 6.869061532559376e-8,
+      "totalTokensBought": 1.3390599,
+      "supplyPercentage": 1.3663421837841377e-7,
       "transactions": [
         {
           "signature": "56TrPtYP7V4JXDpLQsWC9BKUUiUnpH8P338qjKpmQcPsDyjMc98hJnxFgCZ5HCBuXtpwoTcLm8nviJXn7ExnS796",
@@ -2355,17 +2226,35 @@
           "type": "buy",
           "tokenAmount": 0.336581754,
           "solAmount": 0.00621784
+        },
+        {
+          "signature": "upYkhKPeHXWYRJcnRgaKgWjfUVKUqBT9iXJ3tJCev5TYvV2HKmWaVAm3YR5QEas3EMm4cQ4FC7BpQqpXPcEh59z",
+          "timestamp": 1773218066000,
+          "slot": 405658395,
+          "signer": "AG8dtUGJm1aCuJAeyidoMdCdgrJejyGkLCyJwJerdDXc",
+          "type": "buy",
+          "tokenAmount": 0.332948342,
+          "solAmount": 0.00825596
+        },
+        {
+          "signature": "5MKEQK9qReBrHvduaVae11tbJPLMkt5bAaMEGBPR1Ez1p9TuAJEooms9io9dCyMmz6G66rwbFVWWYLHNj1ht3NjK",
+          "timestamp": 1773218066000,
+          "slot": 405658395,
+          "signer": "8ty4AfpMTTdm1BJeKMQ6DC7hifj3uitzsyXkhJogVvZN",
+          "type": "buy",
+          "tokenAmount": 0.332948342,
+          "solAmount": 0.00825596
         }
       ]
     },
     {
-      "id": "bundle_31",
+      "id": "bundle_30",
       "wallets": [
         "tdDmurGTJ288UndUeueSpYcjwpSQY2kGxzrTC2FyvT8",
         "5kJBtTfDceKwENJxwiV2iW7Ey4iBRtTeW6SowJtbQyV8"
       ],
-      "totalTokensBought": 1625.959771012,
-      "supplyPercentage": 0.0001659154488998041,
+      "totalTokensBought": 1629.8791374159998,
+      "supplyPercentage": 0.00016630866325854308,
       "transactions": [
         {
           "signature": "28LJnmLLJAc3kNFEAs3AULu3VAeG3YtLzYoSpJyQMCesJKfjWVpQP2JbU62y8YmYfrWUgrHZLbuoJsCEBK5mjFyE",
@@ -2384,38 +2273,66 @@
           "type": "buy",
           "tokenAmount": 3.924705742,
           "solAmount": 0.009322
+        },
+        {
+          "signature": "33ezHnKnKSWkWrkFHfWtiCxBYLv545mieujxbZ6u9QLqLXUuGA8m5wNFBei8qWyB7m1nWdghYEWgbhATwekiWiJp",
+          "timestamp": 1773218063000,
+          "slot": 405658386,
+          "signer": "5kJBtTfDceKwENJxwiV2iW7Ey4iBRtTeW6SowJtbQyV8",
+          "type": "buy",
+          "tokenAmount": 3.919366404,
+          "solAmount": 0.009320649
+        }
+      ]
+    },
+    {
+      "id": "bundle_31",
+      "wallets": [
+        "9rkXrMaEhi1ewNFdcEXdXMi2tk3TzmRNZqbY8ibt5HJe",
+        "4QcGpRPPeqEnVA77oZKJ9fyPbDGqtrJ79SLehz7HwQAj",
+        "7iVCXQn4u6tiTEfNVqbWSEsRdEi69E9oYsSMiepuECwi"
+      ],
+      "totalTokensBought": 320.353407548,
+      "supplyPercentage": 0.0000326880354233462,
+      "transactions": [
+        {
+          "signature": "6nzwhEgpBVbEwgVyB9dNpMXSPAcwg4iaeYjgewXKTr1wCWVawo1hrnUsHeK8BnRDUdonCToPUfPsEyFq6EjSg3h",
+          "timestamp": 1773218971000,
+          "slot": 405660701,
+          "signer": "9rkXrMaEhi1ewNFdcEXdXMi2tk3TzmRNZqbY8ibt5HJe",
+          "type": "buy",
+          "tokenAmount": 166.827553056,
+          "solAmount": 0.05408456
+        },
+        {
+          "signature": "5Uaj28Kj5fu2zmeEwfebuRhWem6gDK2LZD1y8qJabWKdWvFuNWps98Uqv9AwxQKuhKD9myGYtZp6RnhNrCF9vRbp",
+          "timestamp": 1773218972000,
+          "slot": 405660704,
+          "signer": "4QcGpRPPeqEnVA77oZKJ9fyPbDGqtrJ79SLehz7HwQAj",
+          "type": "buy",
+          "tokenAmount": 78.227799754,
+          "solAmount": 0.03365552
+        },
+        {
+          "signature": "4912psPrxRJEPey1p8pE4ibNUMe2yhpZsA6kG6f4fearQ4e1KNf8P3TvL1rQuCXpWgHc6kGqg4fWSoTEsta2NZpm",
+          "timestamp": 1773218973000,
+          "slot": 405660706,
+          "signer": "7iVCXQn4u6tiTEfNVqbWSEsRdEi69E9oYsSMiepuECwi",
+          "type": "buy",
+          "tokenAmount": 75.298054738,
+          "solAmount": 0.00711784
         }
       ]
     },
     {
       "id": "bundle_32",
       "wallets": [
-        "4ctL8Uoz66QNNVB8w7aifeBWNGGowZK1tD7niJh4by3S",
-        "8aHnZnd6jmX5T2qytd7TTJw5N8Fpu4Qz22218tSyBMjD",
         "4xrfGiXK7aEoik1LRb3pdRtyzq1Gp63eatQsRm1VoC1j",
         "7opQUQn5W3SY3XT8W8gdEHQxnXS8KncJ4eVrQAFZrUCr"
       ],
-      "totalTokensBought": 85.581700684,
-      "supplyPercentage": 0.000008732889054048888,
+      "totalTokensBought": 41.42975553,
+      "supplyPercentage": 0.000004227385395119603,
       "transactions": [
-        {
-          "signature": "i2XSjnaYuuqP75ki3qfDRL8qS31deAg9eH4rGet9jfDjpndyUx71gvWvxHvi84c8G8ZdxqRgWB2cfC67wPDkkdU",
-          "timestamp": 1773208812000,
-          "slot": 405634595,
-          "signer": "4ctL8Uoz66QNNVB8w7aifeBWNGGowZK1tD7niJh4by3S",
-          "type": "buy",
-          "tokenAmount": 3.396504388,
-          "solAmount": 0.00915712
-        },
-        {
-          "signature": "2GnJWunTyjK4Ai5XoWDnwyzQCvsHtNfP7A4Qx7kfBdETKN14GHm2zfyzpjAXyVcYQ5kvbe1xDmZxh9mh2iqV4TVP",
-          "timestamp": 1773208816000,
-          "slot": 405634605,
-          "signer": "8aHnZnd6jmX5T2qytd7TTJw5N8Fpu4Qz22218tSyBMjD",
-          "type": "buy",
-          "tokenAmount": 40.755440766,
-          "solAmount": 0.02015712
-        },
         {
           "signature": "2kjJ5FD162rPhG2VBS3pnSo5FDxNc1ARUN98jcM6BKzghqRSUXpqET3bv3dqrnzDhsyGu79bzMjYp4vNUGBRyf9Z",
           "timestamp": 1773208820000,
@@ -2443,7 +2360,7 @@
         "3r5VpHYWAjNTXu91CZbJr7xM875NTCL4XCPsc8ejp88b"
       ],
       "totalTokensBought": 3.751063066,
-      "supplyPercentage": 3.8276427470250876e-7,
+      "supplyPercentage": 3.8274880019261746e-7,
       "transactions": [
         {
           "signature": "2NkDkb53m7eyTCst7ZHQWP3mn4JFBJKBhFePWnT5pfC3qUK8PKSX4dKZ4tP9RETXbmRLTpavQXLH25gzaexg3uXA",
@@ -2564,7 +2481,7 @@
         "CDYbVP2D4Q9jcHcs5rWW51L7fEc4smiF5TJBNMtziEm7"
       ],
       "totalTokensBought": 440.584243698,
-      "supplyPercentage": 0.00004495789740593456,
+      "supplyPercentage": 0.000044956079834457595,
       "transactions": [
         {
           "signature": "64tkd8HP3uNS26cPP4RhE3HxVnGEaxJNetnEDk5dBD8T163ADyayv46k4BfinkGjTbFWt5ZxQU7NUcQnYvZHZePS",
@@ -2611,7 +2528,7 @@
         "EDQiZudqi47HQsBbucLLf4oTomBvuVGLaT5dHMZnW5bY"
       ],
       "totalTokensBought": 327.359516082,
-      "supplyPercentage": 0.00003340427114538175,
+      "supplyPercentage": 0.00003340292066740244,
       "transactions": [
         {
           "signature": "kLSiqkZNZDV9n1RQAC1pUYEvrhaZTnrLnb6kPouxw6RiCR1GzA86PNwVgmvzbQbqJeDMgcm4vvBBXDgg63Wyhpz",
@@ -2640,7 +2557,7 @@
         "45yT4FGcB4fTnkZXDBTtcvNoMYykL2fifm1G9V4YTV8P"
       ],
       "totalTokensBought": 170.09674815600002,
-      "supplyPercentage": 0.00001735693516521288,
+      "supplyPercentage": 0.000017356233453787207,
       "transactions": [
         {
           "signature": "2Rophr8XRVwjxxbTZekwQ5L8nfEtToqETnH38H4ZQ92rHBRqnoLH2qyp55phS7Jscpv8hKbHVZVLTrvTgEYfDb9D",
@@ -2669,7 +2586,7 @@
         "55JRjhJQGVjFuhLgfv9cgL3NtbCwkTD7MNpL86UcCnfs"
       ],
       "totalTokensBought": 17.927241625,
-      "supplyPercentage": 0.0000018293234523852045,
+      "supplyPercentage": 0.0000018292494959432653,
       "transactions": [
         {
           "signature": "54tYT9myksTxNGtgKM9JcHW98ashhFMcCxF7Vs2L1KiDzKurVZU7xafYco9EVUAsxZE93EfDHTgRwtk6AXLRLR2R",
@@ -2716,7 +2633,7 @@
         "2QYwsBFQbYeYc5UkKVpf8qfJeauW9JfNZoHzUpKLeoyc"
       ],
       "totalTokensBought": 7.428034924,
-      "supplyPercentage": 7.579681679896782e-7,
+      "supplyPercentage": 7.579375246232824e-7,
       "transactions": [
         {
           "signature": "35YJ4Ph7SarsRSCKnswbVLFjbbsb9DNH8p7vDwMRX4NztgBgxA4Lmf5gSvZRRnWuoT64GwuDvT1yeQiPU5Q1y3vU",
@@ -2747,7 +2664,7 @@
         "3aYsbQMkMUQ7UQewt3XDBsHg5dkUASWuqNhtZpua3DyV"
       ],
       "totalTokensBought": 62.987622388,
-      "supplyPercentage": 0.000006427354372446673,
+      "supplyPercentage": 0.0000064270945254197025,
       "transactions": [
         {
           "signature": "3dy6cm9fWJXUjuj4zpAwMPnrYfKAqvy6pns2ZqeTDR74vypR8UuSCPeZ47Br6zZrBMNBSgHgfbsuXMdQKM1P9UW8",
@@ -2803,7 +2720,7 @@
         "BWaEYAuUSNjWNjwijSCffNUNJd7KFoTDpxNadQvckbHj"
       ],
       "totalTokensBought": 11.750172392,
-      "supplyPercentage": 0.0000011990057575996304,
+      "supplyPercentage": 0.0000011989572838321394,
       "transactions": [
         {
           "signature": "2bQmzbC6QfVB16hvcMMcQR54oCBoydVzvwhM7KPZdEiwqHp93aSWRNG3YBRg4bLLr8VD2eCEaRcfVScLtonwLiu7",
@@ -2844,7 +2761,7 @@
         "5AbjCBmUpE9NojV2Ua3fHFKDQLsvnowbFL95wdhTqd2D"
       ],
       "totalTokensBought": 90.90540605,
-      "supplyPercentage": 0.000009276128180475998,
+      "supplyPercentage": 0.000009275753162359709,
       "transactions": [
         {
           "signature": "2Dm43U1g34QiAPEa1jBmYxwW7FcZ19qM4BRjVwSGtKSAPKkjHHqXgJZw96tELnERAy886LJo65mzRrrxmAbBVBTz",
@@ -2909,8 +2826,8 @@
         "6ooVBXhnqAXaF91cu49YmWhoFuE6WLdZWTwNYvTuhyBd",
         "b23Ke4utbwr1WcY8onbybJbNQghkNs7RrEC9f69VbJW"
       ],
-      "totalTokensBought": 652.548133604,
-      "supplyPercentage": 0.00006658702044531577,
+      "totalTokensBought": 742.158194362,
+      "supplyPercentage": 0.0000757279079149385,
       "transactions": [
         {
           "signature": "5LcMnuGUVqwDfV1MVeWNKWWYPu72AJzqBc85obRGAnFYLjamd3bg785RVyYGKfA9TLr7UsT9XFWqMJ8T4iRHcuLt",
@@ -2947,6 +2864,15 @@
           "type": "buy",
           "tokenAmount": 107.796333848,
           "solAmount": 0.000002675
+        },
+        {
+          "signature": "3h28Ttc389cxfqksmfm85KXUniuwcvNX19FPYYbgEJB5ERNtSrzTAQaQLDkUHXU4JkT9M1fY46sSLHhw78secYDn",
+          "timestamp": 1773218953000,
+          "slot": 405660656,
+          "signer": "a23gHknrH37ZsaoYWUYf44d6rYbsVH1Ny3YubpNQTpx",
+          "type": "buy",
+          "tokenAmount": 89.610060758,
+          "solAmount": 0.000002103
         }
       ]
     },
@@ -2956,8 +2882,8 @@
         "DygcrzDiZvHaeaD75sSp5V2UCwYAz5M2P3zMuJdZW9xe",
         "7rtiKSUDLBm59b1SBmD9oajcP8xE64vAGSMbAN5CXy1q"
       ],
-      "totalTokensBought": 92.922601446,
-      "supplyPercentage": 0.000009481965917431601,
+      "totalTokensBought": 448.08375008,
+      "supplyPercentage": 0.00004572131012230991,
       "transactions": [
         {
           "signature": "2HuxT3n9p9xEza9ajqxQ5HoGYuh4pRkFJVpgmL7Ca5dpSSGLUANFTnVmENFQzS29HQpDbc3ew41bzngbh7hEQV1v",
@@ -2976,6 +2902,15 @@
           "type": "buy",
           "tokenAmount": 59.530374342,
           "solAmount": 0.00203928
+        },
+        {
+          "signature": "5heKU15QRkh7qMkZ7xExiiwkHsVJZ2mFMDgzRbmVk9HLkp4EjUzhoK3YQhtm3QMy2pdRQPjHid9fNCUrD6Xcshns",
+          "timestamp": 1773218135000,
+          "slot": 405658574,
+          "signer": "7rtiKSUDLBm59b1SBmD9oajcP8xE64vAGSMbAN5CXy1q",
+          "type": "buy",
+          "tokenAmount": 355.161148634,
+          "solAmount": 0.00203928
         }
       ]
     },
@@ -2986,7 +2921,7 @@
         "8a11heEHboKyJjEFX5oWKaPhK7KTjKCfWXVYM6DY8ujK"
       ],
       "totalTokensBought": 123.27359487000001,
-      "supplyPercentage": 0.000012579028211515136,
+      "supplyPercentage": 0.000012578519662757198,
       "transactions": [
         {
           "signature": "4pzbf5h1UsfuqMHjkRyAvvTwVvbNKGnGuQHDSKFHjhWsNNnYiR5iu278f4CQY1WjhbpyKJyTjbjwbfUru8aTCVBc",
@@ -3015,7 +2950,7 @@
         "EB3vhX1m7vagjSc3N7xBzCCvajncJeXQEqTohipEvtJ4"
       ],
       "totalTokensBought": 6.25421457,
-      "supplyPercentage": 6.381897242460047e-7,
+      "supplyPercentage": 6.38163923318768e-7,
       "transactions": [
         {
           "signature": "2DAwXPgNFBEFfXAE8nBU41xUhGuKZ9sgrwQYURhUH4rwP9tuxqbhnc7jG48gD9P6WzHMHvPYPAAKa8mzZtVvRMNh",
@@ -3054,7 +2989,7 @@
         "8ZPeNWQCsqs4pN56xdXDXtC9qVs7PaaWGBMVTK6cTXcn"
       ],
       "totalTokensBought": 38.038308158,
-      "supplyPercentage": 0.000003881487774753237,
+      "supplyPercentage": 0.0000038813308527912526,
       "transactions": [
         {
           "signature": "4vGQyNBcrXPpezuwpKWfmNGqnkTNrCx5U1XFgprqDgdrpcrFqnXQ2qH1QLvwACFoH5quQg6W3Fkdp1eK55wdTbmq",
@@ -3111,7 +3046,7 @@
         "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP"
       ],
       "totalTokensBought": 863.114501724,
-      "supplyPercentage": 0.00008807353820097147,
+      "supplyPercentage": 0.00008806997753732511,
       "transactions": [
         {
           "signature": "5TNX6vrGpzHsF1NMLmTUk5PZqJsnrUQVkkfsJFuPweTg5xPoueHDRvdzfoMJKZBALtVwZY4AcpuK5aAgTCqvtyB",
@@ -3148,8 +3083,8 @@
         "ProCXqRcXJjoUd1RNoo28bSizAA6EEqt9wURZYPDc5u",
         "G9fzZgWbfAfuYSR4K3yB83ZE3zgLVVA6vceFh9FPLkKB"
       ],
-      "totalTokensBought": 7.068437956,
-      "supplyPercentage": 7.212743374088672e-7,
+      "totalTokensBought": 13.795584746000001,
+      "supplyPercentage": 0.000001407665884732175,
       "transactions": [
         {
           "signature": "2rewavZgqrtQ2ngN4NojuG2XsHNe7tQDmgTcLAofCTh1CgXx1B1QBHcZf8eyekKCcdThZ7BFpSU3cYdb9CgTTgHc",
@@ -3186,6 +3121,24 @@
           "type": "buy",
           "tokenAmount": 0.325148244,
           "solAmount": 0.00507856
+        },
+        {
+          "signature": "2DTNUVZ7qt1zrG7g6gLX735vAcoUxqpQCvu5HbsiCmyjRWCEDwf3fmHUtgRoqawssMxGVgdsfw3pwxRuYSXgeqet",
+          "timestamp": 1773218226000,
+          "slot": 405658802,
+          "signer": "G9fzZgWbfAfuYSR4K3yB83ZE3zgLVVA6vceFh9FPLkKB",
+          "type": "buy",
+          "tokenAmount": 3.363738804,
+          "solAmount": 0.00507856
+        },
+        {
+          "signature": "2TiAt92WgLfHxR3UL84tcb7gyLqw7QRyeMRAYWz1Liua1nUbsTXqo6bBhzFx8DWgkVD4eEg2vh7BNYBkDPoqwAcY",
+          "timestamp": 1773218462000,
+          "slot": 405659409,
+          "signer": "G9fzZgWbfAfuYSR4K3yB83ZE3zgLVVA6vceFh9FPLkKB",
+          "type": "buy",
+          "tokenAmount": 3.363407986,
+          "solAmount": 0.00507856
         }
       ]
     },
@@ -3195,8 +3148,8 @@
         "9EQuQz6acUqQfr3wtGecUcYo19kNaAdcvATrjJm61WkG",
         "8L2y55D11k63CAftvW7uMM2mBhtMxLoLnivG9uY2bt8j"
       ],
-      "totalTokensBought": 10084.092361373,
-      "supplyPercentage": 0.0010289963753795349,
+      "totalTokensBought": 23516.181906433,
+      "supplyPercentage": 0.0023995305467888845,
       "transactions": [
         {
           "signature": "wU9XfYbuGRmwxspDjDfrNNP6aX1gDinrgD7fsnBKjQHsUkWFif4SPk7da6ZFSN4bNW5zF35N5wtU2Kz9x1TbxWB",
@@ -3233,12 +3186,125 @@
           "type": "buy",
           "tokenAmount": 3354.945081153,
           "solAmount": 2.00407856
+        },
+        {
+          "signature": "5s3q7ehkAuJY7hNYjMB7kjetYbdY7Jnb3WVNPqozd31H3RqVB6c5veRivVjJK1mPhScnofu6FKiGTJVyipfuuRAw",
+          "timestamp": 1773218595000,
+          "slot": 405659748,
+          "signer": "9EQuQz6acUqQfr3wtGecUcYo19kNaAdcvATrjJm61WkG",
+          "type": "buy",
+          "tokenAmount": 6720.003762186,
+          "solAmount": 2.00407856
+        },
+        {
+          "signature": "4Dakis1LXx9syVXQVj2K2gmd3Tbo58yKrn9r89t3bKPwspRWL7eGJcotqEHoyBhi2HRYFLJTfssxvpnUudwzPp8P",
+          "timestamp": 1773218616000,
+          "slot": 405659801,
+          "signer": "9EQuQz6acUqQfr3wtGecUcYo19kNaAdcvATrjJm61WkG",
+          "type": "buy",
+          "tokenAmount": 3356.394895852,
+          "solAmount": 2.00407856
+        },
+        {
+          "signature": "3pcXMFMsHJd23cMZ5uo6W9Fy95w6vYAouwCsUHb2SC8XGtsZitjRyX2z4qPRA8Sdfb29AApS5cyPVaPMcw1mNoVk",
+          "timestamp": 1773219058000,
+          "slot": 405660929,
+          "signer": "9EQuQz6acUqQfr3wtGecUcYo19kNaAdcvATrjJm61WkG",
+          "type": "buy",
+          "tokenAmount": 3355.690887022,
+          "solAmount": 2.00407856
+        }
+      ]
+    },
+    {
+      "id": "bundle_50",
+      "wallets": [
+        "8oKVwqA5S2B7g2Li6yqZ4KKghpER8G1vj3bbeg8dFkSw",
+        "Cdw7jx4WYGZZdLbFJVraHUfhB5HEYfaiWMTzDWcRGYNE",
+        "DtX7jo3YkNMm1XZaec34gdszmUJ3JmAJmxcNJeaUX84c"
+      ],
+      "totalTokensBought": 259.736386818,
+      "supplyPercentage": 0.000026502830976650684,
+      "transactions": [
+        {
+          "signature": "5D9WwzFS71YxMSLvR37rXJbQTf91Zz14ZnvCHXhCCCek8UKcPLk8XgiLiW5xtyP951PZ7AXqaXojWsLuJuLCXdhi",
+          "timestamp": 1773217821000,
+          "slot": 405657766,
+          "signer": "Cdw7jx4WYGZZdLbFJVraHUfhB5HEYfaiWMTzDWcRGYNE",
+          "type": "buy",
+          "tokenAmount": 0.33658117,
+          "solAmount": 0.00621784
+        },
+        {
+          "signature": "5hpTj2LW7yVMiZT8Vp4hbsQCBkyZhC6tdK8cS5fv8qtaFwtg8PPYK2ZYAuoFMX6vHj6QSsEtFhcYSfQGwov6ao36",
+          "timestamp": 1773218037000,
+          "slot": 405658323,
+          "signer": "8oKVwqA5S2B7g2Li6yqZ4KKghpER8G1vj3bbeg8dFkSw",
+          "type": "buy",
+          "tokenAmount": 85.450753784,
+          "solAmount": 0.000001601
+        },
+        {
+          "signature": "5v8bGMh8HAMc7JQY9UjFu7GzdrudFGTvk6xesbvYnMV8X8uueqDCn9eu9aPLS8hMvHdSpVCVRwLEZS5ZzF4ezH3z",
+          "timestamp": 1773218058000,
+          "slot": 405658375,
+          "signer": "Cdw7jx4WYGZZdLbFJVraHUfhB5HEYfaiWMTzDWcRGYNE",
+          "type": "buy",
+          "tokenAmount": 0.331936742,
+          "solAmount": 0.008255662
+        },
+        {
+          "signature": "4iJbLBxWdRUnYkTb1xiMJT14UFEkWTsXCZfiZZADeyzdW9aTkbcMs5wQ5Tx7ri8XLiYGcMz3wtGHH12jdbfc2qSB",
+          "timestamp": 1773218062000,
+          "slot": 405658384,
+          "signer": "DtX7jo3YkNMm1XZaec34gdszmUJ3JmAJmxcNJeaUX84c",
+          "type": "buy",
+          "tokenAmount": 3.316703744,
+          "solAmount": 0.009141747
+        },
+        {
+          "signature": "2FWU89TZhy1X9cX7PXMh9dfLNHAdzLMLQhFom8nVQaZYPj7qkaZpfv3fsDaNWTVNnN9GapQvHit82oib7SLp6ynP",
+          "timestamp": 1773219107000,
+          "slot": 405661058,
+          "signer": "8oKVwqA5S2B7g2Li6yqZ4KKghpER8G1vj3bbeg8dFkSw",
+          "type": "buy",
+          "tokenAmount": 170.300411378,
+          "solAmount": 0.000002601
+        }
+      ]
+    },
+    {
+      "id": "bundle_51",
+      "wallets": [
+        "3NGNCKhBhXCUqzrvQRRfQGAuJrR55rCfAuxcm7cujti7",
+        "AKhjPEvjPVyxCyDmNQMRZ1e7VyBUorkq2F87ftfP9ELE"
+      ],
+      "totalTokensBought": 4.998958559999999,
+      "supplyPercentage": 5.100808377218082e-7,
+      "transactions": [
+        {
+          "signature": "nQPe6Dx49uN9ujDu44ka3NhsKvuVaW7eyeMYnwNHJQV7CGDCinJsfbkZ9dK24HJtyjMnJof5LhrHUZCqHDtLBky",
+          "timestamp": 1773218068000,
+          "slot": 405658399,
+          "signer": "3NGNCKhBhXCUqzrvQRRfQGAuJrR55rCfAuxcm7cujti7",
+          "type": "buy",
+          "tokenAmount": 0.430876086,
+          "solAmount": 0.006245751
+        },
+        {
+          "signature": "ngqu55h6bgnbWJ9Y5qxrfXsr9cMvDTYqBuRx2ELKs9Hb5ygCvAM4mbgB15Dk7W5dctRMynTeU7ChMdDrCrpH14B",
+          "timestamp": 1773218070000,
+          "slot": 405658405,
+          "signer": "AKhjPEvjPVyxCyDmNQMRZ1e7VyBUorkq2F87ftfP9ELE",
+          "type": "buy",
+          "tokenAmount": 4.568082474,
+          "solAmount": 0.009513212
         }
       ]
     }
   ],
   "devActivity": {
-    "wallet": "YD861Cmho5tXsvTTvg5iZquFtd7hhfYLPQyYrwAZQpC",
+    "wallet": "4xrfGiXK7aEoik1LRb3pdRtyzq1Gp63eatQsRm1VoC1j",
     "peakHoldingPercentage": 100,
     "currentHoldingPercentage": 100,
     "hasSold": false,

@@ -24,6 +24,7 @@ import { submissionsRouter } from "./routes/submissions.js";
 import { patternsRouter } from "./routes/patterns.js";
 import { tierRouter } from "./routes/tier.js";
 import { leaderboardRouter } from "./routes/leaderboard.js";
+import { contributorRouter } from "./routes/contributor.js";
 import { createRequestLimiter } from "./middleware/auth.js";
 import { getStats } from "./db/helpers.js";
 
@@ -88,6 +89,7 @@ app.route("/api/submissions", submissionsRouter);
 app.route("/api/patterns", patternsRouter);
 app.route("/api/tier", tierRouter);
 app.route("/api/leaderboard", leaderboardRouter);
+app.route("/api/contributor", contributorRouter);
 
 // ─── Error Handling ───────────────────────────────────────
 

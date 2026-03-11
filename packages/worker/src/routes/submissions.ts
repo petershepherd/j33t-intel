@@ -3,6 +3,7 @@ import type { Env } from "../index.js";
 import type { CommunitySubmission, ApiResponse, SubmitAnalysisResponse } from "@j33t-intel/shared";
 import { isValidSolanaCA } from "@j33t-intel/shared";
 import { insertSubmission, getSubmission } from "../db/helpers.js";
+import { recordContributorActivity } from "../db/contributors.js";
 import { rateLimitMiddleware, generateContributorHash } from "../middleware/auth.js";
 
 export const submissionsRouter = new Hono<{ Bindings: Env }>();

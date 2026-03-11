@@ -1,112 +1,191 @@
 # J33T Intel 🐾
 
-**On-Chain Intelligence Platform for Solana Meme Tokens**
+**Open-source on-chain intelligence platform for Solana meme tokens.**
 
-J33T Intel is an open-source, community-driven intelligence platform designed to identify high-potential Solana meme tokens in their earliest stages — and filter out rugpulls before they happen.
+J33T Intel analyzes Solana token transactions to detect promising early launches and filter out rugpulls — before they happen.
+
+---
+
+## What Does It Do?
+
+You give it a Solana token address. It fetches the transaction history, analyzes 14 different signals, and tells you:
+
+- **Potential Score (0–100)** — How promising does this token look?
+- **Rugpull Risk Score (0–100)** — How likely is it to be a scam?
+- **Optimal Filter Settings** — What scanner settings would have caught this token early?
+
+Everything runs on your machine. Your API keys stay local. Nothing is shared unless you explicitly opt in.
+
+### Example Output
+
+```
+━━━ Bonk (Bonk) ━━━
+
+   Pattern: POSITIVE
+
+   Scores
+   Potential:    64/100 ████████████░░░░░░░░
+   Rug Risk:     27/100 █████░░░░░░░░░░░░░░░
+
+   Key Signals
+   Buy/Sell Ratio:     2.36x
+   Bundle %:           0.0%
+   Dev Sold:           0.0%
+   Timing Suspicion:   0%
+   Unique Wallets 10m: 38
+```
+
+---
 
 ## Quick Start
 
+> **New to coding?** See the full [Setup Guide](docs/SETUP.md) with step-by-step instructions for Mac, Windows, and Linux.
+
 ```bash
-# Clone the repo
 git clone https://github.com/petershepherd/j33t-intel.git
 cd j33t-intel
-
-# Install dependencies
 pnpm install
-
-# Build all packages
 pnpm build
-
-# Set up your API keys
-cp .env.example .env
-# Edit .env with your Helius + AI API keys
-
-# Run a backtest
-pnpm --filter @j33t-intel/cli start backtest <TOKEN_CA>
+cp .env.example .env       # then edit .env with your Helius API key
 ```
+
+Run your first analysis:
+
+```bash
+node packages/cli/dist/index.js backtest <TOKEN_ADDRESS> --verbose
+```
+
+---
+
+## Three Modes
+
+### 1. Backtest — Learn from winners
+Input a successful token. J33T Intel reconstructs its early trading history and finds the optimal scanner settings that would have detected it under $100K market cap.
+
+```bash
+node packages/cli/dist/index.js backtest <TOKEN_CA> --verbose
+```
+
+### 2. Rugcheck — Learn from scams
+Input a known rugpull. The system extracts the behavioral signatures from the pre-rug phase, creating patterns that help detect future scams.
+
+```bash
+node packages/cli/dist/index.js rugcheck <TOKEN_CA> --verbose
+```
+
+### 3. Live Scan — Analyze any token (coming soon)
+Real-time analysis of any active token using the scoring engine.
+
+---
+
+## What It Analyzes (14 Signals)
+
+| Signal | What It Means |
+|--------|--------------|
+| **Buy/Sell Ratio** | More buys than sells = healthy interest |
+| **Bundle Detection** | Coordinated wallets buying together = manipulation |
+| **Top 10 Holders** | If a few wallets hold most supply = dump risk |
+| **Dev Wallet** | Did the creator sell? How fast? How much? |
+| **Liquidity Lock** | Locked liquidity = harder to rugpull |
+| **Freeze Authority** | Can the dev freeze your tokens? |
+| **Mint Authority** | Can the dev print unlimited new tokens? |
+| **Volume/MCap** | Active trading relative to market cap |
+| **Price Momentum** | Organic growth vs artificial pump |
+| **Transaction Timing** | Bot-like buying patterns in the first minutes |
+| **Unique Wallets** | More real buyers early = organic interest |
+| **Liquidity Growth** | How fast liquidity grows after launch |
+| **Bundle Count** | Number of coordinated wallet groups |
+| **Lock Duration** | How long is liquidity locked for? |
+
+Each signal is scored 0–100, weighted, and combined into the final Potential and Risk scores.
+
+---
+
+## Security & Privacy
+
+**Your API keys are never uploaded, shared, or exposed.**
+
+- The `.env` file (where your keys live) is in `.gitignore` — Git will never upload it
+- Only the `.env.example` template (with empty placeholder values) is on GitHub
+- The CLI runs entirely on your machine
+- Community data contribution is **opt-in only** and sends anonymized analysis results — never your keys, wallet, or personal data
+
+See [Configuration Guide](docs/CONFIGURATION.md) for details on what each setting does.
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Setup Guide](docs/SETUP.md) | Step-by-step installation for Mac, Windows, Linux |
+| [Configuration](docs/CONFIGURATION.md) | Every setting explained |
+| [How It Works](docs/HOW-IT-WORKS.md) | Scoring engine, signals, and analysis pipeline |
+| [API Reference](docs/API.md) | Central API endpoints (for contributors) |
+| [Contributing](docs/CONTRIBUTING.md) | How to contribute to the project |
+
+---
 
 ## Project Structure
 
 ```
 j33t-intel/
 ├── packages/
-│   ├── shared/          # Types, scoring engine, validation, utilities
-│   │   └── src/
-│   │       ├── types/       # TypeScript types (token, analysis, tiers, config, api)
-│   │       ├── scoring/     # Scoring engine with configurable weights
-│   │       ├── validation/  # Input validation for submissions & config
-│   │       └── utils/       # Formatters, rate limiter, helpers
-│   ├── cli/             # Node.js CLI tool
-│   │   └── src/
-│   │       ├── commands/    # backtest, rugcheck, scan, config
-│   │       ├── services/    # Helius, DexScreener, AI service wrappers
-│   │       ├── lib/         # Core analysis logic
-│   │       └── config/      # .env loader
-│   └── worker/          # Cloudflare Worker (Central API)
-│       └── src/
-│           ├── routes/      # API endpoints (submissions, patterns, tier, leaderboard)
-│           └── db/          # D1 migrations
-├── docs/                # Documentation
-├── .env.example         # API key template
-└── pnpm-workspace.yaml  # Monorepo config
+│   ├── shared/        # Types, scoring engine, validation, utilities
+│   ├── cli/           # Command-line tool (backtest, rugcheck, scan)
+│   └── worker/        # Cloudflare Worker API (community database)
+├── docs/              # Documentation
+├── .env.example       # API key template (safe to share)
+├── .env               # Your actual API keys (never uploaded)
+└── pnpm-workspace.yaml
 ```
 
-## How It Works
-
-1. **Backtester Mode** — Input a successful token CA. The system reconstructs its first 1-2 hours, finds when it could have been detected under $100K MCap, and outputs optimal filter settings as JSON.
-
-2. **Rugpull Pattern Mode** — Input a known rugpull CA. The system extracts pre-rug behavioral signatures that feed the negative training set.
-
-3. **Live Scanner** — Analyze any token in real-time using detection signals and the scoring engine.
-
-4. **Community Database** — Opt-in to contribute anonymized analysis results. Every submission improves the shared pattern library.
-
-## Detection Signals
-
-| Signal | What We Measure |
-|--------|----------------|
-| Liquidity Growth Rate | Organic growth vs. artificial injection |
-| Buy/Sell Ratio | Sustained buy pressure in first 5-60 minutes |
-| Bundle Detection | Coordinated wallets from common funding source |
-| Wallet Concentration | Top holder distribution |
-| Dev Wallet Behavior | Has deployer sold? When? How much? |
-| Liquidity Lock Status | Is liquidity locked and for how long? |
-| Volume/MCap Ratio | Active trading relative to market cap |
-| Price Momentum | Gradual growth vs. artificial spike |
-| Freeze/Mint Authority | Can dev freeze wallets or mint new supply? |
-| Transaction Timing | Suspicious clustering in time windows |
-
-## Tech Stack
-
-- **TypeScript** — Full type safety across CLI and API
-- **pnpm workspaces** — Monorepo with shared packages
-- **Helius API** — Solana transaction history
-- **DexScreener API** — Market data
-- **Cloudflare Workers + D1** — Central API & database
-- **Claude/OpenAI** — AI-powered pattern analysis
-- **Vitest** — Testing
+---
 
 ## $J33T Token Tiers
 
-Access to advanced features is gated by $J33T token holdings:
+Advanced features are unlocked by holding $J33T tokens. Balance is verified via Solana wallet connect — no staking required.
 
-| Tier | $J33T Required | Analyses/Day |
-|------|---------------|-------------|
-| Street Stray | 0 | 1 |
-| First Sniff | 10,000 | 2 |
-| Loud Woofer | 50,000 | 3 |
-| Nose Certified | 100,000 | 5 |
-| Pack Runner | 500,000 | 8 |
-| Paws of Steel | 1,000,000 | 13 |
-| Top Dog | 5,000,000 | 21 |
+| Tier | $J33T Required | Analyses/Day | Features |
+|------|---------------|-------------|----------|
+| 🐕 Street Stray | 0 | 1 | Basic JSON output |
+| 👃 First Sniff | 10,000 | 2 | + Rug Radar |
+| 🐶 Loud Woofer | 50,000 | 3 | + J33T Take |
+| 👆 Nose Certified | 100,000 | 5 | + Rug or Not + Daily Sniff |
+| 🏃 Pack Runner | 500,000 | 8 | + Early Access patterns |
+| 🐾 Paws of Steel | 1,000,000 | 13 | + Paws Staking |
+| 🏆 Top Dog | 5,000,000 | 21 | + Full AI agent + Priority feed |
 
-## Contributing
+---
 
-Contributions are welcome! See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
+## Tech Stack
+
+- **TypeScript** — Type-safe code across all packages
+- **pnpm** — Fast monorepo package management
+- **Helius API** — Solana transaction history
+- **DexScreener API** — Market data and token info
+- **Cloudflare Workers + D1** — Central API and community database
+- **Hono** — Lightweight web framework for the Worker
+- **Vitest** — Testing framework
+
+---
+
+## Roadmap
+
+| Phase | Name | Status |
+|-------|------|--------|
+| 1 | Backtester Tool | ✅ Live |
+| 2 | Data Collection | 🔧 In progress |
+| 3 | Pattern Engine | 📋 Planned |
+| 4 | Live AI Agent | 📋 Planned |
+
+---
 
 ## Disclaimer
 
-J33T Intel is a research and analysis tool. Nothing constitutes financial advice. Meme token trading carries extreme risk. Always do your own research. NFA. DYOR. 🐾
+J33T Intel is a research and analysis tool. Nothing in this repository constitutes financial advice. Meme token trading carries extreme risk. Always do your own research. NFA. DYOR. 🐾
+
+---
 
 ## License
 

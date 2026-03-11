@@ -7,5 +7,8 @@ binding = "DB"
 database_name = "j33t-intel-db"
 database_id = "e17b6f3b-1382-4e9b-93bd-53264eeb6bd6"
 
+[triggers]
+crons = ["0 0 * * *"]
+
 [vars]
 ENVIRONMENT = "production"

@@ -100,3 +100,29 @@ submissionsRouter.get("/token/:ca", async (c) => {
     timestamp: Date.now(),
   });
 });
+
+submissionsRouter.get("/my/recent", async (c) => {
+  const apiKey = c.req.query("apiKey") || c.req.header("X-Intel-Key");
+  if (!apiKey) {
+    return c.json<ApiResponse>(
+      { success: false, error: { code: "MISSING_KEY", message: "apiKey query param required" }, timestamp: Date.now() },
+      400,
+    );
+  }
+
+  const keyHash = await hashApiKey(apiKey);
+  const limit = Math.min(Number(c.req.query("limit") ?? 10), 50);
+
+  const result = await c.env.DB
+    .prepare(
+      `SELECT id, token_ca, analyzed_at, pattern_type, potential_score, rugpull_risk_score,
+              confidence, created_at
+       FROM submissions WHERE contributor_hash = ? ORDER BY created_at DESC LIMIT ?`)
+    .bind(keyHash, limit).all();
+
+  return c.json<ApiResponse>({
+    success: true,
+    data: { submissions: result.results ?? [] },
+    timestamp: Date.now(),
+  });
+});

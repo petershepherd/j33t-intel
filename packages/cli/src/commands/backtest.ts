@@ -162,7 +162,7 @@ async function submitToCommunity(analysis: AnalysisResult, config: J33TConfig): 
     const response = await fetch(`${config.centralApiUrl}/api/submissions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ submission }),
+      body: JSON.stringify({ submission, apiKey: config.intelApiKey }),
     });
 
     if (response.ok) {

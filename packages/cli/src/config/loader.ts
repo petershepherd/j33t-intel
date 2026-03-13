@@ -22,6 +22,7 @@ export async function loadConfig(options: CommandOptions = {}): Promise<J33TConf
     requestTimeoutMs: Number(process.env.REQUEST_TIMEOUT_MS) || CONFIG_DEFAULTS.requestTimeoutMs,
     cacheDir: process.env.CACHE_DIR ?? CONFIG_DEFAULTS.cacheDir,
     dexScreenerRateLimit: Number(process.env.DEXSCREENER_RATE_LIMIT) || CONFIG_DEFAULTS.dexScreenerRateLimit,
+    intelApiKey: process.env.J33T_INTEL_KEY,
     verbose: options.verbose ?? process.env.VERBOSE === "true",
   };
 

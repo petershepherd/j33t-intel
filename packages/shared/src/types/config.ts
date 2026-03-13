@@ -2,6 +2,7 @@ export type AIProvider = "anthropic" | "openai" | "groq";
 
 export interface J33TConfig {
   heliusApiKey: string;
+  intelApiKey?: string;
   dexScreenerRateLimit?: number;
   aiProvider?: AIProvider;
   aiApiKey?: string;

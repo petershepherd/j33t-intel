@@ -3,11 +3,21 @@ import type { Env } from "../index.js";
 import type { ApiResponse } from "@j33t-intel/shared";
 import { generateContributorHash } from "../middleware/auth.js";
 import { getContributorProfile, getTopContributors, CONTRIBUTOR_LEVELS } from "../db/contributors.js";
+import { hashApiKey } from "../db/api-keys.js";
 
 export const contributorRouter = new Hono<{ Bindings: Env }>();
 
 contributorRouter.get("/profile", async (c) => {
-  const hash = await generateContributorHash(c);
+  // Check if API key is provided as query param or header
+  const apiKey = c.req.query("apiKey") || c.req.header("X-Intel-Key");
+  let hash: string;
+
+  if (apiKey) {
+    hash = await hashApiKey(apiKey);
+  } else {
+    hash = await generateContributorHash(c);
+  }
+
   const profile = await getContributorProfile(c.env.DB, hash);
   if (!profile) {
     return c.json<ApiResponse>({
@@ -42,7 +52,7 @@ contributorRouter.get("/levels", (c) => {
         bonusAnalyses: l.bonusAnalyses, patternLibraryAccess: l.patternAccess,
         airdropMultiplier: l.airdropMultiplier,
       })),
-      note: "Future airdrops and rewards will ONLY go to active contributors. The longer your streak, the higher your reward multiplier.",
+      note: "Future airdrops and rewards will ONLY go to active contributors.",
     },
     timestamp: Date.now(),
   });

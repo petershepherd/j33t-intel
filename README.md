@@ -78,8 +78,8 @@ node packages/cli/dist/index.js backtest <TOKEN_ADDRESS> --verbose
 # Analyze a known rugpull
 node packages/cli/dist/index.js rugcheck <TOKEN_ADDRESS> --verbose
 
-# Contribute results to the community database
-node packages/cli/dist/index.js backtest <TOKEN_ADDRESS> --contribute
+# If CONTRIBUTE_TO_COMMUNITY=true in .env, results are uploaded automatically
+# No need for --contribute flag if enabled in .env
 ```
 
 ---

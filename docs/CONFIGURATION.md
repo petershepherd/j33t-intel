@@ -39,7 +39,7 @@ AI is not required for backtesting or rugchecking. The scoring engine is rule-ba
 | Setting | Default | Description |
 |---------|---------|-------------|
 | `CONTRIBUTE_TO_COMMUNITY` | `false` | Send anonymized results to the shared database |
-| `CENTRAL_API_URL` | `https://api.j33t.com` | URL of the central J33T Intel API |
+| `CENTRAL_API_URL` | `https://j33t-intel-api.juhasz-peter1986.workers.dev` | URL of the central J33T Intel API |
 
 When you opt in to community contribution, **only these anonymized fields are sent**: token address, pattern type, detection signals, scores, and filter settings. **Never sent**: your API keys, wallet address, IP address, or any personal data.
 

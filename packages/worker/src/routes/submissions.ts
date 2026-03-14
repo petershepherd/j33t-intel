@@ -6,6 +6,7 @@ import { insertSubmission, getSubmission } from "../db/helpers.js";
 import { rateLimitMiddleware, generateContributorHash } from "../middleware/auth.js";
 import { recordContributorActivity } from "../db/contributors.js";
 import { hashApiKey } from "../db/api-keys.js";
+import { checkDispute, getSubmissionWeight, updateTrustAfterSubmission, isContributorBlocked } from "../db/trust-score.js";
 
 export const submissionsRouter = new Hono<{ Bindings: Env }>();
 
@@ -19,7 +20,7 @@ submissionsRouter.post("/", rateLimitMiddleware, async (c) => {
       );
     }
 
-    // Use API key hash as contributor ID if provided, otherwise fall back to IP hash
+    // Identify contributor
     let contributorHash: string;
     if (body.apiKey) {
       contributorHash = await hashApiKey(body.apiKey);
@@ -27,33 +28,88 @@ submissionsRouter.post("/", rateLimitMiddleware, async (c) => {
       contributorHash = await generateContributorHash(c);
     }
 
-    const result = await insertSubmission(c.env.DB, body.submission, contributorHash);
-
-    const response: ApiResponse<SubmitAnalysisResponse> = {
-      success: result.accepted,
-      data: { id: result.id, accepted: result.accepted, rejectionReason: result.rejectionReason },
-      timestamp: Date.now(),
-    };
-
-    if (!result.accepted) {
-      response.error = { code: "SUBMISSION_REJECTED", message: result.rejectionReason ?? "Unknown" };
+    // Check if contributor is blocked (trust too low)
+    const blockCheck = await isContributorBlocked(c.env.DB, contributorHash);
+    if (blockCheck.blocked) {
+      return c.json<ApiResponse>(
+        { success: false, error: { code: "BLOCKED", message: blockCheck.reason || "Temporarily blocked" }, timestamp: Date.now() },
+        403,
+      );
     }
 
-    // Track contributor activity
-    if (result.accepted) {
+    // Check for dispute: does scoring agree with the user's pattern?
+    const { potentialScore, rugpullRiskScore } = body.submission.scores;
+    const dispute = checkDispute(body.submission.patternType, potentialScore, rugpullRiskScore);
+
+    // Get contributor's trust score for weight calculation
+    const trustRow = await c.env.DB
+      .prepare("SELECT trust_score FROM contributors WHERE hash = ?")
+      .bind(contributorHash)
+      .first<{ trust_score: number }>();
+    const trustScore = trustRow?.trust_score ?? 50;
+    const weight = getSubmissionWeight(trustScore);
+
+    // Insert submission
+    const result = await insertSubmission(c.env.DB, body.submission, contributorHash);
+
+    if (result.accepted && result.id) {
+      // Update submission with trust data
+      await c.env.DB
+        .prepare(
+          `UPDATE submissions SET
+            submission_weight = ?,
+            is_disputed = ?,
+            scoring_pattern_type = ?,
+            dispute_reason = ?
+           WHERE id = ?`)
+        .bind(
+          weight,
+          dispute.disputed ? 1 : 0,
+          dispute.scoringPattern,
+          dispute.reason,
+          result.id,
+        )
+        .run();
+
+      // Update trust score based on whether scoring agrees
+      const newTrust = await updateTrustAfterSubmission(c.env.DB, contributorHash, !dispute.disputed);
+
+      // Track contributor activity (streaks, levels)
+      let contributorProfile = null;
       try {
-        const profile = await recordContributorActivity(
-          c.env.DB,
-          contributorHash,
-          body.submission.tokenCA,
-        );
-        (response as any).data.contributor = profile;
+        contributorProfile = await recordContributorActivity(c.env.DB, contributorHash, body.submission.tokenCA);
       } catch(e) {
         console.error("Contributor tracking error:", e);
       }
+
+      const response: ApiResponse = {
+        success: true,
+        data: {
+          id: result.id,
+          accepted: true,
+          submissionWeight: weight,
+          trustScore: newTrust,
+          disputed: dispute.disputed,
+          scoringPattern: dispute.scoringPattern,
+          disputeReason: dispute.reason,
+          contributor: contributorProfile,
+        },
+        timestamp: Date.now(),
+      };
+
+      return c.json(response, 201);
     }
 
-    return c.json(response, result.accepted ? 201 : 400);
+    // Submission rejected
+    return c.json<ApiResponse>(
+      {
+        success: false,
+        error: { code: "SUBMISSION_REJECTED", message: result.rejectionReason ?? "Unknown" },
+        data: { id: result.id, accepted: false, rejectionReason: result.rejectionReason },
+        timestamp: Date.now(),
+      },
+      400,
+    );
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return c.json<ApiResponse>(
@@ -61,6 +117,30 @@ submissionsRouter.post("/", rateLimitMiddleware, async (c) => {
       500,
     );
   }
+});
+
+submissionsRouter.get("/my/recent", async (c) => {
+  const apiKey = c.req.query("apiKey") || c.req.header("X-Intel-Key");
+  if (!apiKey) {
+    return c.json<ApiResponse>(
+      { success: false, error: { code: "MISSING_KEY", message: "apiKey query param required" }, timestamp: Date.now() },
+      400,
+    );
+  }
+  const keyHash = await hashApiKey(apiKey);
+  const limit = Math.min(Number(c.req.query("limit") ?? 10), 50);
+  const result = await c.env.DB
+    .prepare(
+      `SELECT id, token_ca, analyzed_at, pattern_type, scoring_pattern_type,
+              potential_score, rugpull_risk_score, confidence, submission_weight,
+              is_disputed, dispute_reason, created_at
+       FROM submissions WHERE contributor_hash = ? ORDER BY created_at DESC LIMIT ?`)
+    .bind(keyHash, limit).all();
+  return c.json<ApiResponse>({
+    success: true,
+    data: { submissions: result.results ?? [] },
+    timestamp: Date.now(),
+  });
 });
 
 submissionsRouter.get("/:id", async (c) => {
@@ -88,7 +168,7 @@ submissionsRouter.get("/token/:ca", async (c) => {
   const result = await c.env.DB
     .prepare(
       `SELECT id, token_ca, analyzed_at, pattern_type, potential_score, rugpull_risk_score,
-              confidence, client_version, created_at
+              confidence, submission_weight, is_disputed, client_version, created_at
        FROM submissions WHERE token_ca = ? ORDER BY created_at DESC LIMIT ? OFFSET ?`)
     .bind(ca, limit, offset).all();
   const countResult = await c.env.DB
@@ -97,32 +177,6 @@ submissionsRouter.get("/token/:ca", async (c) => {
   return c.json<ApiResponse>({
     success: true,
     data: { submissions: result.results ?? [], total: countResult?.total ?? 0 },
-    timestamp: Date.now(),
-  });
-});
-
-submissionsRouter.get("/my/recent", async (c) => {
-  const apiKey = c.req.query("apiKey") || c.req.header("X-Intel-Key");
-  if (!apiKey) {
-    return c.json<ApiResponse>(
-      { success: false, error: { code: "MISSING_KEY", message: "apiKey query param required" }, timestamp: Date.now() },
-      400,
-    );
-  }
-
-  const keyHash = await hashApiKey(apiKey);
-  const limit = Math.min(Number(c.req.query("limit") ?? 10), 50);
-
-  const result = await c.env.DB
-    .prepare(
-      `SELECT id, token_ca, analyzed_at, pattern_type, potential_score, rugpull_risk_score,
-              confidence, created_at
-       FROM submissions WHERE contributor_hash = ? ORDER BY created_at DESC LIMIT ?`)
-    .bind(keyHash, limit).all();
-
-  return c.json<ApiResponse>({
-    success: true,
-    data: { submissions: result.results ?? [] },
     timestamp: Date.now(),
   });
 });

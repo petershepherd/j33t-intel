@@ -6,6 +6,7 @@ import { tierRouter } from "./routes/tier.js";
 import { leaderboardRouter } from "./routes/leaderboard.js";
 import { contributorRouter } from "./routes/contributor.js";
 import { keysRouter } from "./routes/keys.js";
+import { votesRouter } from "./routes/votes.js";
 import { createRequestLimiter } from "./middleware/auth.js";
 import { getStats } from "./db/helpers.js";
 import { refreshAllBalances, resetBrokenStreaks } from "./db/api-keys.js";
@@ -55,6 +56,7 @@ app.route("/api/tier", tierRouter);
 app.route("/api/leaderboard", leaderboardRouter);
 app.route("/api/contributor", contributorRouter);
 app.route("/api/keys", keysRouter);
+app.route("/api/votes", votesRouter);
 
 app.notFound((c) => {
   return c.json(

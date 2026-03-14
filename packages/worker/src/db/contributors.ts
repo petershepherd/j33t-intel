@@ -53,6 +53,7 @@ export interface ContributorProfile {
   patternLibraryAccess: boolean;
   airdropEligible: boolean;
   airdropMultiplier: number;
+  trustScore: number;
   isNewContributor: boolean;
   leveledUp?: string;
 }
@@ -66,6 +67,7 @@ export interface ContributorLeaderboardEntry {
   currentStreak: number;
   longestStreak: number;
   airdropMultiplier: number;
+  trustScore: number;
   memberSince: number;
   lastActive: number;
 }
@@ -105,7 +107,7 @@ export async function recordContributorActivity(
       level: "contributor", levelEmoji: "🥉", levelName: "Contributor",
       totalSubmissions: 1, currentStreak: 1, longestStreak: 1,
       bonusAnalyses: 1, patternLibraryAccess: true,
-      airdropEligible: false, airdropMultiplier: 0,
+      airdropEligible: false, airdropMultiplier: 0, trustScore: 50,
       isNewContributor: true,
     };
   }
@@ -154,7 +156,7 @@ export async function recordContributorActivity(
     level, levelEmoji: levelDef.emoji, levelName: levelDef.name,
     totalSubmissions, currentStreak, longestStreak,
     bonusAnalyses: levelDef.bonusAnalyses, patternLibraryAccess: levelDef.patternAccess,
-    airdropEligible: levelDef.airdropMultiplier > 0, airdropMultiplier: levelDef.airdropMultiplier,
+    airdropEligible: levelDef.airdropMultiplier > 0, airdropMultiplier: levelDef.airdropMultiplier, trustScore: 50,
     isNewContributor: false, leveledUp: wasLevelUp ? level : undefined,
   };
 }
@@ -169,7 +171,7 @@ export async function getContributorProfile(
   const levelDef = CONTRIBUTOR_LEVELS[row.contributor_level as ContributorLevelId] ?? CONTRIBUTOR_LEVELS.none;
   return {
     level: row.contributor_level, levelEmoji: levelDef.emoji, levelName: levelDef.name,
-    totalSubmissions: row.total_submissions, currentStreak: row.current_streak_days,
+    totalSubmissions: row.total_submissions, currentStreak: row.current_streak_days, trustScore: (row as any).trust_score ?? 50,
     longestStreak: row.longest_streak_days, bonusAnalyses: levelDef.bonusAnalyses,
     patternLibraryAccess: levelDef.patternAccess, airdropEligible: row.airdrop_eligible === 1,
     airdropMultiplier: row.airdrop_multiplier, isNewContributor: false,
@@ -193,7 +195,7 @@ export async function getTopContributors(
     rank: index + 1, contributorId: row.hash,
     level: row.contributor_level,
     levelEmoji: CONTRIBUTOR_LEVELS[row.contributor_level as ContributorLevelId]?.emoji ?? "",
-    totalSubmissions: row.total_submissions, currentStreak: row.current_streak_days,
+    totalSubmissions: row.total_submissions, currentStreak: row.current_streak_days, trustScore: (row as any).trust_score ?? 50,
     longestStreak: row.longest_streak_days, airdropMultiplier: row.airdrop_multiplier,
     memberSince: row.first_submission_at, lastActive: row.last_submission_at,
   }));

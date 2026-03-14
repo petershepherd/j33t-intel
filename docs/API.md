@@ -153,3 +153,49 @@ wrangler deploy
 ```
 
 See [Configuration](CONFIGURATION.md) for environment variable details.
+
+---
+
+### Community Voting
+
+**`GET /api/votes/disputed`** — Get disputed submissions waiting for community review. Supports `?limit=10`.
+
+Returns submissions where the user's classification conflicts with the scoring engine, along with current vote counts.
+
+**`POST /api/votes/cast`** — Vote on a disputed submission.
+
+Request body:
+```json
+{
+  "submissionId": "sub_xxx",
+  "vote": "agree",
+  "apiKey": "your_intel_api_key"
+}
+```
+
+Vote must be `"agree"` (user is correct) or `"disagree"` (scoring engine is correct). You cannot vote on your own submissions. Minimum trust score of 25 required to vote.
+
+A dispute is resolved after 5+ votes with a clear majority (>60%).
+
+---
+
+### Submission Response (Updated)
+
+When submitting an analysis, the response now includes trust information:
+```json
+{
+  "success": true,
+  "data": {
+    "id": "sub_xxx",
+    "accepted": true,
+    "submissionWeight": 1.0,
+    "trustScore": 52,
+    "disputed": false,
+    "scoringPattern": "positive",
+    "disputeReason": null,
+    "contributor": { ... }
+  }
+}
+```
+
+If `disputed` is `true`, the submission enters community review.

@@ -192,3 +192,153 @@ Things the current version cannot do (yet):
 - **AI-powered analysis** — Rule-based only for now; AI integration is Phase 3
 
 These limitations will be addressed in future updates as the project progresses through its roadmap.
+
+---
+
+## Trust Score System
+
+Every contributor has a Trust Score (0–100) that determines how much weight their submissions carry in the community database. This system prevents manipulation and rewards accurate contributions.
+
+### How It Works
+
+When you submit an analysis, the scoring engine independently evaluates the token and compares its conclusion with yours:
+
+- **You say POSITIVE, scoring agrees** → Trust +2, submission weight normal
+- **You say POSITIVE, scoring says NEGATIVE** → Trust -5, submission marked as **disputed**
+- **You say NEGATIVE, scoring says POSITIVE** → Trust -5, submission marked as **disputed**
+- **Community votes agree with you** → Trust +3
+- **Community votes disagree** → Trust -3
+
+### Starting Score
+
+Everyone starts at **50/100**. Your score changes with every submission.
+
+### Submission Weight
+
+Your trust score determines how much your submissions influence the community pattern library:
+
+| Trust Score | Weight | Label |
+|-------------|--------|-------|
+| 80–100 | 1.5x | Trusted contributor |
+| 50–79 | 1.0x | Normal |
+| 25–49 | 0.5x | Reduced weight |
+| 0–24 | 0.1x | Practically ignored |
+
+### Disputed Submissions
+
+When the scoring engine disagrees with your classification, the submission is marked as **disputed** and enters the community review queue. Other contributors can vote:
+
+- **Agree** — "I think the user's classification is correct"
+- **Disagree** — "I think the scoring engine is correct"
+
+A dispute is resolved when:
+- 5 or more votes have been cast
+- One side has more than 60% of the votes
+
+If the community agrees with you, your trust score gets a bonus. If they disagree, the submission's pattern type is overridden to match the scoring engine's assessment.
+
+### Protection Against Manipulation
+
+- If your trust score drops below **10** and you have 3+ disputed submissions in the last 24 hours, your submissions are **temporarily blocked** for 24 hours
+- The penalty for disagreement (-5) is larger than the reward for agreement (+2), making it expensive to spam bad data
+- Community voters must have a trust score of 25+ to vote, preventing sock puppet manipulation
+
+### Why This Matters
+
+The community database is only as good as the data in it. The trust system ensures that:
+
+1. Accurate contributors have more influence on pattern detection
+2. Manipulators are gradually silenced without being banned
+3. Ambiguous cases get resolved by community consensus
+4. Everyone is incentivized to be honest and accurate
+
+### Viewing Your Trust Score
+
+Your trust score is visible on the [j33t.com](https://j33t.com) Intel dashboard. The color indicates your status:
+
+- 🟢 Green (80+): Trusted
+- 🟡 Gold (50–79): Normal
+- 🟠 Orange (25–49): Reduced
+- 🔴 Red (0–24): At risk of being blocked
+
+### Tips for Maintaining a High Trust Score
+
+- Use **backtest** for tokens you believe are successful
+- Use **rugcheck** for tokens you know were rugged
+- Don't classify a token as negative just because you don't like it — use the scoring as a guide
+- If you're unsure, the scoring engine's pattern classification (shown in the analysis output) is a good indicator
+
+---
+
+## Trust Score System
+
+Every contributor has a Trust Score (0–100) that determines how much weight their submissions carry in the community database. This system prevents manipulation and rewards accurate contributions.
+
+### How It Works
+
+When you submit an analysis, the scoring engine independently evaluates the token and compares its conclusion with yours:
+
+- **You say POSITIVE, scoring agrees** → Trust +2, submission weight normal
+- **You say POSITIVE, scoring says NEGATIVE** → Trust -5, submission marked as **disputed**
+- **You say NEGATIVE, scoring says POSITIVE** → Trust -5, submission marked as **disputed**
+- **Community votes agree with you** → Trust +3
+- **Community votes disagree** → Trust -3
+
+### Starting Score
+
+Everyone starts at **50/100**. Your score changes with every submission.
+
+### Submission Weight
+
+Your trust score determines how much your submissions influence the community pattern library:
+
+| Trust Score | Weight | Label |
+|-------------|--------|-------|
+| 80–100 | 1.5x | Trusted contributor |
+| 50–79 | 1.0x | Normal |
+| 25–49 | 0.5x | Reduced weight |
+| 0–24 | 0.1x | Practically ignored |
+
+### Disputed Submissions
+
+When the scoring engine disagrees with your classification, the submission is marked as **disputed** and enters the community review queue. Other contributors can vote:
+
+- **Agree** — "I think the user's classification is correct"
+- **Disagree** — "I think the scoring engine is correct"
+
+A dispute is resolved when:
+- 5 or more votes have been cast
+- One side has more than 60% of the votes
+
+If the community agrees with you, your trust score gets a bonus. If they disagree, the submission's pattern type is overridden to match the scoring engine's assessment.
+
+### Protection Against Manipulation
+
+- If your trust score drops below **10** and you have 3+ disputed submissions in the last 24 hours, your submissions are **temporarily blocked** for 24 hours
+- The penalty for disagreement (-5) is larger than the reward for agreement (+2), making it expensive to spam bad data
+- Community voters must have a trust score of 25+ to vote, preventing sock puppet manipulation
+
+### Why This Matters
+
+The community database is only as good as the data in it. The trust system ensures that:
+
+1. Accurate contributors have more influence on pattern detection
+2. Manipulators are gradually silenced without being banned
+3. Ambiguous cases get resolved by community consensus
+4. Everyone is incentivized to be honest and accurate
+
+### Viewing Your Trust Score
+
+Your trust score is visible on the [j33t.com](https://j33t.com) Intel dashboard. The color indicates your status:
+
+- 🟢 Green (80+): Trusted
+- 🟡 Gold (50–79): Normal
+- 🟠 Orange (25–49): Reduced
+- 🔴 Red (0–24): At risk of being blocked
+
+### Tips for Maintaining a High Trust Score
+
+- Use **backtest** for tokens you believe are successful
+- Use **rugcheck** for tokens you know were rugged
+- Don't classify a token as negative just because you don't like it — use the scoring as a guide
+- If you're unsure, the scoring engine's pattern classification (shown in the analysis output) is a good indicator

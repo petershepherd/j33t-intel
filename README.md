@@ -258,3 +258,20 @@ J33T Intel is a research and analysis tool. Nothing in this repository constitut
 ## License
 
 MIT — see [LICENSE](LICENSE)
+
+---
+
+## Trust Score
+
+Every contributor has a Trust Score (0–100) that determines submission weight. Accurate classifications increase your score, inaccurate ones decrease it.
+
+| Trust Score | Weight | Meaning |
+|-------------|--------|---------|
+| 80–100 | 1.5x | Trusted — your submissions carry extra weight |
+| 50–79 | 1.0x | Normal |
+| 25–49 | 0.5x | Reduced — scoring often disagrees with you |
+| 0–24 | 0.1x | At risk — submissions practically ignored |
+
+If your classification conflicts with the scoring engine, the submission is marked as **disputed** and goes to community review. Other contributors vote to resolve it.
+
+See [How It Works](docs/HOW-IT-WORKS.md#trust-score-system) for the full explanation.

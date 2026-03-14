@@ -1,3 +1,4 @@
+import { logActivity } from "../db/activity-feed.js";
 import { Hono } from "hono";
 import type { Env } from "../index.js";
 import type { ApiResponse } from "@j33t-intel/shared";

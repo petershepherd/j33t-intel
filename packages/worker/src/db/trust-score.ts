@@ -1,3 +1,4 @@
+import { logActivity } from "./activity-feed.js";
 /**
  * Trust Score System
  *
@@ -292,6 +293,11 @@ export async function castVote(
       await updateTrustAfterVote(db, submission.contributor_hash, false);
     }
   }
+
+  // Log vote activity
+  try {
+    await logActivity(db, "vote", voterHash, (vote === "agree" ? "Agreed" : "Disagreed") + " with disputed submission", 0);
+  } catch(e3) {}
 
   return { success: true };
 }

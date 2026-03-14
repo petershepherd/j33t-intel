@@ -179,7 +179,7 @@ export async function getDisputedSubmissions(
               (SELECT COUNT(*) FROM community_votes WHERE submission_id = s.id AND vote = 'agree') as agree_count,
               (SELECT COUNT(*) FROM community_votes WHERE submission_id = s.id AND vote = 'disagree') as disagree_count
        FROM submissions s
-       WHERE s.is_disputed = 1
+       WHERE s.is_disputed IN (1, 2)
        ORDER BY s.created_at DESC
        LIMIT ?`)
     .bind(limit)
@@ -267,31 +267,15 @@ export async function castVote(
   const agreeCount = votes.results?.find((v) => v.vote === "agree")?.cnt ?? 0;
   const disagreeCount = votes.results?.find((v) => v.vote === "disagree")?.cnt ?? 0;
 
-  // Resolve if 5+ total votes with clear majority (>60%)
+
+  // If 5+ votes, mark as pending admin review (not auto-resolved)
   const totalVotes = agreeCount + disagreeCount;
   if (totalVotes >= 5) {
-    if (agreeCount / totalVotes > 0.6) {
-      // Community agrees with user → keep user's pattern, boost trust
-      await db
-        .prepare("UPDATE submissions SET is_disputed = 0 WHERE id = ?")
-        .bind(submissionId)
-        .run();
-      await updateTrustAfterVote(db, submission.contributor_hash, true);
-    } else if (disagreeCount / totalVotes > 0.6) {
-      // Community disagrees → override to scoring's pattern, penalize trust
-      const scoringPattern = await db
-        .prepare("SELECT scoring_pattern_type FROM submissions WHERE id = ?")
-        .bind(submissionId)
-        .first<{ scoring_pattern_type: string }>();
-
-      if (scoringPattern?.scoring_pattern_type) {
-        await db
-          .prepare("UPDATE submissions SET is_disputed = 0, pattern_type = ? WHERE id = ?")
-          .bind(scoringPattern.scoring_pattern_type, submissionId)
-          .run();
-      }
-      await updateTrustAfterVote(db, submission.contributor_hash, false);
-    }
+    const communityVerdict = agreeCount > disagreeCount ? "user" : "scoring";
+    await db
+      .prepare("UPDATE submissions SET is_disputed = 2 WHERE id = ?")
+      .bind(submissionId)
+      .run();
   }
 
   // Log vote activity

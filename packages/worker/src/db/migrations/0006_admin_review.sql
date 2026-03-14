@@ -1,0 +1,5 @@
+-- is_disputed values:
+-- 0 = not disputed (resolved)
+-- 1 = disputed, voting in progress
+-- 2 = pending admin review (5+ votes received)
+-- Note: no schema change needed, we reuse the integer field

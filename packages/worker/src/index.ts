@@ -8,6 +8,7 @@ import { contributorRouter } from "./routes/contributor.js";
 import { keysRouter } from "./routes/keys.js";
 import { votesRouter } from "./routes/votes.js";
 import { activityRouter } from "./routes/activity.js";
+import { adminRouter } from "./routes/admin.js";
 import { createRequestLimiter } from "./middleware/auth.js";
 import { getStats } from "./db/helpers.js";
 import { refreshAllBalances, resetBrokenStreaks } from "./db/api-keys.js";
@@ -59,6 +60,7 @@ app.route("/api/contributor", contributorRouter);
 app.route("/api/keys", keysRouter);
 app.route("/api/votes", votesRouter);
 app.route("/api/activity", activityRouter);
+app.route("/api/admin", adminRouter);
 
 app.notFound((c) => {
   return c.json(

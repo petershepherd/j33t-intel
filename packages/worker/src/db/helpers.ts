@@ -484,3 +484,81 @@ export async function getStats(db: D1Database): Promise<DbStats> {
     submissionsToday: result?.submissions_today ?? 0,
   };
 }
+
+export async function insertPatterns(
+  db: D1Database,
+  submissionId: string,
+  tokenCA: string,
+  patterns: Record<string, unknown>,
+  patternType: string,
+): Promise<void> {
+  const p = patterns;
+  await db
+    .prepare(
+      `INSERT INTO submission_patterns (
+        submission_id, token_ca,
+        first_5min_total_txs, first_5min_buy_count, first_5min_sell_count,
+        first_5min_unique_buyers, first_5min_unique_sellers, first_5min_total_sol_volume,
+        first_5min_avg_buy_size_sol, first_5min_largest_buy_sol,
+        first_30s_buy_count, first_30s_unique_buyers, first_30s_total_sol,
+        first_30s_slots_used, first_30s_max_buys_per_slot,
+        first_60s_buy_count, first_60s_unique_buyers, first_60s_sell_count,
+        bundle_count, bundle_total_wallets, bundle_avg_wallets_per_bundle,
+        bundle_largest_wallet_count, bundle_first_bundle_time_sec,
+        bundle_avg_buy_size_sol, bundle_total_sol_spent, bundle_slots_span,
+        bundle_pct_of_early_buys,
+        dev_first_action, dev_first_action_time_sec, dev_first_sell_time_sec,
+        dev_sell_count_1h, dev_sell_pct_1h, dev_added_liquidity,
+        dev_removed_liquidity, dev_remove_liq_time_sec,
+        liq_initial_sol, liq_added_count_1h, liq_removed_count_1h,
+        liq_removed_pct_1h, liq_first_remove_time_sec,
+        buys_per_min_avg_5min, buys_per_min_avg_30min,
+        sell_pressure_start_time_sec,
+        buy_sell_ratio_1min, buy_sell_ratio_5min,
+        buy_sell_ratio_15min, buy_sell_ratio_60min,
+        avg_time_between_buys_sec, stddev_time_between_buys,
+        pct_buys_in_same_slot, unique_buyer_return_rate,
+        has_freeze_authority, has_mint_authority,
+        pattern_type, created_at
+      ) VALUES (
+        ?, ?,
+        ?, ?, ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?, ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?,
+        ?, ?
+      )`)
+    .bind(
+      submissionId, tokenCA,
+      p.first_5min_total_txs ?? 0, p.first_5min_buy_count ?? 0, p.first_5min_sell_count ?? 0,
+      p.first_5min_unique_buyers ?? 0, p.first_5min_unique_sellers ?? 0, p.first_5min_total_sol_volume ?? 0,
+      p.first_5min_avg_buy_size_sol ?? 0, p.first_5min_largest_buy_sol ?? 0,
+      p.first_30s_buy_count ?? 0, p.first_30s_unique_buyers ?? 0, p.first_30s_total_sol ?? 0,
+      p.first_30s_slots_used ?? 0, p.first_30s_max_buys_per_slot ?? 0,
+      p.first_60s_buy_count ?? 0, p.first_60s_unique_buyers ?? 0, p.first_60s_sell_count ?? 0,
+      p.bundle_count ?? 0, p.bundle_total_wallets ?? 0, p.bundle_avg_wallets_per_bundle ?? 0,
+      p.bundle_largest_wallet_count ?? 0, p.bundle_first_bundle_time_sec ?? 0,
+      p.bundle_avg_buy_size_sol ?? 0, p.bundle_total_sol_spent ?? 0, p.bundle_slots_span ?? 0,
+      p.bundle_pct_of_early_buys ?? 0,
+      p.dev_first_action ?? null, p.dev_first_action_time_sec ?? 0, p.dev_first_sell_time_sec ?? null,
+      p.dev_sell_count_1h ?? 0, p.dev_sell_pct_1h ?? 0, p.dev_added_liquidity ?? 0,
+      p.dev_removed_liquidity ?? 0, p.dev_remove_liq_time_sec ?? null,
+      p.liq_initial_sol ?? 0, p.liq_added_count_1h ?? 0, p.liq_removed_count_1h ?? 0,
+      p.liq_removed_pct_1h ?? 0, p.liq_first_remove_time_sec ?? null,
+      p.buys_per_min_avg_5min ?? 0, p.buys_per_min_avg_30min ?? 0,
+      p.sell_pressure_start_time_sec ?? null,
+      p.buy_sell_ratio_1min ?? 0, p.buy_sell_ratio_5min ?? 0,
+      p.buy_sell_ratio_15min ?? 0, p.buy_sell_ratio_60min ?? 0,
+      p.avg_time_between_buys_sec ?? 0, p.stddev_time_between_buys ?? 0,
+      p.pct_buys_in_same_slot ?? 0, p.unique_buyer_return_rate ?? 0,
+      p.has_freeze_authority ?? 0, p.has_mint_authority ?? 0,
+      patternType, Date.now(),
+    )
+    .run();
+}

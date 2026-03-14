@@ -9,3 +9,5 @@ export * from "./validation/index.js";
 
 // Utils
 export * from "./utils/index.js";
+export { extractDetailedPatterns } from "./patterns/extractor.js";
+export type { DetailedPatterns, ParsedTx as PatternParsedTx } from "./patterns/extractor.js";

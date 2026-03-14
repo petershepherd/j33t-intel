@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import type { Env } from "../index.js";
 import type { CommunitySubmission, ApiResponse, SubmitAnalysisResponse } from "@j33t-intel/shared";
 import { isValidSolanaCA } from "@j33t-intel/shared";
-import { insertSubmission, getSubmission } from "../db/helpers.js";
+import { insertSubmission, getSubmission, insertPatterns } from "../db/helpers.js";
 import { rateLimitMiddleware, generateContributorHash } from "../middleware/auth.js";
 import { recordContributorActivity } from "../db/contributors.js";
 import { hashApiKey } from "../db/api-keys.js";
@@ -83,6 +83,13 @@ submissionsRouter.post("/", rateLimitMiddleware, async (c) => {
         console.error("Contributor tracking error:", e);
       }
 
+
+      // Save detailed patterns for AI training
+      if (result.id && (body as any).patterns) {
+        try {
+          await insertPatterns(c.env.DB, result.id, body.submission.tokenCA, (body as any).patterns, body.submission.patternType);
+        } catch(e3) { console.error("Pattern insert error:", e3); }
+      }
 
       // Log activity for live feed
       try {

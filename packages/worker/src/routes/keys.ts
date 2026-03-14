@@ -103,3 +103,38 @@ keysRouter.post("/revoke", async (c) => {
     );
   }
 });
+
+keysRouter.get("/status/:wallet", async (c) => {
+  const wallet = c.req.param("wallet");
+  const row = await c.env.DB
+    .prepare("SELECT key_hash, tier_id, tier_name, balance, created_at FROM intel_api_keys WHERE wallet_address = ? AND is_revoked = 0")
+    .bind(wallet)
+    .first<{ key_hash: string; tier_id: string; tier_name: string; balance: number; created_at: number }>();
+
+  if (!row) {
+    return c.json<ApiResponse>({ success: true, data: { hasKey: false }, timestamp: Date.now() });
+  }
+
+  const contributor = await c.env.DB
+    .prepare("SELECT trust_score, current_streak_days, longest_streak_days, contributor_level, total_submissions, airdrop_multiplier FROM contributors WHERE hash = ?")
+    .bind(row.key_hash)
+    .first<{ trust_score: number; current_streak_days: number; longest_streak_days: number; contributor_level: string; total_submissions: number; airdrop_multiplier: number }>();
+
+  return c.json<ApiResponse>({
+    success: true,
+    data: {
+      hasKey: true,
+      tier: row.tier_name,
+      tierId: row.tier_id,
+      balance: row.balance,
+      createdAt: row.created_at,
+      trustScore: contributor?.trust_score ?? 50,
+      currentStreak: contributor?.current_streak_days ?? 0,
+      longestStreak: contributor?.longest_streak_days ?? 0,
+      contributorLevel: contributor?.contributor_level ?? "none",
+      totalSubmissions: contributor?.total_submissions ?? 0,
+      airdropMultiplier: contributor?.airdrop_multiplier ?? 0,
+    },
+    timestamp: Date.now(),
+  });
+});

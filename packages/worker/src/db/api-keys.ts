@@ -95,12 +95,20 @@ export interface ApiKeyInfo {
 /**
  * Generate a new API key for a wallet.
  * Called by j33t.com when user clicks "Generate Intel Key".
+ * Migrates all activity from the old key to the new key.
  */
 export async function createApiKey(
   db: D1Database,
   walletAddress: string,
   heliusKey?: string,
 ): Promise<{ key: string; keyHash: string; tier: ReturnType<typeof getTierForBalance> }> {
+  // Get the old key hash before revoking (to migrate activity)
+  const oldKey = await db
+    .prepare("SELECT key_hash FROM intel_api_keys WHERE wallet_address = ? AND is_revoked = 0")
+    .bind(walletAddress)
+    .first<{ key_hash: string }>();
+  const oldKeyHash = oldKey?.key_hash || null;
+
   // Revoke any existing keys for this wallet
   await db
     .prepare("UPDATE intel_api_keys SET is_revoked = 1 WHERE wallet_address = ? AND is_revoked = 0")
@@ -124,6 +132,24 @@ export async function createApiKey(
     .bind(keyHash, walletAddress, balance, tier.id, tier.name,
       tier.analysesPerDay, Date.now(), Date.now())
     .run();
+
+  // Migrate all activity from old key to new key
+  if (oldKeyHash) {
+    try {
+      await db.prepare("UPDATE submissions SET contributor_hash = ? WHERE contributor_hash = ?")
+        .bind(keyHash, oldKeyHash).run();
+      await db.prepare("UPDATE contributors SET hash = ? WHERE hash = ?")
+        .bind(keyHash, oldKeyHash).run();
+      await db.prepare("UPDATE contributor_daily_log SET contributor_hash = ? WHERE contributor_hash = ?")
+        .bind(keyHash, oldKeyHash).run();
+      await db.prepare("UPDATE community_votes SET voter_hash = ? WHERE voter_hash = ?")
+        .bind(keyHash, oldKeyHash).run();
+      await db.prepare("UPDATE activity_log SET contributor_hash = ? WHERE contributor_hash = ?")
+        .bind(keyHash, oldKeyHash).run();
+    } catch {
+      // Migration is best-effort — don't fail key generation
+    }
+  }
 
   return { key: plainKey, keyHash, tier };
 }

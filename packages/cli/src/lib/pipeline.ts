@@ -1,3 +1,4 @@
+import { extractDetailedPatterns } from "@j33t-intel/shared";
 /**
  * Backtester Pipeline
  *
@@ -208,6 +209,13 @@ export async function runBacktesterPipeline(
     // Build final result
     const durationMs = Date.now() - startTime;
 
+
+    // Extract detailed patterns for AI training
+    const detailedPatterns = extractDetailedPatterns(
+      parsedTxs.map(t => ({ timestamp: t.timestamp, slot: t.slot, type: t.type, signer: t.signer, tokenAmount: t.tokenAmount ?? 0, solAmount: t.solAmount ?? 0 })),
+      deployer,
+      bundles.map(b => ({ wallets: b.wallets, txCount: b.transactions?.length ?? b.wallets.length })),
+    );
     const result: AnalysisResult = {
       schemaVersion: SCHEMA_VERSION,
       tokenCA,
@@ -224,6 +232,7 @@ export async function runBacktesterPipeline(
       bundles,
       devActivity,
       mode: "backtester" as AnalysisMode,
+      detailedPatterns,
     };
 
     onProgress?.("complete", `Analysis complete in ${(durationMs / 1000).toFixed(1)}s`);

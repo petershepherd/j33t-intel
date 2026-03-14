@@ -123,6 +123,8 @@ export interface AnalysisResult {
   devActivity: DevWalletActivity;
   /** Analysis mode that produced this result */
   mode: AnalysisMode;
+  /** Detailed behavioral patterns for AI training */
+  detailedPatterns?: any;
 }
 
 export type AnalysisMode = "backtester" | "rugpull_pattern" | "live_scan";

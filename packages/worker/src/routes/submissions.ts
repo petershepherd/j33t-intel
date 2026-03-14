@@ -83,6 +83,19 @@ submissionsRouter.post("/", rateLimitMiddleware, async (c) => {
         console.error("Contributor tracking error:", e);
       }
 
+
+      // Log activity for live feed
+      try {
+        const shortCA = body.submission.tokenCA.slice(0, 6) + "..." + body.submission.tokenCA.slice(-4);
+        if (dispute.disputed) {
+          await logActivity(c.env.DB, "disputed", contributorHash, "Disputed analysis on " + shortCA + " (user: " + body.submission.patternType + ", scoring: " + dispute.scoringPattern + ")", -5, body.submission.tokenCA);
+        } else {
+          await logActivity(c.env.DB, "submission", contributorHash, "Analyzed " + shortCA + " — " + body.submission.patternType.toUpperCase(), 2, body.submission.tokenCA);
+        }
+        if (contributorProfile?.leveledUp) {
+          await logActivity(c.env.DB, "level_up", contributorHash, "Reached " + (contributorProfile.levelEmoji || "") + " " + (contributorProfile.levelName || "") + " level!", 0);
+        }
+      } catch(e2) {}
       const response: ApiResponse = {
         success: true,
         data: {

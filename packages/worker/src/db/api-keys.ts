@@ -11,7 +11,7 @@
 
 import { getTierForBalance } from "@j33t-intel/shared";
 
-const J33T_TOKEN_MINT = "355ses9YKA4pTvbyTqRDT4QjzuJ1CW23eLqsfi1npump";
+const J33T_TOKEN_MINT = "5zUr3xLCmLRg9JVjegxQzRixfPUyrmACS3XKQiZiDUSD";
 
 /** Generate a random API key */
 export function generateApiKey(): string {

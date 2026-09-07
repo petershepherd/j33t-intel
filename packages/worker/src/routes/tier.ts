@@ -13,7 +13,7 @@ import { getDailyUsage } from "../db/helpers.js";
 import { generateContributorHash } from "../middleware/auth.js";
 
 /** The $J33T token mint address on Solana */
-const J33T_TOKEN_MINT = "355ses9YKA4pTvbyTqRDT4QjzuJ1CW23eLqsfi1npump"; // placeholder — update with real mint
+const J33T_TOKEN_MINT = "5zUr3xLCmLRg9JVjegxQzRixfPUyrmACS3XKQiZiDUSD";
 
 export const tierRouter = new Hono<{ Bindings: Env }>();
 
